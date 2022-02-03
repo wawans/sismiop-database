@@ -1,0 +1,54 @@
+{
+    "name": "wawans/sismiop-database",
+    "description": "Eloquent Model untuk Database SISMIOP PBB",
+    "keywords": [
+        "wawans",
+        "sismiop-database"
+    ],
+    "homepage": "https://github.com/wawans/sismiop-database",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Wawan Setyawan",
+            "email": "wakuadratn@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wawans\\SismiopDatabase\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wawans\\SismiopDatabase\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wawans\\SismiopDatabase\\SismiopDatabaseServiceProvider"
+            ],
+            "aliases": {
+                "SismiopDatabase": "Wawans\\SismiopDatabase\\SismiopDatabaseFacade"
+            }
+        }
+    }
+}
