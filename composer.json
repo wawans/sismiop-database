@@ -2,8 +2,9 @@
     "name": "wawans/sismiop-database",
     "description": "Eloquent Model untuk Database SISMIOP PBB",
     "keywords": [
-        "wawans",
-        "sismiop-database"
+        "sismiop pbb",
+        "sismiop database",
+        "laravel sismiop database"
     ],
     "homepage": "https://github.com/wawans/sismiop-database",
     "license": "MIT",
@@ -16,8 +17,7 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
-        "illuminate/support": "^8.0"
+        "illuminate/database": ">=5.6 <10.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
