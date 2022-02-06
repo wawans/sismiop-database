@@ -2,23 +2,36 @@
 
 namespace Wawans\SismiopDatabase\Ref;
 
+use Wawans\SismiopDatabase\Casts\StrPad;
+use Wawans\SismiopDatabase\Concerns\WithRefDati2;
+use Wawans\SismiopDatabase\Concerns\WithRefKecamatan;
+use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Model;
 
 class RefKelurahan extends Model
 {
+    use WithRefPropinsi;
+    use WithRefDati2;
+    use WithRefKecamatan;
+
     /**
      * The primary key for the model.
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+    ];
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -39,5 +52,10 @@ class RefKelurahan extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'kd_propinsi' => StrPad::class . ':2',
+        'kd_dati2' => StrPad::class . ':2',
+        'kd_kecamatan' => StrPad::class . ':3',
+        'kd_kelurahan' => StrPad::class . ':3',
+    ];
 }

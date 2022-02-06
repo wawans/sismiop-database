@@ -2,12 +2,14 @@
 
 namespace Wawans\SismiopDatabase;
 
+use Awobaz\Compoships\Compoships;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Str;
 
 class Model extends EloquentModel
 {
+    use Compoships;
     use HasFactory;
 
     /**

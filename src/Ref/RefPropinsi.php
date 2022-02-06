@@ -2,6 +2,7 @@
 
 namespace Wawans\SismiopDatabase\Ref;
 
+use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
 class RefPropinsi extends Model
@@ -11,14 +12,14 @@ class RefPropinsi extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_propinsi';
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -39,5 +40,7 @@ class RefPropinsi extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'kd_propinsi' => StrPad::class . ':2',
+    ];
 }

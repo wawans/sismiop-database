@@ -11,21 +11,27 @@ class RefKppbb extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = ['kd_kanwil', 'kd_kppbb'];
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'nm_kppbb',
+        'al_kppbb',
+        'kota_terbit_kppbb',
+        'no_faksimili',
+        'no_telpon',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

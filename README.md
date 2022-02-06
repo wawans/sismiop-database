@@ -1,10 +1,10 @@
-# Very short description of the package
+# Laravel Eloquent Model untuk Database SISMIOP PBB
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/wawans/sismiop-database.svg?style=flat-square)](https://packagist.org/packages/wawans/sismiop-database)
 [![Total Downloads](https://img.shields.io/packagist/dt/wawans/sismiop-database.svg?style=flat-square)](https://packagist.org/packages/wawans/sismiop-database)
 ![GitHub Actions](https://github.com/wawans/sismiop-database/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Model dari database SISMIOP PBB (Sistem Manajemen Informasi Objek Pajak - Pajak Bumi dan Bangunan) yang siap digunakan pada Laravel. 
 
 ## Installation
 
@@ -14,10 +14,21 @@ You can install the package via composer:
 composer require wawans/sismiop-database
 ```
 
-## Usage
+## Configuration (OPTIONAL)
 
-```php
-// Usage description here
+Optionally publish a configuration file by running the following Artisan command.
+If config file is not publish, the package will automatically use what is declared on your `.env` file database connection.
+
+```bash
+php artisan vendor:publish --tag=sismiop-config
+```
+
+This will copy the configuration file to `config/sismiop-database.php`.
+
+> To change/separate database connection, you can set connection data in your `.env` files:
+
+ ```ini
+SISMIOP_CONNECTION=sismiop
 ```
 
 ### Testing
@@ -25,6 +36,19 @@ composer require wawans/sismiop-database
 ```bash
 composer test
 ```
+
+## Catatan
+
+Primary key pada database sismiop menggunakan Composite Keys, sehingga agar relationship dari model satu ke yang lain 
+dapat berjalan memerlukan paket ```awobaz/compoships```. 
+Silahkan lihat dialamat [repository](https://github.com/topclaudy/compoships) untuk detail dari paket tersebut.  
+
+
+## Disclaimer
+
+Paket ini tidak menyertakan migration/struktur tabel dari database sismiop. Paket ini hanya berisi model
+dari tabel yang sebelumnya sudah ada pada database sismiop. Juga tidak semua tabel dan/atau relasi disertakan
+dalam paket ini.
 
 ### Changelog
 

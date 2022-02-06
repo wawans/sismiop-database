@@ -17,6 +17,7 @@
         }
     ],
     "require": {
+        "awobaz/compoships": "^2.1",
         "illuminate/database": ">=5.6 <10.0"
     },
     "require-dev": {

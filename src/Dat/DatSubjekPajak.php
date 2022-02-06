@@ -2,6 +2,7 @@
 
 namespace Wawans\SismiopDatabase\Dat;
 
+use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
 class DatSubjekPajak extends Model
@@ -11,21 +12,34 @@ class DatSubjekPajak extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'subjek_pajak_id';
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'subjek_pajak_id',
+        'nm_wp',
+        'jalan_wp',
+        'blok_kav_no_wp',
+        'rw_wp',
+        'rt_wp',
+        'kelurahan_wp',
+        'kota_wp',
+        'kd_pos_wp',
+        'telp_wp',
+        'npwp',
+        'status_pekerjaan_wp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -39,5 +53,13 @@ class DatSubjekPajak extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'rw_wp' => StrPad::class . ':2',
+        'rt_wp' => StrPad::class . ':3',
+    ];
+
+    public function datObjekPajak()
+    {
+        return $this->hasMany(DatObjekPajak::class, $this->primaryKey, $this->primaryKey);
+    }
 }

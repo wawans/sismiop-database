@@ -11,14 +11,14 @@ class LookupGroup extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_lookup_group';
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -40,4 +40,9 @@ class LookupGroup extends Model
      * @var array
      */
     protected $casts = [];
+
+    public function lookupItem()
+    {
+        return $this->hasMany(LookupGroup::class, 'kd_lookup_group', 'kd_lookup_group');
+    }
 }
