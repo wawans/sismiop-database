@@ -11,14 +11,14 @@ class RefJabatan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_jabatan';
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.

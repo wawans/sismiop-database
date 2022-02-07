@@ -11,7 +11,7 @@ class RefUmum extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_ref';
 
     /**
      * The "type" of the primary key ID.

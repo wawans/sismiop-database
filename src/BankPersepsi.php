@@ -11,21 +11,34 @@ class BankPersepsi extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'kd_bank_tunggal',
+        'kd_bank_persepsi',
+    ];
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'kd_bank_tunggal',
+        'kd_bank_persepsi',
+        'nm_bank_persepsi',
+        'al_bank_persepsi',
+        'no_rek_bank_persepsi',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -40,4 +53,9 @@ class BankPersepsi extends Model
      * @var array
      */
     protected $casts = [];
+
+    public function bankTunggal()
+    {
+        return $this->belongsTo(BankTunggal::class, $this->primaryKey, $this->primaryKey);
+    }
 }

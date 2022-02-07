@@ -11,21 +11,27 @@ class Fasilitas extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_fasilitas';
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_fasilitas',
+        'nm_fasilitas',
+        'satuan_fasilitas',
+        'status_fasilitas',
+        'ketergantungan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

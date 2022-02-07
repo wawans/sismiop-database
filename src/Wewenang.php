@@ -11,21 +11,21 @@ class Wewenang extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_wewenang';
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = ['kd_wewenang', 'nm_wewenang'];
 
     /**
      * The attributes that should be hidden for serialization.

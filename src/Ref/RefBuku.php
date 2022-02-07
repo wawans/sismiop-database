@@ -11,14 +11,14 @@ class RefBuku extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = ['thn_awal', 'thn_akhir', 'kd_buku'];
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.

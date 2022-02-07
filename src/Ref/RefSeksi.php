@@ -11,14 +11,14 @@ class RefSeksi extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_seksi';
 
     /**
      * The "type" of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -40,4 +40,9 @@ class RefSeksi extends Model
      * @var array
      */
     protected $casts = [];
+
+    public function refSubSeksi()
+    {
+        return $this->hasMany(RefSeksi::class, 'kd_seksi', 'kd_seksi');
+    }
 }
