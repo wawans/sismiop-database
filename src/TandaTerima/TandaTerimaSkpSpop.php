@@ -1,10 +1,10 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Ttr;
+namespace Wawans\SismiopDatabase\TandaTerima;
 
 use Wawans\SismiopDatabase\Model;
 
-class TtrSrtTegoran extends Model
+class TandaTerimaSkpSpop extends Model
 {
     /**
      * The primary key for the model.

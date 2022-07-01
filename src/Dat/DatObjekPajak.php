@@ -7,7 +7,10 @@ use Wawans\SismiopDatabase\Concerns\WithRefDati2;
 use Wawans\SismiopDatabase\Concerns\WithRefKecamatan;
 use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
+use Wawans\SismiopDatabase\Constants\Lookup;
+use Wawans\SismiopDatabase\Lookup\LookupItem;
 use Wawans\SismiopDatabase\Model;
+use Wawans\SismiopDatabase\Pegawai;
 use Wawans\SismiopDatabase\Sppt\Sppt;
 
 class DatObjekPajak extends Model
@@ -111,6 +114,13 @@ class DatObjekPajak extends Model
         return $this->hasOne(DatOpBumi::class, $this->primaryKey, $this->primaryKey);
     }
 
+    public function datPetaBlok()
+    {
+        return $this->belongsTo(DatPetaBlok::class,
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok'],
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok']);
+    }
+
     public function datSubjekPajak()
     {
         return $this->belongsTo(DatSubjekPajak::class, 'subjek_pajak_id', 'subjek_pajak_id');
@@ -119,5 +129,45 @@ class DatObjekPajak extends Model
     public function sppt()
     {
         return $this->hasMany(Sppt::class, $this->primaryKey, $this->primaryKey);
+    }
+
+    public function refJnsTransaksi()
+    {
+        return $this->belongsTo(LookupItem::class, 'jns_transaksi_op', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_TRANSAKSI);
+    }
+
+    public function refKdStatusCabang()
+    {
+        return $this->belongsTo(LookupItem::class, 'kd_status_cabang', 'kd_lookup_item')->whereGroup(Lookup::GROUP_STATUS_CABANG_OP);
+    }
+
+    public function refKdStatusWp()
+    {
+        return $this->belongsTo(LookupItem::class, 'kd_status_wp', 'kd_lookup_item')->whereGroup(Lookup::GROUP_STATUS_WP_OP);
+    }
+
+    public function refStatusPeta()
+    {
+        return $this->belongsTo(LookupItem::class, 'status_peta_op', 'kd_lookup_item')->whereGroup(Lookup::GROUP_STATUS_PETA_OP);
+    }
+
+    public function pegawaiPendata()
+    {
+        return $this->belongsTo(Pegawai::class, 'nip_pendata', 'nip');
+    }
+
+    public function pegawaiPemeriksa()
+    {
+        return $this->belongsTo(Pegawai::class, 'nip_pemeriksa_op', 'nip');
+    }
+
+    public function pegawaiPerekam()
+    {
+        return $this->belongsTo(Pegawai::class, 'nip_perekam_op', 'nip');
+    }
+
+    public function getJalanBlokKavNoOpAttribute($value)
+    {
+        return $this->jalan_op . ' ' . $this->blok_kav_no_op;
     }
 }

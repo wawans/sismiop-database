@@ -1,10 +1,10 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Srt;
+namespace Wawans\SismiopDatabase\TandaTerima;
 
 use Wawans\SismiopDatabase\Model;
 
-class SrtHimbauan extends Model
+class TandaTerimaSkp extends Model
 {
     /**
      * The primary key for the model.

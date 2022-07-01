@@ -7,6 +7,7 @@ use Wawans\SismiopDatabase\Concerns\WithRefDati2;
 use Wawans\SismiopDatabase\Concerns\WithRefKecamatan;
 use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
+use Wawans\SismiopDatabase\Constants\FasilitasBangunan;
 use Wawans\SismiopDatabase\Fasilitas;
 use Wawans\SismiopDatabase\Model;
 
@@ -90,6 +91,36 @@ class DatFasilitasBangunan extends Model
     public function fasilitas()
     {
         return $this->belongsTo(Fasilitas::class, 'kd_fasilitas', 'kd_fasilitas');
+    }
+
+    /**
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeAcSplit($query)
+    {
+        return $query->where('kd_fasilitas', FasilitasBangunan::AC_SPLIT);
+    }
+
+    /**
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeAcWindows($query)
+    {
+        return $query->where('kd_fasilitas', FasilitasBangunan::AC_WINDOWS);
+    }
+
+    /**
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeListrik($query)
+    {
+        return $query->where('kd_fasilitas', FasilitasBangunan::LISTRIK);
     }
 
     /**

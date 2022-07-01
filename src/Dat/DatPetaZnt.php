@@ -70,4 +70,18 @@ class DatPetaZnt extends Model
         'kd_kelurahan' => StrPad::class . ':3',
         'kd_blok' => StrPad::class . ':3',
     ];
+
+    public function datPetaBlok()
+    {
+        return $this->belongsTo(DatPetaBlok::class,
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok'],
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok']);
+    }
+
+    public function datZnt()
+    {
+        return $this->belongsTo(DatZnt::class,
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_znt'],
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_znt']);
+    }
 }

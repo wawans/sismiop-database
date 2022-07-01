@@ -3,16 +3,15 @@
 namespace Wawans\SismiopDatabase\Dat;
 
 use Wawans\SismiopDatabase\Casts\StrPad;
-use Wawans\SismiopDatabase\Concerns\WithDatObjekPajak;
 use Wawans\SismiopDatabase\Concerns\WithRefDati2;
 use Wawans\SismiopDatabase\Concerns\WithRefKecamatan;
 use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
+use Wawans\SismiopDatabase\Dokumen;
 use Wawans\SismiopDatabase\Model;
 
 class DatNir extends Model
 {
-    use WithDatObjekPajak;
     use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
@@ -28,9 +27,7 @@ class DatNir extends Model
         'kd_dati2',
         'kd_kecamatan',
         'kd_kelurahan',
-        'kd_blok',
-        'no_urut',
-        'kd_jns_op',
+        'kd_znt',
         'thn_nir_znt'
     ];
 
@@ -51,10 +48,13 @@ class DatNir extends Model
         'kd_dati2',
         'kd_kecamatan',
         'kd_kelurahan',
-        'kd_blok',
-        'no_urut',
-        'kd_jns_op',
-        'thn_nir_znt'
+        'kd_znt',
+        'thn_nir_znt',
+        'kd_kanwil',
+        'kd_kppbb',
+        'jns_dokumen',
+        'no_dokumen',
+        'nir',
     ];
 
     /**
@@ -74,7 +74,19 @@ class DatNir extends Model
         'kd_dati2' => StrPad::class . ':2',
         'kd_kecamatan' => StrPad::class . ':3',
         'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
     ];
+
+    public function datZnt()
+    {
+        return $this->belongsTo(DatZnt::class,
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_znt'],
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_znt']);
+    }
+
+    public function dokumen()
+    {
+        return $this->belongsTo(Dokumen::class,
+            ['kd_kanwil','kd_kppbb','jns_dokumen','no_dokumen'],
+            ['kd_kanwil','kd_kppbb','jns_dokumen','no_dokumen']);
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace Wawans\SismiopDatabase\Lookup;
 
+use Wawans\SismiopDatabase\Casts\StrFn;
 use Wawans\SismiopDatabase\Model;
 
 class LookupItem extends Model
@@ -25,7 +26,11 @@ class LookupItem extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_lookup_group',
+        'kd_lookup_item',
+        'nm_lookup_item',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -39,9 +44,16 @@ class LookupItem extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'nm_lookup_item' => StrFn::class . ':strtoupper',
+    ];
 
     public function lookupGroup()
+    {
+        return $this->belongsTo(LookupGroup::class, 'kd_lookup_group', 'kd_lookup_group');
+    }
+
+    public function group()
     {
         return $this->belongsTo(LookupGroup::class, 'kd_lookup_group', 'kd_lookup_group');
     }
@@ -78,5 +90,10 @@ class LookupItem extends Model
     public function scopeWhereGroupItem($query, $group, $item)
     {
         return $query->whereGroup($group)->whereItem($item);
+    }
+
+    public function getNamaAttribute()
+    {
+        return $this->nm_lookup_item;
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Srt;
+namespace Wawans\SismiopDatabase\TandaTerima;
 
 use Wawans\SismiopDatabase\Model;
 
-class SrtBatalLelang extends Model
+class TandaTerimaSuratTegoran extends Model
 {
     /**
      * The primary key for the model.

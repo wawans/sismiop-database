@@ -2,6 +2,7 @@
 
 namespace Wawans\SismiopDatabase\Lookup;
 
+use Wawans\SismiopDatabase\Casts\StrFn;
 use Wawans\SismiopDatabase\Model;
 
 class LookupGroup extends Model
@@ -25,7 +26,10 @@ class LookupGroup extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_lookup_group',
+        'nm_lookup_group'
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -39,10 +43,22 @@ class LookupGroup extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'nm_lookup_group' => StrFn::class . ':strtoupper',
+    ];
 
     public function lookupItem()
     {
-        return $this->hasMany(LookupGroup::class, 'kd_lookup_group', 'kd_lookup_group');
+        return $this->hasMany(LookupItem::class, $this->primaryKey, $this->primaryKey);
+    }
+
+    public function item()
+    {
+        return $this->hasMany(LookupItem::class, $this->primaryKey, $this->primaryKey);
+    }
+
+    public function getNamaAttribute()
+    {
+        return $this->nm_lookup_group;
     }
 }

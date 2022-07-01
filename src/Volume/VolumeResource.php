@@ -1,17 +1,22 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Srt;
+namespace Wawans\SismiopDatabase\Volume;
 
 use Wawans\SismiopDatabase\Model;
 
-class SrtPerintahSita extends Model
+class VolumeResource extends Model
 {
     /**
      * The primary key for the model.
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_pekerjaan',
+        'kd_kegiatan',
+        'kd_group_resource',
+        'kd_resource',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,13 @@ class SrtPerintahSita extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_pekerjaan',
+        'kd_kegiatan',
+        'kd_group_resource',
+        'kd_resource',
+        'vol_resource',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

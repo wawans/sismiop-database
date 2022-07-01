@@ -1,10 +1,10 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Ttr;
+namespace Wawans\SismiopDatabase\Surat;
 
 use Wawans\SismiopDatabase\Model;
 
-class TtrSkp extends Model
+class SuratCabutSita extends Model
 {
     /**
      * The primary key for the model.

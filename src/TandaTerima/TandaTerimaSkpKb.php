@@ -1,10 +1,10 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Vol;
+namespace Wawans\SismiopDatabase\TandaTerima;
 
 use Wawans\SismiopDatabase\Model;
 
-class VolKegiatanJpb8 extends Model
+class TandaTerimaSkpKb extends Model
 {
     /**
      * The primary key for the model.

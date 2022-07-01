@@ -3,6 +3,8 @@
 namespace Wawans\SismiopDatabase\Dat;
 
 use Wawans\SismiopDatabase\Casts\StrPad;
+use Wawans\SismiopDatabase\Constants\Lookup;
+use Wawans\SismiopDatabase\Lookup\LookupItem;
 use Wawans\SismiopDatabase\Model;
 
 class DatSubjekPajak extends Model
@@ -58,8 +60,25 @@ class DatSubjekPajak extends Model
         'rt_wp' => StrPad::class . ':3',
     ];
 
+    /**
+     * The relations to eager load on every query.
+     *
+     * @var array
+     */
+    protected $with = ['refStatusPekerjaan'];
+
     public function datObjekPajak()
     {
         return $this->hasMany(DatObjekPajak::class, $this->primaryKey, $this->primaryKey);
+    }
+
+    public function datSubjekPajakNjoptkp()
+    {
+        return $this->belongsTo(DatSubjekPajakNjoptkp::class, 'subjek_pajak_id', 'subjek_pajak_id');
+    }
+
+    public function refStatusPekerjaan()
+    {
+        return $this->belongsTo(LookupItem::class, 'status_pekerjaan_wp', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_PEKERJAAN_WP);
     }
 }
