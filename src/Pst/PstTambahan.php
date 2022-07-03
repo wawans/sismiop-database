@@ -5,6 +5,29 @@ namespace Wawans\SismiopDatabase\Pst;
 use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Pst\PstTambahan
+ *
+ * @property string $KD_KANWIL
+ * @property string $KD_KPPBB
+ * @property string $THN_PELAYANAN
+ * @property string $BUNDEL_PELAYANAN
+ * @property string $NO_URUT_PELAYANAN
+ * @property string|null $THN_PENERBITAN
+ * @property string|null $NO_TELP
+ * @property string|null $TGL_REKAM
+ * @property string|null $NIP_REKAM
+ * @property StrPad $kd_kanwil
+ * @property StrPad $kd_kppbb
+ * @property StrPad $thn_pelayanan
+ * @property StrPad $bundel_pelayanan
+ * @property StrPad $no_urut_pelayanan
+ * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonan $pstPermohonan
+ * @method static \Illuminate\Database\Eloquent\Builder|PstTambahan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstTambahan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstTambahan query()
+ * @mixin \Eloquent
+ */
 class PstTambahan extends Model
 {
     /**

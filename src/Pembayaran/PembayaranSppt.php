@@ -10,6 +10,39 @@ use Wawans\SismiopDatabase\Model;
 use Wawans\SismiopDatabase\Sppt\Sppt;
 use Wawans\SismiopDatabase\TempatPembayaran;
 
+/**
+ * Wawans\SismiopDatabase\Pembayaran\PembayaranSppt
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_BLOK
+ * @property string $NO_URUT
+ * @property string $KD_JNS_OP
+ * @property string $THN_PAJAK_SPPT
+ * @property int $PEMBAYARAN_SPPT_KE
+ * @property string $KD_KANWIL_BANK
+ * @property string $KD_KPPBB_BANK
+ * @property string $KD_BANK_TUNGGAL
+ * @property string $KD_BANK_PERSEPSI
+ * @property string $KD_TP
+ * @property int|null $DENDA_SPPT
+ * @property int $JML_SPPT_YG_DIBAYAR
+ * @property string $TGL_PEMBAYARAN_SPPT
+ * @property string $TGL_REKAM_BYR_SPPT
+ * @property string $NIP_REKAM_BYR_SPPT
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @property-read Sppt $sppt
+ * @property-read TempatPembayaran $tempatPembayaran
+ * @method static \Illuminate\Database\Eloquent\Builder|PembayaranSppt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PembayaranSppt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PembayaranSppt query()
+ * @mixin \Eloquent
+ */
 class PembayaranSppt extends Model
 {
     use WithRefPropinsi;

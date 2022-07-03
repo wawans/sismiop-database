@@ -4,6 +4,11 @@ namespace Wawans\SismiopDatabase\Casts;
 
 use Illuminate\Contracts\Database\Eloquent\CastsInboundAttributes;
 
+/**
+ * Wawans\SismiopDatabase\Casts\StrFn
+ *
+ * @method static StrFn __toString()
+ */
 class StrFn implements CastsInboundAttributes
 {
     /**

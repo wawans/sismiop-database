@@ -6,6 +6,19 @@ use Wawans\SismiopDatabase\Casts\StrFn;
 use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Wewenang
+ *
+ * @property string $KD_WEWENANG
+ * @property string|null $NM_WEWENANG
+ * @property StrPad $kd_wewenang
+ * @property StrFn $nm_wewenang
+ * @property-read mixed $nama
+ * @method static \Illuminate\Database\Eloquent\Builder|Wewenang newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Wewenang newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Wewenang query()
+ * @mixin \Eloquent
+ */
 class Wewenang extends Model
 {
     /**

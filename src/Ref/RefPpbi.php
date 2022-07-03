@@ -6,6 +6,25 @@ use Wawans\SismiopDatabase\Casts\StrFn;
 use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Ref\RefPpbi
+ *
+ * @property string $KD_PEBIN
+ * @property string $KD_PBI
+ * @property string $KD_PPBI
+ * @property string|null $NM_PPBI
+ * @property StrPad $kd_pebin
+ * @property StrPad $kd_pbi
+ * @property StrPad $kd_ppbi
+ * @property StrFn $nm_ppbi
+ * @property-read mixed $nama
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPbi $refPbi
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPebin $refPebin
+ * @method static \Illuminate\Database\Eloquent\Builder|RefPpbi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefPpbi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefPpbi query()
+ * @mixin \Eloquent
+ */
 class RefPpbi extends Model
 {
     /**

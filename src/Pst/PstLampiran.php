@@ -4,6 +4,35 @@ namespace Wawans\SismiopDatabase\Pst;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Pst\PstLampiran
+ *
+ * @property string $KD_KANWIL
+ * @property string $KD_KPPBB
+ * @property string $THN_PELAYANAN
+ * @property string $BUNDEL_PELAYANAN
+ * @property string $NO_URUT_PELAYANAN
+ * @property bool|null $L_PERMOHONAN
+ * @property bool|null $L_SURAT_KUASA
+ * @property bool|null $L_KTP_WP
+ * @property bool|null $L_SERTIFIKAT_TANAH
+ * @property bool|null $L_SPPT
+ * @property bool|null $L_IMB
+ * @property bool|null $L_AKTE_JUAL_BELI
+ * @property bool|null $L_SK_PENSIUN
+ * @property bool|null $L_SPPT_STTS
+ * @property bool|null $L_STTS
+ * @property bool|null $L_SK_PENGURANGAN
+ * @property bool|null $L_SK_KEBERATAN
+ * @property bool|null $L_SKKP_PBB
+ * @property bool|null $L_SPMKP_PBB
+ * @property bool|null $L_LAIN_LAIN
+ * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonan $pstPermohonan
+ * @method static \Illuminate\Database\Eloquent\Builder|PstLampiran newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstLampiran newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstLampiran query()
+ * @mixin \Eloquent
+ */
 class PstLampiran extends Model
 {
     /**

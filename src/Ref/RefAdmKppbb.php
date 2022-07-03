@@ -7,6 +7,26 @@ use Wawans\SismiopDatabase\Concerns\WithRefDati2;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Ref\RefAdmKppbb
+ *
+ * @property string $KD_KANWIL
+ * @property string $KD_KPPBB
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property StrPad $kd_kanwil
+ * @property StrPad $kd_kppbb
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKanwil $refKanwil
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKppbb $refKppbb
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @method static \Illuminate\Database\Eloquent\Builder|RefAdmKppbb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefAdmKppbb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefAdmKppbb query()
+ * @mixin \Eloquent
+ */
 class RefAdmKppbb extends Model
 {
     use WithRefPropinsi;

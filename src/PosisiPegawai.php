@@ -8,6 +8,29 @@ use Wawans\SismiopDatabase\Ref\RefJabatan;
 use Wawans\SismiopDatabase\Ref\RefSeksi;
 use Wawans\SismiopDatabase\Ref\RefSubSeksi;
 
+/**
+ * Wawans\SismiopDatabase\PosisiPegawai
+ *
+ * @property string $KD_KANWIL
+ * @property string $KD_KPPBB
+ * @property string $NIP
+ * @property string $KD_SEKSI
+ * @property string $KD_SUBSEKSI
+ * @property string $TGL_AWAL_BERLAKU
+ * @property string|null $TGL_AKHIR_BERLAKU
+ * @property string|null $KD_WEWENANG
+ * @property string|null $KD_JABATAN
+ * @property-read \Wawans\SismiopDatabase\Pegawai $pegawai
+ * @property-read RefJabatan $refJabatan
+ * @property-read RefSeksi $refSeksi
+ * @property-read RefSubSeksi $refSubSeksi
+ * @property-read \Wawans\SismiopDatabase\Wewenang $refWewenang
+ * @method static \Illuminate\Database\Eloquent\Builder|PosisiPegawai newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PosisiPegawai newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PosisiPegawai query()
+ * @method static \Illuminate\Database\Eloquent\Builder|PosisiPegawai whereActive($date = null, $format = 'YYYY-MM-DD')
+ * @mixin \Eloquent
+ */
 class PosisiPegawai extends Model
 {
     /**

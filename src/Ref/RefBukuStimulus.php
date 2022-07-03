@@ -15,7 +15,8 @@ use Wawans\SismiopDatabase\Model;
  * @property string|null $BUKU
  * @property int|null $NILAI_MIN
  * @property int|null $NILAI_MAX
- * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi|null $refPropinsi
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
  * @method static \Illuminate\Database\Eloquent\Builder|RefBukuStimulus newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|RefBukuStimulus newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|RefBukuStimulus query()

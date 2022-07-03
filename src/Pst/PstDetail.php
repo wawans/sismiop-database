@@ -15,6 +15,63 @@ use Wawans\SismiopDatabase\Ref\RefSeksi;
 use Wawans\SismiopDatabase\Ref\RefSubSeksi;
 use Wawans\SismiopDatabase\Sppt\Sppt;
 
+/**
+ * Wawans\SismiopDatabase\Pst\PstDetail
+ *
+ * @property string $KD_KANWIL
+ * @property string $KD_KPPBB
+ * @property string $THN_PELAYANAN
+ * @property string $BUNDEL_PELAYANAN
+ * @property string $NO_URUT_PELAYANAN
+ * @property string $KD_PROPINSI_PEMOHON
+ * @property string $KD_DATI2_PEMOHON
+ * @property string $KD_KECAMATAN_PEMOHON
+ * @property string $KD_KELURAHAN_PEMOHON
+ * @property string $KD_BLOK_PEMOHON
+ * @property string $NO_URUT_PEMOHON
+ * @property string $KD_JNS_OP_PEMOHON
+ * @property string $KD_JNS_PELAYANAN
+ * @property string $THN_PAJAK_PERMOHONAN
+ * @property string|null $NAMA_PENERIMA
+ * @property string|null $CATATAN_PENYERAHAN
+ * @property bool $STATUS_SELESAI
+ * @property string $TGL_SELESAI
+ * @property string $KD_SEKSI_BERKAS
+ * @property string|null $TGL_PENYERAHAN
+ * @property string|null $NIP_PENYERAH
+ * @property string|null $KD_SUBSEKSI_BERKAS
+ * @property StrPad $kd_kanwil
+ * @property StrPad $kd_kppbb
+ * @property StrPad $thn_pelayanan
+ * @property StrPad $bundel_pelayanan
+ * @property StrPad $no_urut_pelayanan
+ * @property StrPad $kd_propinsi_pemohon
+ * @property StrPad $kd_dati2_pemohon
+ * @property StrPad $kd_kecamatan_pemohon
+ * @property StrPad $kd_kelurahan_pemohon
+ * @property StrPad $kd_blok_pemohon
+ * @property StrPad $no_urut_pemohon
+ * @property StrFn $nama_penerima
+ * @property StrFn $catatan_penyerahan
+ * @property-read DatObjekPajak $datObjekPajak
+ * @property-read mixed $nop
+ * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonan $pstPermohonan
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Pst\PstPosisiBerkas[] $pstPosisiBerkas
+ * @property-read RefJnsPelayanan $refJnsPelayanan
+ * @property-read RefKecamatan $refKecamatan
+ * @property-read RefKelurahan $refKelurahan
+ * @property-read RefSeksi $refSeksi
+ * @property-read LookupItem $refStatusBerkas
+ * @property-read RefSubSeksi $refSubSeksi
+ * @property-read Sppt $sppt
+ * @property-read \Illuminate\Database\Eloquent\Collection|Sppt[] $sppts
+ * @method static \Illuminate\Database\Eloquent\Builder|PstDetail newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstDetail newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstDetail query()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstDetail whereBelumPenyerahan()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstDetail whereSudahPenyerahan()
+ * @mixin \Eloquent
+ */
 class PstDetail extends Model
 {
     /**

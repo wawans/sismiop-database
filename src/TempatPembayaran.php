@@ -6,6 +6,29 @@ use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Ref\RefKanwil;
 use Wawans\SismiopDatabase\Ref\RefKppbb;
 
+/**
+ * Wawans\SismiopDatabase\TempatPembayaran
+ *
+ * @property string $KD_KANWIL
+ * @property string $KD_KPPBB
+ * @property string $KD_BANK_TUNGGAL
+ * @property string $KD_BANK_PERSEPSI
+ * @property string $KD_TP
+ * @property string|null $NM_TP
+ * @property string|null $ALAMAT_TP
+ * @property string|null $NO_REK_TP
+ * @property StrPad $kd_kanwil
+ * @property StrPad $kd_kppbb
+ * @property-read \Wawans\SismiopDatabase\BankPersepsi $bankPersepsi
+ * @property-read \Wawans\SismiopDatabase\BankTunggal $bankTunggal
+ * @property-read mixed $nama
+ * @property-read RefKanwil $refKanwil
+ * @property-read RefKppbb $refKppbb
+ * @method static \Illuminate\Database\Eloquent\Builder|TempatPembayaran newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|TempatPembayaran newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|TempatPembayaran query()
+ * @mixin \Eloquent
+ */
 class TempatPembayaran extends Model
 {
     /**

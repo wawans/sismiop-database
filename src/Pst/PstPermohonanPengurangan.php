@@ -7,6 +7,41 @@ use Wawans\SismiopDatabase\Constants\Lookup;
 use Wawans\SismiopDatabase\Lookup\LookupItem;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Pst\PstPermohonanPengurangan
+ *
+ * @property string $KD_KANWIL
+ * @property string $KD_KPPBB
+ * @property string $THN_PELAYANAN
+ * @property string $BUNDEL_PELAYANAN
+ * @property string $NO_URUT_PELAYANAN
+ * @property string $KD_PROPINSI_PEMOHON
+ * @property string $KD_DATI2_PEMOHON
+ * @property string $KD_KECAMATAN_PEMOHON
+ * @property string $KD_KELURAHAN_PEMOHON
+ * @property string $KD_BLOK_PEMOHON
+ * @property string $NO_URUT_PEMOHON
+ * @property string $KD_JNS_OP_PEMOHON
+ * @property string|null $JNS_PENGURANGAN
+ * @property string|null $PCT_PERMOHONAN_PENGURANGAN
+ * @property StrPad $kd_kanwil
+ * @property StrPad $kd_kppbb
+ * @property StrPad $thn_pelayanan
+ * @property StrPad $bundel_pelayanan
+ * @property StrPad $no_urut_pelayanan
+ * @property StrPad $kd_propinsi_pemohon
+ * @property StrPad $kd_dati2_pemohon
+ * @property StrPad $kd_kecamatan_pemohon
+ * @property StrPad $kd_kelurahan_pemohon
+ * @property StrPad $kd_blok_pemohon
+ * @property StrPad $no_urut_pemohon
+ * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonan $pstPermohonan
+ * @property-read LookupItem $refJnsPengurangan
+ * @method static \Illuminate\Database\Eloquent\Builder|PstPermohonanPengurangan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstPermohonanPengurangan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PstPermohonanPengurangan query()
+ * @mixin \Eloquent
+ */
 class PstPermohonanPengurangan extends Model
 {
     /**
