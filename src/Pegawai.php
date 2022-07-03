@@ -2,6 +2,7 @@
 
 namespace Wawans\SismiopDatabase;
 
+use Wawans\SismiopDatabase\Dat\DatLogin;
 use Wawans\SismiopDatabase\Model;
 
 class Pegawai extends Model
@@ -25,7 +26,11 @@ class Pegawai extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'nip',
+        'nm_pegawai',
+        'nip_baru',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -40,4 +45,24 @@ class Pegawai extends Model
      * @var array
      */
     protected $casts = [];
+
+    public function datLogin()
+    {
+        return $this->hasOne(DatLogin::class, $this->primaryKey, $this->primaryKey);
+    }
+
+    public function posisi()
+    {
+        return $this->hasOne(PosisiPegawai::class, $this->primaryKey, $this->primaryKey)->whereActive();
+    }
+
+    public function posisiPegawai()
+    {
+        return $this->hasMany(PosisiPegawai::class, $this->primaryKey, $this->primaryKey);
+    }
+
+    public function getNamaAttribute()
+    {
+        return $this->nm_pegawai;
+    }
 }

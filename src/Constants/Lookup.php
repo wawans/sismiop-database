@@ -41,4 +41,11 @@ class Lookup
      */
     const GROUP_STATUS_BERKAS_PST = '06';
     const GROUP_JNS_PENGURANGAN_PST = '77';
+
+    /**
+     * SPPT
+     */
+    const GROUP_STATUS_TAGIHAN_SPPT = '01';
+    const GROUP_STATUS_PEMBAYARAN_SPPT = '02';
+    const GROUP_STATUS_CETAK_SPPT = '55';
 }

@@ -80,7 +80,10 @@ class PembayaranSppt extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'tgl_pembayaran_sppt' => 'date',
+        'tgl_rekam_byr_sppt' => 'datetime',
+    ];
 
     public function sppt()
     {
