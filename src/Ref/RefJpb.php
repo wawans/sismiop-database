@@ -2,8 +2,23 @@
 
 namespace Wawans\SismiopDatabase\Ref;
 
+use Wawans\SismiopDatabase\Casts\StrFn;
+use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Ref\RefJpb
+ *
+ * @property string $KD_JPB
+ * @property string|null $NM_JPB
+ * @property StrPad $kd_jpb
+ * @property StrFn $nm_jpb
+ * @property-read mixed $nama
+ * @method static \Illuminate\Database\Eloquent\Builder|RefJpb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefJpb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefJpb query()
+ * @mixin \Eloquent
+ */
 class RefJpb extends Model
 {
     /**
@@ -25,7 +40,10 @@ class RefJpb extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jpb',
+        'nm_jpb',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -39,5 +57,13 @@ class RefJpb extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'kd_jpb' => StrPad::class . ':2',
+        'nm_jpb' => StrFn::class . ':strtoupper',
+    ];
+
+    public function getNamaAttribute()
+    {
+        return $this->nm_jpb;
+    }
 }

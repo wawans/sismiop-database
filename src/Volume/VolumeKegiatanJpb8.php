@@ -7,6 +7,13 @@ use Wawans\SismiopDatabase\Model;
 class VolumeKegiatanJpb8 extends Model
 {
     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'vol_kegiatan_jpb8';
+
+    /**
      * The primary key for the model.
      *
      * @var string

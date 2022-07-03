@@ -2,8 +2,21 @@
 
 namespace Wawans\SismiopDatabase\Ref;
 
+use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Ref\RefMap
+ *
+ * @property string $KD_SEKTOR
+ * @property string|null $KD_MAP
+ * @property StrPad $kd_sektor
+ * @property-read \Wawans\SismiopDatabase\Ref\RefJnsSektor|null $refJnsSektor
+ * @method static \Illuminate\Database\Eloquent\Builder|RefMap newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefMap newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefMap query()
+ * @mixin \Eloquent
+ */
 class RefMap extends Model
 {
     /**
@@ -11,7 +24,7 @@ class RefMap extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = ['kd_sektor', 'kd_map'];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +38,7 @@ class RefMap extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = ['kd_sektor', 'kd_map'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -39,5 +52,12 @@ class RefMap extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'kd_sektor' => StrPad::class . ':2',
+    ];
+
+    public function refJnsSektor()
+    {
+        return $this->belongsTo(RefJnsSektor::class, 'kd_sektor', 'kd_sektor');
+    }
 }

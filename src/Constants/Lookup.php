@@ -36,4 +36,9 @@ class Lookup
     const GROUP_JNS_LANGIT2_BNG = '44';
     const GROUP_JNS_LANTAI_BNG = '43';
 
+    /**
+     * PST
+     */
+    const GROUP_STATUS_BERKAS_PST = '06';
+    const GROUP_JNS_PENGURANGAN_PST = '77';
 }

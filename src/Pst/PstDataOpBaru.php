@@ -2,6 +2,7 @@
 
 namespace Wawans\SismiopDatabase\Pst;
 
+use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
 class PstDataOpBaru extends Model
@@ -54,7 +55,19 @@ class PstDataOpBaru extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'kd_kanwil' => StrPad::class . ':2',
+        'kd_kppbb' => StrPad::class . ':2',
+        'thn_pelayanan' => StrPad::class . ':4',
+        'bundel_pelayanan' => StrPad::class . ':4',
+        'no_urut_pelayanan' => StrPad::class . ':3',
+        'kd_propinsi_pemohon' => StrPad::class . ':2',
+        'kd_dati2_pemohon' => StrPad::class . ':2',
+        'kd_kecamatan_pemohon' => StrPad::class . ':3',
+        'kd_kelurahan_pemohon' => StrPad::class . ':3',
+        'kd_blok_pemohon' => StrPad::class . ':3',
+        'no_urut_pemohon' => StrPad::class . ':4',
+    ];
 
     public function pstPermohonan()
     {

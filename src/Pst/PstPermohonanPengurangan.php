@@ -2,6 +2,9 @@
 
 namespace Wawans\SismiopDatabase\Pst;
 
+use Wawans\SismiopDatabase\Casts\StrPad;
+use Wawans\SismiopDatabase\Constants\Lookup;
+use Wawans\SismiopDatabase\Lookup\LookupItem;
 use Wawans\SismiopDatabase\Model;
 
 class PstPermohonanPengurangan extends Model
@@ -55,11 +58,27 @@ class PstPermohonanPengurangan extends Model
      * @var array
      */
     protected $casts = [
+        'kd_kanwil' => StrPad::class . ':2',
+        'kd_kppbb' => StrPad::class . ':2',
+        'thn_pelayanan' => StrPad::class . ':4',
+        'bundel_pelayanan' => StrPad::class . ':4',
+        'no_urut_pelayanan' => StrPad::class . ':3',
+        'kd_propinsi_pemohon' => StrPad::class . ':2',
+        'kd_dati2_pemohon' => StrPad::class . ':2',
+        'kd_kecamatan_pemohon' => StrPad::class . ':3',
+        'kd_kelurahan_pemohon' => StrPad::class . ':3',
+        'kd_blok_pemohon' => StrPad::class . ':3',
+        'no_urut_pemohon' => StrPad::class . ':4',
         'pct_permohonan_pengurangan' => 'integer',
     ];
 
     public function pstPermohonan()
     {
         return $this->belongsTo(PstPermohonan::class, $this->primaryKey, $this->primaryKey);
+    }
+
+    public function refJnsPengurangan()
+    {
+        return $this->belongsTo(LookupItem::class, 'jns_pengurangan', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_PENGURANGAN_PST);
     }
 }

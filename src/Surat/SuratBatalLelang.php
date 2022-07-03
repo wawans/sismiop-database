@@ -7,6 +7,13 @@ use Wawans\SismiopDatabase\Model;
 class SuratBatalLelang extends Model
 {
     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'srt_batal_lelang';
+
+    /**
      * The primary key for the model.
      *
      * @var string

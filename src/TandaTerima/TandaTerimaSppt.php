@@ -7,6 +7,13 @@ use Wawans\SismiopDatabase\Model;
 class TandaTerimaSppt extends Model
 {
     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'ttr_sppt';
+
+    /**
      * The primary key for the model.
      *
      * @var string

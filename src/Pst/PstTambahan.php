@@ -2,6 +2,7 @@
 
 namespace Wawans\SismiopDatabase\Pst;
 
+use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
 class PstTambahan extends Model
@@ -25,7 +26,17 @@ class PstTambahan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'thn_pelayanan',
+        'bundel_pelayanan',
+        'no_urut_pelayanan',
+        'thn_penerbitan',
+        'no_telp',
+        'tgl_rekam',
+        'nip_rekam',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -39,7 +50,14 @@ class PstTambahan extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'kd_kanwil' => StrPad::class . ':2',
+        'kd_kppbb' => StrPad::class . ':2',
+        'thn_pelayanan' => StrPad::class . ':4',
+        'bundel_pelayanan' => StrPad::class . ':4',
+        'no_urut_pelayanan' => StrPad::class . ':3',
+        'tgl_rekam' => 'datetime',
+    ];
 
     public function pstPermohonan()
     {

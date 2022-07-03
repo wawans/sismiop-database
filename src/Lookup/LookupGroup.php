@@ -5,6 +5,22 @@ namespace Wawans\SismiopDatabase\Lookup;
 use Wawans\SismiopDatabase\Casts\StrFn;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Lookup\LookupGroup
+ *
+ * @property string $KD_LOOKUP_GROUP
+ * @property string|null $NM_LOOKUP_GROUP
+ * @property StrFn $nm_lookup_group
+ * @property-read mixed $nama
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Lookup\LookupItem[] $item
+ * @property-read int|null $item_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Lookup\LookupItem[] $lookupItem
+ * @property-read int|null $lookup_item_count
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupGroup newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupGroup newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupGroup query()
+ * @mixin \Eloquent
+ */
 class LookupGroup extends Model
 {
     /**

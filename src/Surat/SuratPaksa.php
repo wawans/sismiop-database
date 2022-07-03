@@ -7,6 +7,13 @@ use Wawans\SismiopDatabase\Model;
 class SuratPaksa extends Model
 {
     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'srt_paksa';
+
+    /**
      * The primary key for the model.
      *
      * @var string
