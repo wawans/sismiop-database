@@ -20,6 +20,12 @@ class SismiopDatabaseServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
+            $this->registerMigrations();
+
+            $this->publishes([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], 'sismiop-migrations');
+
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('sismiop-database.php'),
             ], 'sismiop-config');
@@ -56,5 +62,17 @@ class SismiopDatabaseServiceProvider extends ServiceProvider
         $this->app->singleton('sismiop-database', function () {
             return new SismiopDatabase;
         });
+    }
+
+    /**
+     * Register SISMIOP Database's migration files.
+     *
+     * @return void
+     */
+    protected function registerMigrations()
+    {
+        if (SismiopDatabase::shouldRunMigrations()) {
+            return $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        }
     }
 }

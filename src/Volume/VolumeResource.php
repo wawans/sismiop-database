@@ -1,17 +1,29 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Ttr;
+namespace Wawans\SismiopDatabase\Volume;
 
 use Wawans\SismiopDatabase\Model;
 
-class TtrSrtTegoran extends Model
+class VolumeResource extends Model
 {
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'vol_resource';
+
     /**
      * The primary key for the model.
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_pekerjaan',
+        'kd_kegiatan',
+        'kd_group_resource',
+        'kd_resource',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +37,13 @@ class TtrSrtTegoran extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_pekerjaan',
+        'kd_kegiatan',
+        'kd_group_resource',
+        'kd_resource',
+        'vol_resource',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

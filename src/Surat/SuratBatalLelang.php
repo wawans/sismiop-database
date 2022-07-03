@@ -1,11 +1,18 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Vol;
+namespace Wawans\SismiopDatabase\Surat;
 
 use Wawans\SismiopDatabase\Model;
 
-class VolKegiatanJpb8 extends Model
+class SuratBatalLelang extends Model
 {
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'srt_batal_lelang';
+
     /**
      * The primary key for the model.
      *

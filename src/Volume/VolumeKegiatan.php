@@ -1,17 +1,30 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Vol;
+namespace Wawans\SismiopDatabase\Volume;
 
 use Wawans\SismiopDatabase\Model;
 
-class VolKegiatan extends Model
+class VolumeKegiatan extends Model
 {
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'vol_kegiatan';
+
     /**
      * The primary key for the model.
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'KD_JPB',
+        'TIPE_BNG',
+        'KD_BNG_LANTAI',
+        'KD_PEKERJAAN',
+        'KD_KEGIATAN',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +38,14 @@ class VolKegiatan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'KD_JPB',
+        'TIPE_BNG',
+        'KD_BNG_LANTAI',
+        'KD_PEKERJAAN',
+        'KD_KEGIATAN',
+        'VOL_KEGIATAN',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

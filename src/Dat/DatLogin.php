@@ -2,6 +2,7 @@
 
 namespace Wawans\SismiopDatabase\Dat;
 
+use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 use Wawans\SismiopDatabase\Pegawai;
 
@@ -26,21 +27,27 @@ class DatLogin extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'nip',
+        'nm_login',
+        'password',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = ['password'];
 
     /**
      * The attributes that should be cast.
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'nip' => StrPad::class . ':9',
+    ];
 
     public function pegawai()
     {

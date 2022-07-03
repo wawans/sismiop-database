@@ -1,11 +1,18 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Ttr;
+namespace Wawans\SismiopDatabase\TandaTerima;
 
 use Wawans\SismiopDatabase\Model;
 
-class TtrSppt extends Model
+class TandaTerimaSkpSpop extends Model
 {
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'ttr_skp_spop';
+
     /**
      * The primary key for the model.
      *

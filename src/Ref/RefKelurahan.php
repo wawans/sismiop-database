@@ -8,6 +8,30 @@ use Wawans\SismiopDatabase\Concerns\WithRefKecamatan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Ref\RefKelurahan
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string|null $KD_SEKTOR
+ * @property string|null $NM_KELURAHAN
+ * @property int|null $NO_KELURAHAN
+ * @property string|null $KD_POS_KELURAHAN
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property-read mixed $nama
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi|null $refPropinsi
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2|null $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan|null $refKecamatan
+ * @method static \Illuminate\Database\Eloquent\Builder|RefKelurahan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefKelurahan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RefKelurahan query()
+ * @mixin \Eloquent
+ */
 class RefKelurahan extends Model
 {
     use WithRefPropinsi;
@@ -58,4 +82,9 @@ class RefKelurahan extends Model
         'kd_kecamatan' => StrPad::class . ':3',
         'kd_kelurahan' => StrPad::class . ':3',
     ];
+
+    public function getNamaAttribute()
+    {
+        return $this->nm_kelurahan;
+    }
 }

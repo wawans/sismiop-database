@@ -1,11 +1,18 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Srt;
+namespace Wawans\SismiopDatabase\TandaTerima;
 
 use Wawans\SismiopDatabase\Model;
 
-class SrtHimbauan extends Model
+class TandaTerimaSuratTegoran extends Model
 {
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'ttr_srt_tegoran';
+
     /**
      * The primary key for the model.
      *

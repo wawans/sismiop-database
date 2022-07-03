@@ -8,6 +8,8 @@ use Wawans\SismiopDatabase\Concerns\WithRefDati2;
 use Wawans\SismiopDatabase\Concerns\WithRefKecamatan;
 use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
+use Wawans\SismiopDatabase\Constants\Lookup;
+use Wawans\SismiopDatabase\Lookup\LookupItem;
 use Wawans\SismiopDatabase\Model;
 
 class DatOpBumi extends Model
@@ -31,6 +33,7 @@ class DatOpBumi extends Model
         'kd_blok',
         'no_urut',
         'kd_jns_op',
+        'no_bumi',
     ];
 
     /**
@@ -80,4 +83,23 @@ class DatOpBumi extends Model
         'kd_blok' => StrPad::class . ':3',
         'no_urut' => StrPad::class . ':4',
     ];
+
+    /**
+     * The relations to eager load on every query.
+     *
+     * @var array
+     */
+    protected $with = ['refJnsBumi'];
+
+    public function datPetaZnt()
+    {
+        return $this->belongsTo(DatPetaZnt::class,
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok','kd_znt'],
+            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok','kd_znt']);
+    }
+
+    public function refJnsBumi()
+    {
+        return $this->belongsTo(LookupItem::class, 'jns_bumi', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_BUMI_OP);
+    }
 }

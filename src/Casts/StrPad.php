@@ -4,6 +4,11 @@ namespace Wawans\SismiopDatabase\Casts;
 
 use Illuminate\Contracts\Database\Eloquent\CastsInboundAttributes;
 
+/**
+ * Wawans\SismiopDatabase\Casts\StrPad
+ *
+ * @method static StrPad __toString()
+ */
 class StrPad implements CastsInboundAttributes
 {
     /**

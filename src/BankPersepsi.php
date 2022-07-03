@@ -4,6 +4,22 @@ namespace Wawans\SismiopDatabase;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\BankPersepsi
+ *
+ * @property string $KD_KANWIL
+ * @property string $KD_KPPBB
+ * @property string $KD_BANK_TUNGGAL
+ * @property string $KD_BANK_PERSEPSI
+ * @property string|null $NM_BANK_PERSEPSI
+ * @property string|null $AL_BANK_PERSEPSI
+ * @property string|null $NO_REK_BANK_PERSEPSI
+ * @property-read \Wawans\SismiopDatabase\BankTunggal $bankTunggal
+ * @method static \Illuminate\Database\Eloquent\Builder|BankPersepsi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BankPersepsi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BankPersepsi query()
+ * @mixin \Eloquent
+ */
 class BankPersepsi extends Model
 {
     /**

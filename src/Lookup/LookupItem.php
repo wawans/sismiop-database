@@ -2,8 +2,27 @@
 
 namespace Wawans\SismiopDatabase\Lookup;
 
+use Wawans\SismiopDatabase\Casts\StrFn;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Lookup\LookupItem
+ *
+ * @property string $KD_LOOKUP_GROUP
+ * @property string $KD_LOOKUP_ITEM
+ * @property string|null $NM_LOOKUP_ITEM
+ * @property StrFn $nm_lookup_item
+ * @property-read mixed $nama
+ * @property-read \Wawans\SismiopDatabase\Lookup\LookupGroup|null $group
+ * @property-read \Wawans\SismiopDatabase\Lookup\LookupGroup|null $lookupGroup
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupItem newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupItem newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupItem query()
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupItem whereGroup($group)
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupItem whereGroupItem($group, $item)
+ * @method static \Illuminate\Database\Eloquent\Builder|LookupItem whereItem($item)
+ * @mixin \Eloquent
+ */
 class LookupItem extends Model
 {
     /**
@@ -25,7 +44,11 @@ class LookupItem extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_lookup_group',
+        'kd_lookup_item',
+        'nm_lookup_item',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -39,9 +62,16 @@ class LookupItem extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = [
+        'nm_lookup_item' => StrFn::class . ':strtoupper',
+    ];
 
     public function lookupGroup()
+    {
+        return $this->belongsTo(LookupGroup::class, 'kd_lookup_group', 'kd_lookup_group');
+    }
+
+    public function group()
     {
         return $this->belongsTo(LookupGroup::class, 'kd_lookup_group', 'kd_lookup_group');
     }
@@ -78,5 +108,10 @@ class LookupItem extends Model
     public function scopeWhereGroupItem($query, $group, $item)
     {
         return $query->whereGroup($group)->whereItem($item);
+    }
+
+    public function getNamaAttribute()
+    {
+        return $this->nm_lookup_item;
     }
 }

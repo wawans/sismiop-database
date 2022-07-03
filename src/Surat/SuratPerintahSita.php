@@ -1,11 +1,18 @@
 <?php
 
-namespace Wawans\SismiopDatabase\Srt;
+namespace Wawans\SismiopDatabase\Surat;
 
 use Wawans\SismiopDatabase\Model;
 
-class SrtBatalLelang extends Model
+class SuratPerintahSita extends Model
 {
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'srt_perintah_sita';
+
     /**
      * The primary key for the model.
      *

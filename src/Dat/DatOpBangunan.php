@@ -8,7 +8,10 @@ use Wawans\SismiopDatabase\Concerns\WithRefDati2;
 use Wawans\SismiopDatabase\Concerns\WithRefKecamatan;
 use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
+use Wawans\SismiopDatabase\Constants\Lookup;
+use Wawans\SismiopDatabase\Lookup\LookupItem;
 use Wawans\SismiopDatabase\Model;
+use Wawans\SismiopDatabase\Pegawai;
 use Wawans\SismiopDatabase\Ref\RefJpb;
 
 class DatOpBangunan extends Model
@@ -103,6 +106,25 @@ class DatOpBangunan extends Model
         'tgl_perekaman_bng' => 'datetime',
     ];
 
+    /**
+     * The relations to eager load on every query.
+     *
+     * @var array
+     */
+    protected $with = [
+        'refJpb',
+        'refKondisi',
+        'refJnsKonstruksi',
+        'refJnsAtap',
+        'refKdDinding',
+        'refKdLantai',
+        'refKdLangitLangit',
+        'datFasilitasBangunan',
+        'pegawaiPendata',
+        'pegawaiPemeriksa',
+        'pegawaiPerekam',
+    ];
+
     public function datFasilitasBangunan()
     {
         return $this->hasMany(DatFasilitasBangunan::class, $this->primaryKey, $this->primaryKey);
@@ -111,5 +133,50 @@ class DatOpBangunan extends Model
     public function refJpb()
     {
         return $this->belongsTo(RefJpb::class, 'kd_jpb', 'kd_jpb');
+    }
+
+    public function refKondisi()
+    {
+        return $this->belongsTo(LookupItem::class, 'kondisi_bng', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_KONDISI_BNG);
+    }
+
+    public function refJnsKonstruksi()
+    {
+        return $this->belongsTo(LookupItem::class, 'jns_konstruksi_bng', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_KONSTRUKSI_BNG);
+    }
+
+    public function refJnsAtap()
+    {
+        return $this->belongsTo(LookupItem::class, 'jns_atap_bng', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_ATAP_BNG);
+    }
+
+    public function refKdDinding()
+    {
+        return $this->belongsTo(LookupItem::class, 'kd_dinding', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_DINDING_BNG);
+    }
+
+    public function refKdLantai()
+    {
+        return $this->belongsTo(LookupItem::class, 'kd_lantai', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_LANTAI_BNG);
+    }
+
+    public function refKdLangitLangit()
+    {
+        return $this->belongsTo(LookupItem::class, 'kd_langit_langit', 'kd_lookup_item')->whereGroup(Lookup::GROUP_JNS_LANGIT2_BNG);
+    }
+
+    public function pegawaiPendata()
+    {
+        return $this->belongsTo(Pegawai::class, 'nip_pendata_bng', 'nip');
+    }
+
+    public function pegawaiPemeriksa()
+    {
+        return $this->belongsTo(Pegawai::class, 'nip_pemeriksa_bng', 'nip');
+    }
+
+    public function pegawaiPerekam()
+    {
+        return $this->belongsTo(Pegawai::class, 'nip_perekam_bng', 'nip');
     }
 }
