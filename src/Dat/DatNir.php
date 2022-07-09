@@ -10,6 +10,35 @@ use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Dokumen;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatNir
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_ZNT
+ * @property string $THN_NIR_ZNT
+ * @property string|null $KD_KANWIL
+ * @property string|null $KD_KPPBB
+ * @property string|null $JNS_DOKUMEN
+ * @property string|null $NO_DOKUMEN
+ * @property string|null $NIR
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property-read \Wawans\SismiopDatabase\Dat\DatZnt $datZnt
+ * @property-read Dokumen $dokumen
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @method static \Illuminate\Database\Eloquent\Builder|DatNir newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatNir newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatNir query()
+ * @mixin \Eloquent
+ */
 class DatNir extends Model
 {
     use WithRefPropinsi;

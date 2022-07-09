@@ -11,6 +11,40 @@ use Wawans\SismiopDatabase\Constants\FasilitasBangunan;
 use Wawans\SismiopDatabase\Fasilitas;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatFasilitasBangunan
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_BLOK
+ * @property string $NO_URUT
+ * @property string $KD_JNS_OP
+ * @property int $NO_BNG
+ * @property string $KD_FASILITAS
+ * @property int|null $JML_SATUAN
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property StrPad $kd_blok
+ * @property StrPad $no_urut
+ * @property-read \Wawans\SismiopDatabase\Dat\DatOpBangunan $datOpBangunan
+ * @property-read Fasilitas $fasilitas
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan acSplit()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan acWindows()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan listrik()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan query()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan whereFasilitas($value)
+ * @mixin \Eloquent
+ */
 class DatFasilitasBangunan extends Model
 {
     use WithRefPropinsi;

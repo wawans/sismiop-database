@@ -6,6 +6,19 @@ use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 use Wawans\SismiopDatabase\Pegawai;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatLogin
+ *
+ * @property string $NM_LOGIN
+ * @property string $NIP
+ * @property string $PASSWORD
+ * @property StrPad $nip
+ * @property-read Pegawai $pegawai
+ * @method static \Illuminate\Database\Eloquent\Builder|DatLogin newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatLogin newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatLogin query()
+ * @mixin \Eloquent
+ */
 class DatLogin extends Model
 {
     /**

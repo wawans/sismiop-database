@@ -12,6 +12,39 @@ use Wawans\SismiopDatabase\Constants\Lookup;
 use Wawans\SismiopDatabase\Lookup\LookupItem;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatOpBumi
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_BLOK
+ * @property string $NO_URUT
+ * @property string $KD_JNS_OP
+ * @property int $NO_BUMI
+ * @property string|null $KD_ZNT
+ * @property int|null $LUAS_BUMI
+ * @property string|null $JNS_BUMI
+ * @property int|null $NILAI_SISTEM_BUMI
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property StrPad $kd_blok
+ * @property StrPad $no_urut
+ * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
+ * @property-read \Wawans\SismiopDatabase\Dat\DatPetaZnt $datPetaZnt
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read LookupItem $refJnsBumi
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @method static \Illuminate\Database\Eloquent\Builder|DatOpBumi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatOpBumi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatOpBumi query()
+ * @mixin \Eloquent
+ */
 class DatOpBumi extends Model
 {
     use WithDatObjekPajak;

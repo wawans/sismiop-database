@@ -7,6 +7,31 @@ use Wawans\SismiopDatabase\Constants\Lookup;
 use Wawans\SismiopDatabase\Lookup\LookupItem;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatSubjekPajak
+ *
+ * @property string $SUBJEK_PAJAK_ID
+ * @property string|null $NM_WP
+ * @property string|null $JALAN_WP
+ * @property string|null $BLOK_KAV_NO_WP
+ * @property string|null $RW_WP
+ * @property string|null $RT_WP
+ * @property string|null $KELURAHAN_WP
+ * @property string|null $KOTA_WP
+ * @property string|null $KD_POS_WP
+ * @property string|null $TELP_WP
+ * @property string|null $NPWP
+ * @property string|null $STATUS_PEKERJAAN_WP
+ * @property StrPad $rw_wp
+ * @property StrPad $rt_wp
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Dat\DatObjekPajak[] $datObjekPajak
+ * @property-read \Wawans\SismiopDatabase\Dat\DatSubjekPajakNjoptkp $datSubjekPajakNjoptkp
+ * @property-read LookupItem $refStatusPekerjaan
+ * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajak newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajak newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajak query()
+ * @mixin \Eloquent
+ */
 class DatSubjekPajak extends Model
 {
     /**

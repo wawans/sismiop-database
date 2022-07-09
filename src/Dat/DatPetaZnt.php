@@ -9,6 +9,31 @@ use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatPetaZnt
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_BLOK
+ * @property string $KD_ZNT
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property StrPad $kd_blok
+ * @property-read \Wawans\SismiopDatabase\Dat\DatPetaBlok $datPetaBlok
+ * @property-read \Wawans\SismiopDatabase\Dat\DatZnt $datZnt
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @method static \Illuminate\Database\Eloquent\Builder|DatPetaZnt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatPetaZnt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatPetaZnt query()
+ * @mixin \Eloquent
+ */
 class DatPetaZnt extends Model
 {
     use WithRefPropinsi;

@@ -11,6 +11,38 @@ use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatJpb13
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_BLOK
+ * @property string $NO_URUT
+ * @property string $KD_JNS_OP
+ * @property int $NO_BNG
+ * @property string|null $KLS_JPB13
+ * @property int|null $JML_JPB13
+ * @property int|null $LUAS_JPB13_DGN_AC_SENT
+ * @property int|null $LUAS_JPB13_LAIN_DGN_AC_SENT
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property StrPad $kd_blok
+ * @property StrPad $no_urut
+ * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
+ * @property-read \Wawans\SismiopDatabase\Dat\DatOpBangunan $datOpBangunan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @method static \Illuminate\Database\Eloquent\Builder|DatJpb13 newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatJpb13 newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatJpb13 query()
+ * @mixin \Eloquent
+ */
 class DatJpb13 extends Model
 {
     use WithDatObjekPajak;
