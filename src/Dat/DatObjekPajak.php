@@ -13,6 +13,67 @@ use Wawans\SismiopDatabase\Model;
 use Wawans\SismiopDatabase\Pegawai;
 use Wawans\SismiopDatabase\Sppt\Sppt;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatObjekPajak
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_BLOK
+ * @property string $NO_URUT
+ * @property string $KD_JNS_OP
+ * @property string|null $SUBJEK_PAJAK_ID
+ * @property string|null $NO_FORMULIR_SPOP
+ * @property string|null $NO_PERSIL
+ * @property string|null $JALAN_OP
+ * @property string|null $BLOK_KAV_NO_OP
+ * @property string|null $RW_OP
+ * @property string|null $RT_OP
+ * @property bool|null $KD_STATUS_CABANG
+ * @property string|null $KD_STATUS_WP
+ * @property int|null $TOTAL_LUAS_BUMI
+ * @property int|null $TOTAL_LUAS_BNG
+ * @property int|null $NJOP_BUMI
+ * @property int|null $NJOP_BNG
+ * @property bool|null $STATUS_PETA_OP
+ * @property string|null $JNS_TRANSAKSI_OP
+ * @property string|null $TGL_PENDATAAN_OP
+ * @property string|null $NIP_PENDATA
+ * @property string|null $TGL_PEMERIKSAAN_OP
+ * @property string|null $NIP_PEMERIKSA_OP
+ * @property string|null $TGL_PEREKAMAN_OP
+ * @property string|null $NIP_PEREKAM_OP
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property StrPad $kd_blok
+ * @property StrPad $no_urut
+ * @property StrPad $rw_op
+ * @property StrPad $rt_op
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Dat\DatOpBangunan[] $datOpBangunan
+ * @property-read \Wawans\SismiopDatabase\Dat\DatOpBumi|null $datOpBumi
+ * @property-read \Wawans\SismiopDatabase\Dat\DatPetaBlok $datPetaBlok
+ * @property-read \Wawans\SismiopDatabase\Dat\DatSubjekPajak $datSubjekPajak
+ * @property-read mixed $jalan_blok_kav_no_op
+ * @property-read Pegawai $pegawaiPemeriksa
+ * @property-read Pegawai $pegawaiPendata
+ * @property-read Pegawai $pegawaiPerekam
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read LookupItem $refJnsTransaksi
+ * @property-read LookupItem $refKdStatusCabang
+ * @property-read LookupItem $refKdStatusWp
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @property-read LookupItem $refStatusPeta
+ * @property-read \Illuminate\Database\Eloquent\Collection|Sppt[] $sppt
+ * @method static \Illuminate\Database\Eloquent\Builder|DatObjekPajak newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatObjekPajak newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatObjekPajak query()
+ * @mixin \Eloquent
+ */
 class DatObjekPajak extends Model
 {
     use WithRefPropinsi;

@@ -9,6 +9,27 @@ use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatZnt
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_ZNT
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @method static \Illuminate\Database\Eloquent\Builder|DatZnt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatZnt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatZnt query()
+ * @mixin \Eloquent
+ */
 class DatZnt extends Model
 {
     use WithRefPropinsi;

@@ -6,11 +6,13 @@ use Awobaz\Compoships\Compoships;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Str;
+use Wawans\SismiopDatabase\Concerns\HasRouteBinding;
 
 class Model extends EloquentModel
 {
     use Compoships;
     use HasFactory;
+    use HasRouteBinding;
 
     /**
      * Indicates if the IDs are auto-incrementing.

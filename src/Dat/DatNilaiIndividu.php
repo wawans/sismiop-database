@@ -12,6 +12,45 @@ use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Model;
 use Wawans\SismiopDatabase\Pegawai;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatNilaiIndividu
+ *
+ * @property string $KD_PROPINSI
+ * @property string $KD_DATI2
+ * @property string $KD_KECAMATAN
+ * @property string $KD_KELURAHAN
+ * @property string $KD_BLOK
+ * @property string $NO_URUT
+ * @property string $KD_JNS_OP
+ * @property int $NO_BNG
+ * @property string|null $NO_FORMULIR_INDIVIDU
+ * @property int|null $NILAI_INDIVIDU
+ * @property string|null $TGL_PENILAIAN_INDIVIDU
+ * @property string|null $NIP_PENILAI_INDIVIDU
+ * @property string|null $TGL_PEMERIKSAAN_INDIVIDU
+ * @property string|null $NIP_PEMERIKSA_INDIVIDU
+ * @property string|null $TGL_REKAM_NILAI_INDIVIDU
+ * @property string|null $NIP_PEREKAM_INDIVIDU
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property StrPad $kd_blok
+ * @property StrPad $no_urut
+ * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
+ * @property-read \Wawans\SismiopDatabase\Dat\DatOpBangunan $datOpBangunan
+ * @property-read Pegawai $pegawaiPemeriksa
+ * @property-read Pegawai $pegawaiPenilai
+ * @property-read Pegawai $pegawaiPerekam
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ * @method static \Illuminate\Database\Eloquent\Builder|DatNilaiIndividu newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatNilaiIndividu newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatNilaiIndividu query()
+ * @mixin \Eloquent
+ */
 class DatNilaiIndividu extends Model
 {
     use WithDatObjekPajak;

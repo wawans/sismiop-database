@@ -5,6 +5,30 @@ namespace Wawans\SismiopDatabase\Dat;
 use Wawans\SismiopDatabase\Casts\StrPad;
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * Wawans\SismiopDatabase\Dat\DatSubjekPajakNjoptkp
+ *
+ * @property string $SUBJEK_PAJAK_ID
+ * @property string|null $KD_PROPINSI
+ * @property string|null $KD_DATI2
+ * @property string|null $KD_KECAMATAN
+ * @property string|null $KD_KELURAHAN
+ * @property string|null $KD_BLOK
+ * @property string|null $NO_URUT
+ * @property string|null $KD_JNS_OP
+ * @property string|null $THN_NJOPTKP
+ * @property StrPad $kd_propinsi
+ * @property StrPad $kd_dati2
+ * @property StrPad $kd_kecamatan
+ * @property StrPad $kd_kelurahan
+ * @property StrPad $kd_blok
+ * @property StrPad $no_urut
+ * @property-read \Wawans\SismiopDatabase\Dat\DatSubjekPajak $datSubjekPajak
+ * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajakNjoptkp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajakNjoptkp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajakNjoptkp query()
+ * @mixin \Eloquent
+ */
 class DatSubjekPajakNjoptkp extends Model
 {
     /**
