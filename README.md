@@ -6,6 +6,16 @@
 
 Model dari database SISMIOP PBB (Sistem Manajemen Informasi Objek Pajak - Pajak Bumi dan Bangunan) yang siap digunakan pada Laravel. 
 
+## Laravel Version Compatibility
+
+ Laravel  | Package
+:---------|:----------
+ 7.x.x    | 1.x.x
+ 8.x.x    | 1.x.x
+ 9.x.x    | 2.x.x
+ 10.x.x   | 2.x.x
+
+
 ## Installation
 
 You can install the package via composer:
