@@ -11,7 +11,14 @@ class Komdir extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'mfnpwp_comp',
+        'mfkpp_comp',
+        'mfcab_comp',
+        'mfnpwp_komdir',
+        'mfkpp_komdir',
+        'mfcab_kokmdir',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +32,17 @@ class Komdir extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'mfnpwp_comp',
+        'mfkpp_comp',
+        'mfcab_comp',
+        'mfnpwp_komdir',
+        'mfkpp_komdir',
+        'mfcab_kokmdir',
+        'kd_jabatan_komdir',
+        'nama_komdir',
+        'alamat_komdir',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

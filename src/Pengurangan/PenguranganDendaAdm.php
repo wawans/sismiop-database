@@ -11,7 +11,20 @@ class PenguranganDendaAdm extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'thn_pelayanan',
+        'bundel_pelayanan',
+        'no_urut_pelayanan',
+        'kd_propinsi_pemohon',
+        'kd_dati2_pemohon',
+        'kd_kecamatan_pemohon',
+        'kd_kelurahan_pemohon',
+        'kd_blok_pemohon',
+        'no_urut_pemohon',
+        'kd_jns_op_pemohon',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +38,25 @@ class PenguranganDendaAdm extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'thn_pelayanan',
+        'bundel_pelayanan',
+        'no_urut_pelayanan',
+        'kd_propinsi_pemohon',
+        'kd_dati2_pemohon',
+        'kd_kecamatan_pemohon',
+        'kd_kelurahan_pemohon',
+        'kd_blok_pemohon',
+        'no_urut_pemohon',
+        'kd_jns_op_pemohon',
+        'thn_pengurangan_denda_adm',
+        'jns_sk',
+        'no_sk',
+        'status_peng_adm',
+        'pct_peng_denda_adm',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

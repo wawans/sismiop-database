@@ -11,7 +11,12 @@ class LogZnt extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,15 @@ class LogZnt extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'status_log_znt',
+        'tgl_rekam_log_znt',
+        'nip_perekam_log_znt',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

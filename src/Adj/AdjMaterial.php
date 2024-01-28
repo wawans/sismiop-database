@@ -11,7 +11,10 @@ class AdjMaterial extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_pekerjaan',
+        'kd_kegiatan',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +28,13 @@ class AdjMaterial extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_pekerjaan',
+        'kd_kegiatan',
+        'pct_adj_mtrl_1',
+        'pct_adj_mtrl_2',
+        'deskripsi_adj',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

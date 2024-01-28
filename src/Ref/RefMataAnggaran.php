@@ -11,7 +11,12 @@ class RefMataAnggaran extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'jns_mata_anggaran',
+        'kd_mata_anggaran',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,14 @@ class RefMataAnggaran extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'jns_mata_anggaran',
+        'kd_mata_anggaran',
+        'nm_mata_anggaran',
+        'rekening_kas_negara',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

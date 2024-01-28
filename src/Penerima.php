@@ -11,7 +11,7 @@ class Penerima extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_penerima';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class Penerima extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_penerima',
+        'nm_penerima',
+        'pct_pembagian',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

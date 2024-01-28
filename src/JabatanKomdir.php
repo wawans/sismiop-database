@@ -11,7 +11,7 @@ class JabatanKomdir extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_jabatan_komdir';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class JabatanKomdir extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jabatan_komdir',
+        'ket_jabatan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

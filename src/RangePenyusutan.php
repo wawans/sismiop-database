@@ -11,7 +11,7 @@ class RangePenyusutan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_range_penyusutan';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class RangePenyusutan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_range_penyusutan',
+        'nilai_min_penyusutan',
+        'nilai_max_penyusutan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

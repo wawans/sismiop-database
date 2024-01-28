@@ -11,7 +11,11 @@ class PermintaanJadualLelang extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'no_pmt_jdl_lelang',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,20 @@ class PermintaanJadualLelang extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'no_pmt_jdl_lelang',
+        'no_spmp',
+        'kd_kantor_lelang',
+        'tgl_srt_pmt_jdl_lelang',
+        'tgl_pmt_pelelangan',
+        'status_lelang',
+        'tgl_pelelangan',
+        'tempat_pelelangan',
+        'tgl_cetak_srt_pmt_jdl_lelang',
+        'nip_pencetak_srt_pmt_jdl_llg',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

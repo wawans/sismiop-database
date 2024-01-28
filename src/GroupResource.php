@@ -11,7 +11,7 @@ class GroupResource extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_group_resource';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class GroupResource extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_group_resource',
+        'nm_group_resource',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

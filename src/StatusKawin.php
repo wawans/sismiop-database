@@ -11,7 +11,7 @@ class StatusKawin extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_stat_kawin';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class StatusKawin extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_stat_kawin',
+        'ket_stat_kawin',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

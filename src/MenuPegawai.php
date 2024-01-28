@@ -11,7 +11,7 @@ class MenuPegawai extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'nip';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class MenuPegawai extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'nip',
+        'menu',
+        'tgl_update',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

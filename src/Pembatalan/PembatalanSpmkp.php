@@ -11,7 +11,11 @@ class PembatalanSpmkp extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'no_sk_pembatalan_spmkp',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,16 @@ class PembatalanSpmkp extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'no_sk_pembatalan_spmkp',
+        'no_spmkp',
+        'tgl_pembatalan_spmkp',
+        'tgl_cetak_pembatalan_spmkp',
+        'nip_pencetak_pembatalan_spmkp',
+        'alasan_pembatalan_spmkp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

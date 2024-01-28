@@ -11,7 +11,7 @@ class JnsUsaha extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_jns_usaha';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class JnsUsaha extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jns_usaha',
+        'ket_jns_usaha',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

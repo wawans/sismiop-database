@@ -11,7 +11,16 @@ class DendaAdministrasi extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_denda',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +34,22 @@ class DendaAdministrasi extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_denda',
+        'pokok_denda_adm',
+        'pengurangan_denda',
+        'denda_adm_stlh_pengurangan',
+        'status_tagihan_denda',
+        'tgl_rekam_denda',
+        'nip_perekam_denda',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

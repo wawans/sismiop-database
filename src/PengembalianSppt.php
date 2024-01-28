@@ -11,7 +11,16 @@ class PengembalianSppt extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_sppt',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +34,20 @@ class PengembalianSppt extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_sppt',
+        'alasan_sppt_kembali',
+        'tgl_kembali_sppt',
+        'tgl_rekam_kembali_sppt',
+        'nip_perekam_kembali_sppt',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

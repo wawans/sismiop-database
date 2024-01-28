@@ -11,7 +11,10 @@ class Telepon extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_area',
+        'no_telepon',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +28,18 @@ class Telepon extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_area',
+        'no_telepon',
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'no_bng',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

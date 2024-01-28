@@ -11,7 +11,10 @@ class RefThnNjkpNjoptkpTarif extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'indeks_range',
+        'kd_jns_range',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +28,13 @@ class RefThnNjkpNjoptkpTarif extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'indeks_range',
+        'kd_jns_range',
+        'kd_sk_njop_njkp',
+        'range_thn_awal',
+        'range_thn_akhir',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

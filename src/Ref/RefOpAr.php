@@ -11,7 +11,15 @@ class RefOpAr extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +33,18 @@ class RefOpAr extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'nip_ar',
+        'tgl_awal',
+        'tgl_akhir',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

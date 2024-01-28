@@ -11,7 +11,13 @@ class TempatPembayaranSpptMasal extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'thn_tp_sppt_masal',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +31,18 @@ class TempatPembayaranSpptMasal extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'thn_tp_sppt_masal',
+        'kd_kanwil',
+        'kd_kppbb',
+        'kd_bank_tunggal',
+        'kd_bank_persepsi',
+        'kd_tp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

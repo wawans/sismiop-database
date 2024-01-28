@@ -64,4 +64,9 @@ class RefDati2 extends Model
         'kd_propinsi' => StrPad::class . ':2',
         'kd_dati2' => StrPad::class . ':2',
     ];
+
+    public function getNamaAttribute()
+    {
+        return $this->nm_dati2;
+    }
 }

@@ -11,7 +11,7 @@ class Pekerjaan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_pekerjaan';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class Pekerjaan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_pekerjaan',
+        'nm_pekerjaan',
+        'status_pekerjaan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

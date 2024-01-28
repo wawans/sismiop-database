@@ -11,7 +11,7 @@ class AktaLahir extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_akta_lahir';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class AktaLahir extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_akta_lahir',
+        'no_penduduk',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

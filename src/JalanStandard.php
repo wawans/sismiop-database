@@ -11,7 +11,13 @@ class JalanStandard extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'nm_jln_sementara',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +31,14 @@ class JalanStandard extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'nm_jln_sementara',
+        'nm_jln_standard',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

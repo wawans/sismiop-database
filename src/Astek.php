@@ -11,7 +11,7 @@ class Astek extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_astek';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class Astek extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_astek',
+        'no_penduduk',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

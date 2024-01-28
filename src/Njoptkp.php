@@ -11,7 +11,11 @@ class Njoptkp extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_awal',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,13 @@ class Njoptkp extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_awal',
+        'thn_akhir',
+        'nilai_njoptkp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -11,7 +11,17 @@ class HisSkpSpopOpBersama extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_skp_spop',
+        'his_indeks_perubahan_skp_spop',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +35,21 @@ class HisSkpSpopOpBersama extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_skp_spop',
+        'his_indeks_perubahan_skp_spop',
+        'his_luas_bumi_beban_skp_spop',
+        'his_luas_bng_beban_skp_spop',
+        'his_njop_bumi_beban_skp_spop',
+        'his_njop_bng_beban_skp_spop',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

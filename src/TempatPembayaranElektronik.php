@@ -11,7 +11,14 @@ class TempatPembayaranElektronik extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'kd_bank_tunggal',
+        'kd_bank_persepsi',
+        'kd_tp',
+        'kd_tampil',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +32,20 @@ class TempatPembayaranElektronik extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'kd_bank_tunggal',
+        'kd_bank_persepsi',
+        'kd_tp',
+        'kd_tampil',
+        'kd_urut_tampil',
+        'atm',
+        'teller',
+        'internet',
+        'phone',
+        'sms',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

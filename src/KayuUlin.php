@@ -11,7 +11,11 @@ class KayuUlin extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_status_kayu_ulin',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,12 @@ class KayuUlin extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_status_kayu_ulin',
+        'status_kayu_ulin',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

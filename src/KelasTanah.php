@@ -11,7 +11,10 @@ class KelasTanah extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kls_tanah',
+        'thn_awal_kls_tanah',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +28,14 @@ class KelasTanah extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kls_tanah',
+        'thn_awal_kls_tanah',
+        'thn_akhir_kls_tanah',
+        'nilai_min_tanah',
+        'nilai_max_tanah',
+        'nilai_per_m2_tanah',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

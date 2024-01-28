@@ -11,7 +11,7 @@ class Asuransi extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_polis';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class Asuransi extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_polis',
+        'no_penduduk',
+        'ket_asuransi',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

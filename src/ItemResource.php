@@ -11,7 +11,10 @@ class ItemResource extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_group_resource',
+        'kd_resource',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +28,12 @@ class ItemResource extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_group_resource',
+        'kd_resource',
+        'nm_resource',
+        'satuan_resource',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

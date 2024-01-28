@@ -11,7 +11,7 @@ class Imb extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_imb';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,20 @@ class Imb extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_imb',
+        'kd_jns_imb',
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'no_bng',
+        'tgl_imb',
+        'nama_imb',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

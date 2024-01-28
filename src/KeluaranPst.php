@@ -11,7 +11,7 @@ class KeluaranPst extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_jns_pelayanan';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,13 @@ class KeluaranPst extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jns_pelayanan',
+        'sppt_pelayanan',
+        'stts_pelayanan',
+        'dhkp_pelayanan',
+        'sk_pelayanan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

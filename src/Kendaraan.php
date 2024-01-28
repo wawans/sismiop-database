@@ -11,7 +11,7 @@ class Kendaraan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_polisi';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,22 @@ class Kendaraan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_polisi',
+        'kd_kendaraan',
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'no_bng',
+        'merk',
+        'tahun',
+        'nama_pemilik',
+        'status_kendaraan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

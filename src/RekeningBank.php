@@ -11,7 +11,7 @@ class RekeningBank extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_rekening';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class RekeningBank extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_rekening',
+        'no_penduduk',
+        'ket_bank',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

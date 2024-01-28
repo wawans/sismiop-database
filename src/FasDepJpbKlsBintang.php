@@ -11,7 +11,14 @@ class FasDepJpbKlsBintang extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dep_jpb_kls_bintang',
+        'kd_fasilitas',
+        'kd_jpb',
+        'kls_bintang',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +32,15 @@ class FasDepJpbKlsBintang extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dep_jpb_kls_bintang',
+        'kd_fasilitas',
+        'kd_jpb',
+        'kls_bintang',
+        'nilai_fasilitas_kls_bintang',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

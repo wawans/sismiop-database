@@ -11,7 +11,7 @@ class KonversiDesimal extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'bilangan_10';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class KonversiDesimal extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'bilangan_10',
+        'bilangan_62',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

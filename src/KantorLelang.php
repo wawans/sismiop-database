@@ -11,7 +11,7 @@ class KantorLelang extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_kantor_lelang';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class KantorLelang extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kantor_lelang',
+        'nm_kantor_lelang',
+        'al_kantor_lelang',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

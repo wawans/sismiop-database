@@ -11,7 +11,11 @@ class Npwp extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'mfnpwp',
+        'mfkpp',
+        'mfcab',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,13 @@ class Npwp extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'mfnpwp',
+        'mfkpp',
+        'mfcab',
+        'kd_klu',
+        'no_penduduk',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

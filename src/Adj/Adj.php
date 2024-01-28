@@ -11,7 +11,7 @@ class Adj extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_adj';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class Adj extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_adj',
+        'nm_adj',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

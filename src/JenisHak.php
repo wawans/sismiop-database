@@ -11,7 +11,7 @@ class JenisHak extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_jns_hak';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class JenisHak extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jns_hak',
+        'ket_hak',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

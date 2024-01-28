@@ -11,7 +11,7 @@ class JnsStatusKantor extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_stat_kantor';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class JnsStatusKantor extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_stat_kantor',
+        'ket_stat_kantor',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
