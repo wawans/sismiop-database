@@ -11,7 +11,12 @@ class Dokumen extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'jns_dokumen',
+        'no_dokumen',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,18 @@ class Dokumen extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'jns_dokumen',
+        'no_dokumen',
+        'tgl_pendataan_dok',
+        'nip_pendata_dok',
+        'tgl_pemeriksaan_dok',
+        'nip_pemeriksa_dok',
+        'tgl_perekaman_dok',
+        'nip_perekam_dok',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -11,7 +11,17 @@ class SspPbbSppt extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_sppt',
+        'pembayaran_sppt_ke',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +35,23 @@ class SspPbbSppt extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_sppt',
+        'pembayaran_sppt_ke',
+        'jns_pembayaran',
+        'no_srt_ketetapan',
+        'tgl_srt_ketetapan',
+        'ntpn',
+        'uraian_bayar_sppt',
+        'nm_penyetor',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -11,7 +11,12 @@ class LaporanPembagian extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_lap_pembagian',
+        'bln_lap_pembagian',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,26 @@ class LaporanPembagian extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_lap_pembagian',
+        'bln_lap_pembagian',
+        'kd_mata_anggaran',
+        'jns_mata_anggaran',
+        'no_sk_pembagian',
+        'tgl_sk_pembagian',
+        'no_spmphp',
+        'tgl_spmphp',
+        'kd_program',
+        'kd_unit',
+        'kd_lokasi',
+        'potongan',
+        'lokasi_kpkn',
+        'tgl_rekam_lap_pembagian',
+        'nip_rekam_lap_pembagian',
+        'kd_proyek',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -11,7 +11,7 @@ class Kepegawaian extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_pegawai';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class Kepegawaian extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_pegawai',
+        'no_penduduk',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

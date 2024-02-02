@@ -11,7 +11,7 @@ class JenisImb extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_jns_imb';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class JenisImb extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jns_imb',
+        'ket_imb',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

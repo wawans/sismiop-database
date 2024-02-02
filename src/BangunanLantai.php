@@ -11,7 +11,11 @@ class BangunanLantai extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_jpb',
+        'tipe_bng',
+        'kd_bng_lantai',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,13 @@ class BangunanLantai extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jpb',
+        'tipe_bng',
+        'kd_bng_lantai',
+        'lantai_min_bng_lantai',
+        'lantai_max_bng_lantai',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

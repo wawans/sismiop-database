@@ -11,7 +11,10 @@ class HisPemakai extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'username',
+        'tgl_ubah',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +28,12 @@ class HisPemakai extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'username',
+        'tgl_ubah',
+        'user_pengubah',
+        'ket',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

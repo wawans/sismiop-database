@@ -11,7 +11,11 @@ class Penyusutan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'umur_efektif',
+        'kd_range_penyusutan',
+        'kondisi_bng_susut',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,12 @@ class Penyusutan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'umur_efektif',
+        'kd_range_penyusutan',
+        'kondisi_bng_susut',
+        'nilai_penyusutan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

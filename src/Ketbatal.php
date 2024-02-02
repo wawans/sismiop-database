@@ -11,7 +11,7 @@ class Ketbatal extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_batal';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class Ketbatal extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_batal',
+        'ket_batal',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

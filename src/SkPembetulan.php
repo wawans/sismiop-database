@@ -25,7 +25,11 @@ class SkPembetulan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_sk',
+        'tgl_sk',
+        'no_uhp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

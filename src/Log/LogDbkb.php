@@ -11,7 +11,12 @@ class LogDbkb extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,15 @@ class LogDbkb extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'status_log_dbkb',
+        'tgl_rekam_log_dbkb',
+        'nip_perekam_log_dbkb',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

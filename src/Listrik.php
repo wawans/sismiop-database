@@ -11,7 +11,7 @@ class Listrik extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_pelanggan_pln';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,18 @@ class Listrik extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_pelanggan_pln',
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'no_bng',
+        'daya_pln',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

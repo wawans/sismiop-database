@@ -11,7 +11,13 @@ class HrgResource extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_hrg_resource',
+        'kd_group_resource',
+        'kd_resource',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +31,18 @@ class HrgResource extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_hrg_resource',
+        'kd_group_resource',
+        'kd_resource',
+        'kd_kanwil',
+        'kd_kppbb',
+        'jns_dokumen',
+        'no_dokumen',
+        'hrg_resource',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

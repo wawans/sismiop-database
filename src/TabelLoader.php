@@ -11,7 +11,7 @@ class TabelLoader extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'nama_tabel';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,13 @@ class TabelLoader extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'nama_tabel',
+        'kode_tabel',
+        'jenis_tabel',
+        'no_urut',
+        'status_load',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

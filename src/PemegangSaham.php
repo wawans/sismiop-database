@@ -11,7 +11,14 @@ class PemegangSaham extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'mfnpwp_comp',
+        'mfkpp_comp',
+        'mfcab_comp',
+        'mfnpwp_pemegang',
+        'mfkpp_pemegang',
+        'mfcab_pemegang',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +32,17 @@ class PemegangSaham extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'mfnpwp_comp',
+        'mfkpp_comp',
+        'mfcab_comp',
+        'mfnpwp_pemegang',
+        'mfkpp_pemegang',
+        'mfcab_pemegang',
+        'nama_pemegang',
+        'alamat_pemegang',
+        'jumlah_saham',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

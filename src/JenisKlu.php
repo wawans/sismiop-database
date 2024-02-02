@@ -11,7 +11,7 @@ class JenisKlu extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_klu';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class JenisKlu extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_klu',
+        'ket_klu',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

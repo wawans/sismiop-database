@@ -11,7 +11,13 @@ class Tarif extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_awal',
+        'thn_akhir',
+        'njop_min',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +31,16 @@ class Tarif extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_awal',
+        'thn_akhir',
+        'njop_min',
+        'njop_max',
+        'nilai_tarif',
+        'nilai_tarif_khusus',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

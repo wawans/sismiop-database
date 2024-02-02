@@ -11,7 +11,11 @@ class PbbMinimal extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_pbb_minimal',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,16 @@ class PbbMinimal extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_pbb_minimal',
+        'no_sk_pbb_minimal',
+        'tgl_sk_pbb_minimal',
+        'nilai_pbb_minimal',
+        'tgl_rekam_pbb_minimal',
+        'nip_perekam_pbb_minimal',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

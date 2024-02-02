@@ -11,7 +11,7 @@ class Tandatangan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'nip';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class Tandatangan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'nip',
+        'tanda_tangan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

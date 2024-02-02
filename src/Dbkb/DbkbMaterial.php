@@ -11,7 +11,13 @@ class DbkbMaterial extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dbkb_material',
+        'kd_pekerjaan',
+        'kd_kegiatan',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +31,14 @@ class DbkbMaterial extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dbkb_material',
+        'kd_pekerjaan',
+        'kd_kegiatan',
+        'nilai_dbkb_material',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

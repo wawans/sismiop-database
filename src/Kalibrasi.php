@@ -11,7 +11,14 @@ class Kalibrasi extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'thn_kalibrasi',
+        'indeks_kalibrasi',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +32,16 @@ class Kalibrasi extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'thn_kalibrasi',
+        'indeks_kalibrasi',
+        'tgl_kalibrasi',
+        'nip_pengkalibrasi',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

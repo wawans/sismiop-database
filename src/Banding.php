@@ -11,7 +11,16 @@ class Banding extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_sppt',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +34,18 @@ class Banding extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_sppt',
+        'status_banding',
+        'tgl_banding',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

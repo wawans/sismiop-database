@@ -11,7 +11,7 @@ class Gas extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_pelanggan_gas';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,17 @@ class Gas extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_pelanggan_gas',
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'no_bng',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

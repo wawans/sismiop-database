@@ -11,7 +11,13 @@ class TabStts extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'kd_bank_tunggal',
+        'kd_bank_persepsi',
+        'kd_tp',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +31,17 @@ class TabStts extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'kd_bank_tunggal',
+        'kd_bank_persepsi',
+        'kd_tp',
+        'stts_byr',
+        'stts_btl',
+        'stts_salinan',
+        'tgl_lapor',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

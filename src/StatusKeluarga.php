@@ -11,7 +11,7 @@ class StatusKeluarga extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_status';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class StatusKeluarga extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_status',
+        'ket_status',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -11,7 +11,11 @@ class Spmkp extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'no_spmkp',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,26 @@ class Spmkp extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'no_spmkp',
+        'tgl_spmkp',
+        'thn_pelayanan',
+        'bundel_pelayanan',
+        'no_urut_pelayanan',
+        'kd_propinsi_pemohon',
+        'kd_dati2_pemohon',
+        'kd_kecamatan_pemohon',
+        'kd_kelurahan_pemohon',
+        'kd_blok_pemohon',
+        'no_urut_pemohon',
+        'kd_jns_op_pemohon',
+        'no_rek_wp',
+        'nm_bank_wp',
+        'tgl_rekam_spmkp',
+        'nip_rekam_spmkp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

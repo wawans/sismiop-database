@@ -25,7 +25,10 @@ class Statkp extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'nmkp',
+        'nmkp2',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

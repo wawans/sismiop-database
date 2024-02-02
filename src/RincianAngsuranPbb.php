@@ -11,7 +11,17 @@ class RincianAngsuranPbb extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_sppt',
+        'angsuran_ke',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +35,24 @@ class RincianAngsuranPbb extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'thn_pajak_sppt',
+        'angsuran_ke',
+        'jml_pokok_angsuran',
+        'tgl_jatuh_tempo',
+        'jml_denda_adm',
+        'status_pembayaran',
+        'status_tagihan',
+        'tgl_rekam_angsuran',
+        'nip_perekam_angsuran',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

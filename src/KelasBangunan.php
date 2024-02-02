@@ -11,7 +11,10 @@ class KelasBangunan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kls_bng',
+        'thn_awal_kls_bng',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +28,14 @@ class KelasBangunan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kls_bng',
+        'thn_awal_kls_bng',
+        'thn_akhir_kls_bng',
+        'nilai_min_bng',
+        'nilai_max_bng',
+        'nilai_per_m2_bng',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

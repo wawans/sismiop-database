@@ -11,7 +11,16 @@ class NopNpwp extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'npwp',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +34,17 @@ class NopNpwp extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'npwp',
+        'nama_wp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

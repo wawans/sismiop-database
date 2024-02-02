@@ -11,7 +11,11 @@ class AdjLuas extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_jpb',
+        'tipe_bng',
+        'kd_bng_lantai',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,12 @@ class AdjLuas extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jpb',
+        'tipe_bng',
+        'kd_bng_lantai',
+        'pct_adj_luas',
+];
 
     /**
      * The attributes that should be hidden for serialization.

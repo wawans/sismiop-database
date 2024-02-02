@@ -11,7 +11,7 @@ class JpbJpt extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_jpb_jpt';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class JpbJpt extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_jpb_jpt',
+        'nm_jpb_jpt',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

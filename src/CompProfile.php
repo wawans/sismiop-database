@@ -11,7 +11,11 @@ class CompProfile extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'mfnpwp_comp',
+        'mfkpp_comp',
+        'mfcab_comp',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +29,19 @@ class CompProfile extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'mfnpwp_comp',
+        'mfkpp_comp',
+        'mfcab_comp',
+        'kd_stat_kantor',
+        'kd_jns_usaha',
+        'nm_perusahaan',
+        'no_akta',
+        'no_situ',
+        'no_siup',
+        'no_ijin_usaha',
+        'franchise',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

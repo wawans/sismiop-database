@@ -11,7 +11,7 @@ class JnsKendaraan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_kendaraan';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class JnsKendaraan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kendaraan',
+        'ket_kendaraan',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

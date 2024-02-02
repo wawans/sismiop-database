@@ -11,7 +11,7 @@ class DayaDukung extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'type_konstruksi';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class DayaDukung extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'type_konstruksi',
+        'daya_dukung_lantai_min_dbkb',
+        'daya_dukung_lantai_max_dbkb',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

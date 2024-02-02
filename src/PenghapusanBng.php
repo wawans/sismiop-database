@@ -11,7 +11,17 @@ class PenghapusanBng extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok_penghapusan_bng',
+        'no_urut_penghapusan_bng',
+        'kd_jns_op_penghapusan_bng',
+        'no_bng_penghapusan',
+        'indeks_penghapusan_bng',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +35,23 @@ class PenghapusanBng extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok_penghapusan_bng',
+        'no_urut_penghapusan_bng',
+        'kd_jns_op_penghapusan_bng',
+        'no_bng_penghapusan',
+        'indeks_penghapusan_bng',
+        'thn_pajak_penghapusan_bng',
+        'no_formulir_penghapusan_bng',
+        'luas_bng_penghapusan',
+        'nilai_bng_penghapusan',
+        'tgl_penghapusan_bng',
+        'nip_perekam_penghapusan_bng',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

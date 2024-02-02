@@ -11,7 +11,15 @@ class DatOpSin extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +33,20 @@ class DatOpSin extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_kecamatan',
+        'kd_kelurahan',
+        'kd_blok',
+        'no_urut',
+        'kd_jns_op',
+        'kd_jns_sin',
+        'nip_pendata',
+        'nip_perekam',
+        'tgl_pendataan',
+        'tgl_perekaman',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

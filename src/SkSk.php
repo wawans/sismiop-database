@@ -11,7 +11,12 @@ class SkSk extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'jns_sk',
+        'no_sk',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,19 @@ class SkSk extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'jns_sk',
+        'no_sk',
+        'tgl_sk',
+        'no_ba_kantor',
+        'tgl_ba_kantor',
+        'no_ba_lapangan',
+        'tgl_ba_lapangan',
+        'tgl_cetak_sk',
+        'nip_pencetak_sk',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

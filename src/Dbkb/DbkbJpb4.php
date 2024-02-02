@@ -11,7 +11,14 @@ class DbkbJpb4 extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dbkb_jpb4',
+        'kls_dbkb_jpb4',
+        'lantai_min_jpb4',
+        'lantai_max_jpb4',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +32,15 @@ class DbkbJpb4 extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dbkb_jpb4',
+        'kls_dbkb_jpb4',
+        'lantai_min_jpb4',
+        'lantai_max_jpb4',
+        'nilai_dbkb_jpb4',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

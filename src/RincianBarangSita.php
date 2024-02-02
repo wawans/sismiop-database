@@ -11,7 +11,12 @@ class RincianBarangSita extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'no_ba_sita',
+        'no_urut_barang_sita',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,18 @@ class RincianBarangSita extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kanwil',
+        'kd_kppbb',
+        'no_ba_sita',
+        'no_urut_barang_sita',
+        'jns_barang_sita',
+        'nm_barang_sita',
+        'al_barang_sita',
+        'no_sertifikat',
+        'tgl_sertifikat',
+        'taksiran_harga_barang_sita',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -11,7 +11,7 @@ class TipeBangunan extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'tipe_bng';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,13 @@ class TipeBangunan extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'tipe_bng',
+        'nm_tipe_bng',
+        'luas_min_tipe_bng',
+        'luas_max_tipe_bng',
+        'faktor_pembagi_tipe_bng',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

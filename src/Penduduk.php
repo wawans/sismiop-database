@@ -11,7 +11,7 @@ class Penduduk extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'no_penduduk';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,16 @@ class Penduduk extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'no_penduduk',
+        'no_kk',
+        'kd_stat_kawin',
+        'kd_status',
+        'nama',
+        'tgl_lahir',
+        'kota_lahir',
+        'jns_kelamin',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

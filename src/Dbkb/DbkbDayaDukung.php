@@ -11,7 +11,12 @@ class DbkbDayaDukung extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dbkb_daya_dukung',
+        'type_konstruksi',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +30,13 @@ class DbkbDayaDukung extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dbkb_daya_dukung',
+        'type_konstruksi',
+        'nilai_dbkb_daya_dukung',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

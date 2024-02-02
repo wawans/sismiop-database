@@ -11,7 +11,7 @@ class KelompokSppt extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_kelompok_sppt';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,10 @@ class KelompokSppt extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_kelompok_sppt',
+        'nama_kelompok_sppt',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

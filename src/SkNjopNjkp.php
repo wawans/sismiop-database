@@ -11,7 +11,7 @@ class SkNjopNjkp extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'kd_sk_njop_njkp';
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +25,11 @@ class SkNjopNjkp extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_sk_njop_njkp',
+        'no_sk_njop_njkp',
+        'tgl_sk_njop_njkp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

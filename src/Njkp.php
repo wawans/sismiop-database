@@ -11,7 +11,14 @@ class Njkp extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'indeks_range',
+        'kd_jns_range',
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_jpb_jpt',
+        'urutan_njkp',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +32,17 @@ class Njkp extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'indeks_range',
+        'kd_jns_range',
+        'kd_propinsi',
+        'kd_dati2',
+        'kd_jpb_jpt',
+        'urutan_njkp',
+        'njop_min',
+        'njop_max',
+        'nilai_njkp',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -11,7 +11,14 @@ class FasDepMinMax extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dep_min_max',
+        'kd_fasilitas',
+        'kls_dep_min',
+        'kls_dep_max',
+    ];
 
     /**
      * The "type" of the primary key ID.
@@ -25,7 +32,15 @@ class FasDepMinMax extends Model
      *
      * @var string[]
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'kd_propinsi',
+        'kd_dati2',
+        'thn_dep_min_max',
+        'kd_fasilitas',
+        'kls_dep_min',
+        'kls_dep_max',
+        'nilai_dep_min_max',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
