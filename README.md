@@ -14,6 +14,8 @@ Model dari database SISMIOP PBB (Sistem Manajemen Informasi Objek Pajak - Pajak 
  8.x.x    | 1.x.x
  9.x.x    | 2.x.x
  10.x.x   | 2.x.x
+ 11.x.x   | 3.x.x
+ 12.x.x   | 3.x.x
 
 
 ## Installation

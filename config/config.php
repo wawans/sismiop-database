@@ -14,5 +14,5 @@ return [
     |
     */
 
-    'connection' => env('SISMIOP_CONNECTION', env('DB_CONNECTION', 'mysql')),
+    'connection' => env('SISMIOP_CONNECTION', env('DB_CONNECTION', 'sqlite')),
 ];
