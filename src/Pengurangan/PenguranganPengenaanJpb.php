@@ -4,6 +4,31 @@ namespace Wawans\SismiopDatabase\Pengurangan;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string $kd_propinsi_pemohon
+ * @property string $kd_dati2_pemohon
+ * @property string $kd_kecamatan_pemohon
+ * @property string $kd_kelurahan_pemohon
+ * @property string $kd_blok_pemohon
+ * @property string $no_urut_pemohon
+ * @property string $kd_jns_op_pemohon
+ * @property string|null $thn_pengenaan_jpb
+ * @property string|null $jns_sk
+ * @property string|null $no_sk
+ * @property string|null $pct_pengurangan_jpb
+ * @property string|null $sys_nc00017$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenguranganPengenaanJpb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenguranganPengenaanJpb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenguranganPengenaanJpb query()
+ *
+ * @mixin \Eloquent
+ */
 class PenguranganPengenaanJpb extends Model
 {
     /**

@@ -14,41 +14,37 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Dat\DatJpb15
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property int $NO_BNG
- * @property string|null $LETAK_TANGKI_JPB15
- * @property int|null $KAPASITAS_TANGKI_JPB15
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bng
+ * @property string|null $letak_tangki_jpb15
+ * @property string|null $kapasitas_tangki_jpb15
  * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
  * @property-read \Wawans\SismiopDatabase\Dat\DatOpBangunan $datOpBangunan
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatJpb15 newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatJpb15 newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatJpb15 query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatJpb15 newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatJpb15 newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatJpb15 query()
+ *
  * @mixin \Eloquent
  */
 class DatJpb15 extends Model
 {
     use WithDatObjekPajak;
     use WithDatOpBangunan;
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -63,7 +59,7 @@ class DatJpb15 extends Model
         'kd_blok',
         'no_urut',
         'kd_jns_op',
-        'no_bng'
+        'no_bng',
     ];
 
     /**
@@ -102,11 +98,11 @@ class DatJpb15 extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
     ];
 }

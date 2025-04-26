@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string|null $nmkp
+ * @property string|null $nmkp2
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Statkp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Statkp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Statkp query()
+ *
+ * @mixin \Eloquent
+ */
 class Statkp extends Model
 {
     /**

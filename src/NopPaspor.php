@@ -2,8 +2,25 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $paspor
+ * @property string|null $nama
+ * @property string|null $tgl_awal_berlaku
+ * @property string|null $tgl_akhir_berlaku
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopPaspor newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopPaspor newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopPaspor query()
+ *
+ * @mixin \Eloquent
+ */
 class NopPaspor extends Model
 {
     /**

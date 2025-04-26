@@ -2,8 +2,19 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $tipe_bng
+ * @property string|null $nm_tipe_bng
+ * @property string|null $luas_min_tipe_bng
+ * @property string|null $luas_max_tipe_bng
+ * @property string|null $faktor_pembagi_tipe_bng
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TipeBangunan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TipeBangunan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TipeBangunan query()
+ *
+ * @mixin \Eloquent
+ */
 class TipeBangunan extends Model
 {
     /**

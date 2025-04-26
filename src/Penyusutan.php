@@ -2,8 +2,18 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $umur_efektif
+ * @property string $kd_range_penyusutan
+ * @property string $kondisi_bng_susut
+ * @property string|null $nilai_penyusutan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Penyusutan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Penyusutan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Penyusutan query()
+ *
+ * @mixin \Eloquent
+ */
 class Penyusutan extends Model
 {
     /**

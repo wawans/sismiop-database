@@ -2,8 +2,34 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_lap_pembagian
+ * @property string $bln_lap_pembagian
+ * @property string|null $kd_mata_anggaran
+ * @property string|null $jns_mata_anggaran
+ * @property string|null $no_sk_pembagian
+ * @property string|null $tgl_sk_pembagian
+ * @property string|null $no_spmphp
+ * @property string|null $tgl_spmphp
+ * @property string|null $kd_program
+ * @property string|null $kd_unit
+ * @property string|null $kd_lokasi
+ * @property string|null $potongan
+ * @property string|null $lokasi_kpkn
+ * @property string|null $tgl_rekam_lap_pembagian
+ * @property string|null $nip_rekam_lap_pembagian
+ * @property string|null $kd_proyek
+ * @property string|null $sys_nc00019$
+ * @property string|null $sys_nc00020$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LaporanPembagian newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LaporanPembagian newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LaporanPembagian query()
+ *
+ * @mixin \Eloquent
+ */
 class LaporanPembagian extends Model
 {
     /**

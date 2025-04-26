@@ -8,17 +8,16 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Lookup\LookupGroup
  *
- * @property string $KD_LOOKUP_GROUP
- * @property string|null $NM_LOOKUP_GROUP
- * @property StrFn $nm_lookup_group
+ * @property string $kd_lookup_group
+ * @property string|null $nm_lookup_group
  * @property-read mixed $nama
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Lookup\LookupItem[] $item
- * @property-read int|null $item_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Lookup\LookupItem[] $lookupItem
- * @property-read int|null $lookup_item_count
- * @method static \Illuminate\Database\Eloquent\Builder|LookupGroup newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|LookupGroup newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|LookupGroup query()
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Lookup\LookupItem> $item
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Lookup\LookupItem> $lookupItem
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupGroup newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupGroup newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupGroup query()
+ *
  * @mixin \Eloquent
  */
 class LookupGroup extends Model
@@ -44,7 +43,7 @@ class LookupGroup extends Model
      */
     protected $fillable = [
         'kd_lookup_group',
-        'nm_lookup_group'
+        'nm_lookup_group',
     ];
 
     /**
@@ -60,7 +59,7 @@ class LookupGroup extends Model
      * @var array
      */
     protected $casts = [
-        'nm_lookup_group' => StrFn::class . ':strtoupper',
+        'nm_lookup_group' => StrFn::class.':strtoupper',
     ];
 
     public function lookupItem()

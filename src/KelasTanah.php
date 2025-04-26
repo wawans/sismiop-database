@@ -2,8 +2,20 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kls_tanah
+ * @property string $thn_awal_kls_tanah
+ * @property string|null $thn_akhir_kls_tanah
+ * @property string|null $nilai_min_tanah
+ * @property string|null $nilai_max_tanah
+ * @property string|null $nilai_per_m2_tanah
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelasTanah newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelasTanah newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelasTanah query()
+ *
+ * @mixin \Eloquent
+ */
 class KelasTanah extends Model
 {
     /**

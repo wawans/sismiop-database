@@ -9,14 +9,14 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefJnsPembetulan
  *
- * @property string $KD_PEMBETULAN
- * @property string|null $NM_PEMBETULAN
- * @property StrPad $kd_pembetulan
- * @property StrFn $nm_pembetulan
+ * @property string $kd_pembetulan
+ * @property string|null $nm_pembetulan
  * @property-read mixed $nama
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsPembetulan newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsPembetulan newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsPembetulan query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsPembetulan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsPembetulan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsPembetulan query()
+ *
  * @mixin \Eloquent
  */
 class RefJnsPembetulan extends Model
@@ -58,8 +58,8 @@ class RefJnsPembetulan extends Model
      * @var array
      */
     protected $casts = [
-        'kd_pembetulan' => StrPad::class . ':2',
-        'nm_pembetulan' => StrFn::class . ':strtoupper',
+        'kd_pembetulan' => StrPad::class.':2',
+        'nm_pembetulan' => StrFn::class.':strtoupper',
     ];
 
     public function getNamaAttribute()

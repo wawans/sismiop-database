@@ -2,8 +2,22 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_awal
+ * @property string $thn_akhir
+ * @property string $njop_min
+ * @property string $njop_max
+ * @property string $nilai_tarif
+ * @property string|null $nilai_tarif_khusus
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tarif newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tarif newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tarif query()
+ *
+ * @mixin \Eloquent
+ */
 class Tarif extends Model
 {
     /**

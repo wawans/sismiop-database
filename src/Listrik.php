@@ -2,8 +2,24 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $no_pelanggan_pln
+ * @property string|null $kd_propinsi
+ * @property string|null $kd_dati2
+ * @property string|null $kd_kecamatan
+ * @property string|null $kd_kelurahan
+ * @property string|null $kd_blok
+ * @property string|null $no_urut
+ * @property string|null $kd_jns_op
+ * @property string|null $no_bng
+ * @property string|null $daya_pln
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Listrik newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Listrik newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Listrik query()
+ *
+ * @mixin \Eloquent
+ */
 class Listrik extends Model
 {
     /**

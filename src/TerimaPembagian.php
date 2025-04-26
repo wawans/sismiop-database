@@ -2,8 +2,28 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_sektor
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $tahun_pembagian
+ * @property string $bulan_pembagian
+ * @property string $minggu_ke_pembagian
+ * @property string $pembagian_ke
+ * @property string $kd_penerima
+ * @property string|null $no_nota_debet_pembagian
+ * @property string|null $tgl_nota_debet_pembagian
+ * @property string|null $besar_pembagian
+ * @property string|null $tgl_rekam_pembagian
+ * @property string|null $nip_rekam_trm_bagi
+ * @property string|null $sys_nc00014$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TerimaPembagian newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TerimaPembagian newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TerimaPembagian query()
+ *
+ * @mixin \Eloquent
+ */
 class TerimaPembagian extends Model
 {
     /**

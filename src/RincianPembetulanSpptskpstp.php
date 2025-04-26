@@ -2,8 +2,31 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string $kd_propinsi_pemohon
+ * @property string $kd_dati2_pemohon
+ * @property string $kd_kecamatan_pemohon
+ * @property string $kd_kelurahan_pemohon
+ * @property string $kd_blok_pemohon
+ * @property string $no_urut_pemohon
+ * @property string $kd_jns_op_pemohon
+ * @property string $thn_pembetulan
+ * @property string $no_urut_rinci_pembetulan
+ * @property string|null $pbl_uraian
+ * @property string|null $pbl_semula
+ * @property string|null $pbl_menjadi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianPembetulanSpptskpstp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianPembetulanSpptskpstp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianPembetulanSpptskpstp query()
+ *
+ * @mixin \Eloquent
+ */
 class RincianPembetulanSpptskpstp extends Model
 {
     /**

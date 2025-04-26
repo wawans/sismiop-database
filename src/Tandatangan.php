@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $nip
+ * @property string|null $tanda_tangan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tandatangan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tandatangan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tandatangan query()
+ *
+ * @mixin \Eloquent
+ */
 class Tandatangan extends Model
 {
     /**

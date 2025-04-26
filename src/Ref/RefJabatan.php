@@ -8,16 +8,16 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefJabatan
  *
- * @property string $KD_JABATAN
- * @property string|null $NM_JABATAN
- * @property string|null $SINGKATAN_JABATAN
- * @property StrFn $nm_jabatan
- * @property StrFn $singkatan_jabatan
+ * @property string $kd_jabatan
+ * @property string|null $nm_jabatan
+ * @property string|null $singkatan_jabatan
  * @property-read mixed $nama
  * @property-read mixed $singkatan
- * @method static \Illuminate\Database\Eloquent\Builder|RefJabatan newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJabatan newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJabatan query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJabatan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJabatan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJabatan query()
+ *
  * @mixin \Eloquent
  */
 class RefJabatan extends Model
@@ -60,8 +60,8 @@ class RefJabatan extends Model
      * @var array
      */
     protected $casts = [
-        'nm_jabatan' => StrFn::class . ':strtoupper',
-        'singkatan_jabatan' => StrFn::class . ':strtoupper',
+        'nm_jabatan' => StrFn::class.':strtoupper',
+        'singkatan_jabatan' => StrFn::class.':strtoupper',
     ];
 
     public function getNamaAttribute()

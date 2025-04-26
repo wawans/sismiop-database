@@ -2,8 +2,25 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $thn_cetak_masal
+ * @property string $indeks_cetak_masal
+ * @property string|null $tgl_cetak_masal
+ * @property string|null $nip_pencetak_masal
+ * @property string|null $jml_sppt
+ * @property string|null $jml_pbb_yg_harus_dibayar
+ * @property string|null $sys_nc00011$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CetakMasal newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CetakMasal newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CetakMasal query()
+ *
+ * @mixin \Eloquent
+ */
 class CetakMasal extends Model
 {
     /**

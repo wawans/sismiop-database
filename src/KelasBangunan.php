@@ -2,8 +2,20 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kls_bng
+ * @property string $thn_awal_kls_bng
+ * @property string|null $thn_akhir_kls_bng
+ * @property string|null $nilai_min_bng
+ * @property string|null $nilai_max_bng
+ * @property string|null $nilai_per_m2_bng
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelasBangunan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelasBangunan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelasBangunan query()
+ *
+ * @mixin \Eloquent
+ */
 class KelasBangunan extends Model
 {
     /**

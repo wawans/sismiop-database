@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_jpb_jpt
+ * @property string|null $nm_jpb_jpt
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JpbJpt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JpbJpt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JpbJpt query()
+ *
+ * @mixin \Eloquent
+ */
 class JpbJpt extends Model
 {
     /**

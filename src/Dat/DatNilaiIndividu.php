@@ -15,50 +15,46 @@ use Wawans\SismiopDatabase\Pegawai;
 /**
  * Wawans\SismiopDatabase\Dat\DatNilaiIndividu
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property int $NO_BNG
- * @property string|null $NO_FORMULIR_INDIVIDU
- * @property int|null $NILAI_INDIVIDU
- * @property string|null $TGL_PENILAIAN_INDIVIDU
- * @property string|null $NIP_PENILAI_INDIVIDU
- * @property string|null $TGL_PEMERIKSAAN_INDIVIDU
- * @property string|null $NIP_PEMERIKSA_INDIVIDU
- * @property string|null $TGL_REKAM_NILAI_INDIVIDU
- * @property string|null $NIP_PEREKAM_INDIVIDU
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bng
+ * @property string|null $no_formulir_individu
+ * @property string|null $nilai_individu
+ * @property \Illuminate\Support\Carbon|null $tgl_penilaian_individu
+ * @property string|null $nip_penilai_individu
+ * @property \Illuminate\Support\Carbon|null $tgl_pemeriksaan_individu
+ * @property string|null $nip_pemeriksa_individu
+ * @property \Illuminate\Support\Carbon|null $tgl_rekam_nilai_individu
+ * @property string|null $nip_perekam_individu
  * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
  * @property-read \Wawans\SismiopDatabase\Dat\DatOpBangunan $datOpBangunan
- * @property-read Pegawai $pegawaiPemeriksa
- * @property-read Pegawai $pegawaiPenilai
- * @property-read Pegawai $pegawaiPerekam
+ * @property-read Pegawai|null $pegawaiPemeriksa
+ * @property-read Pegawai|null $pegawaiPenilai
+ * @property-read Pegawai|null $pegawaiPerekam
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatNilaiIndividu newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatNilaiIndividu newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatNilaiIndividu query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatNilaiIndividu newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatNilaiIndividu newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatNilaiIndividu query()
+ *
  * @mixin \Eloquent
  */
 class DatNilaiIndividu extends Model
 {
     use WithDatObjekPajak;
     use WithDatOpBangunan;
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -73,7 +69,7 @@ class DatNilaiIndividu extends Model
         'kd_blok',
         'no_urut',
         'kd_jns_op',
-        'no_bng'
+        'no_bng',
     ];
 
     /**
@@ -120,12 +116,12 @@ class DatNilaiIndividu extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
         'tgl_penilaian_individu' => 'date',
         'tgl_pemeriksaan_individu' => 'date',
         'tgl_rekam_nilai_individu' => 'datetime',

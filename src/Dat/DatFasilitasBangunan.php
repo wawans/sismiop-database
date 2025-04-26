@@ -8,49 +8,45 @@ use Wawans\SismiopDatabase\Concerns\WithRefKecamatan;
 use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Constants\FasilitasBangunan;
-use Wawans\SismiopDatabase\Fasilitas;
+use Wawans\SismiopDatabase\Fasilitas\Fasilitas;
 use Wawans\SismiopDatabase\Model;
 
 /**
  * Wawans\SismiopDatabase\Dat\DatFasilitasBangunan
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property int $NO_BNG
- * @property string $KD_FASILITAS
- * @property int|null $JML_SATUAN
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bng
+ * @property string $kd_fasilitas
+ * @property string|null $jml_satuan
  * @property-read \Wawans\SismiopDatabase\Dat\DatOpBangunan $datOpBangunan
  * @property-read Fasilitas $fasilitas
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan acSplit()
- * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan acWindows()
- * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan listrik()
- * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan query()
- * @method static \Illuminate\Database\Eloquent\Builder|DatFasilitasBangunan whereFasilitas($value)
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatFasilitasBangunan acSplit()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatFasilitasBangunan acWindows()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatFasilitasBangunan listrik()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatFasilitasBangunan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatFasilitasBangunan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatFasilitasBangunan query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatFasilitasBangunan whereFasilitas($value)
+ *
  * @mixin \Eloquent
  */
 class DatFasilitasBangunan extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -66,7 +62,7 @@ class DatFasilitasBangunan extends Model
         'no_urut',
         'kd_jns_op',
         'no_bng',
-        'kd_fasilitas'
+        'kd_fasilitas',
     ];
 
     /**
@@ -91,7 +87,7 @@ class DatFasilitasBangunan extends Model
         'kd_jns_op',
         'no_bng',
         'kd_fasilitas',
-        'jml_satuan'
+        'jml_satuan',
     ];
 
     /**
@@ -107,12 +103,12 @@ class DatFasilitasBangunan extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
     ];
 
     public function datOpBangunan()
@@ -128,7 +124,6 @@ class DatFasilitasBangunan extends Model
     }
 
     /**
-     *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -138,7 +133,6 @@ class DatFasilitasBangunan extends Model
     }
 
     /**
-     *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -148,8 +142,7 @@ class DatFasilitasBangunan extends Model
     }
 
     /**
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeListrik($query)
@@ -158,8 +151,7 @@ class DatFasilitasBangunan extends Model
     }
 
     /**
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWhereFasilitas($query, $value)

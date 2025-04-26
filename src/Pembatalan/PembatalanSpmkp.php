@@ -4,6 +4,22 @@ namespace Wawans\SismiopDatabase\Pembatalan;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $no_sk_pembatalan_spmkp
+ * @property string|null $no_spmkp
+ * @property string|null $tgl_pembatalan_spmkp
+ * @property string|null $tgl_cetak_pembatalan_spmkp
+ * @property string|null $nip_pencetak_pembatalan_spmkp
+ * @property string|null $alasan_pembatalan_spmkp
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembatalanSpmkp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembatalanSpmkp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembatalanSpmkp query()
+ *
+ * @mixin \Eloquent
+ */
 class PembatalanSpmkp extends Model
 {
     /**

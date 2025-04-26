@@ -2,8 +2,17 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $no_kartu
+ * @property string|null $no_penduduk
+ * @property string|null $ket_kartu
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KartuKredit newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KartuKredit newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KartuKredit query()
+ *
+ * @mixin \Eloquent
+ */
 class KartuKredit extends Model
 {
     /**

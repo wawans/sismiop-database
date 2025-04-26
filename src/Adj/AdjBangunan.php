@@ -4,6 +4,19 @@ namespace Wawans\SismiopDatabase\Adj;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_jpb
+ * @property string $tipe_bng
+ * @property string $kd_bng_lantai
+ * @property string $kd_adj
+ * @property string|null $pct_adj_bng
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjBangunan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjBangunan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjBangunan query()
+ *
+ * @mixin \Eloquent
+ */
 class AdjBangunan extends Model
 {
     /**

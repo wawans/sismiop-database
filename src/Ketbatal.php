@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_batal
+ * @property string|null $ket_batal
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Ketbatal newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Ketbatal newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Ketbatal query()
+ *
+ * @mixin \Eloquent
+ */
 class Ketbatal extends Model
 {
     /**

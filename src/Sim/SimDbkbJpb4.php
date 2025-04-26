@@ -4,6 +4,21 @@ namespace Wawans\SismiopDatabase\Sim;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $sim_thn_dbkb_jpb4
+ * @property string $sim_kls_dbkb_jpb4
+ * @property string $sim_lantai_min_jpb4
+ * @property string $sim_lantai_max_jpb4
+ * @property string|null $sim_nilai_dbkb_jpb4
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimDbkbJpb4 newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimDbkbJpb4 newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimDbkbJpb4 query()
+ *
+ * @mixin \Eloquent
+ */
 class SimDbkbJpb4 extends Model
 {
     /**

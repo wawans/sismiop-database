@@ -2,8 +2,23 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $no_penduduk
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bng
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PendudukBngSin newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PendudukBngSin newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PendudukBngSin query()
+ *
+ * @mixin \Eloquent
+ */
 class PendudukBngSin extends Model
 {
     /**

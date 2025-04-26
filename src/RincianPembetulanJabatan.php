@@ -2,8 +2,27 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $thn_pembetulan
+ * @property string $pembetulan_ke
+ * @property string $no_urut_rinci_pembetulan
+ * @property string|null $pbl_uraian
+ * @property string|null $pbl_semula
+ * @property string|null $pbl_menjadi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianPembetulanJabatan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianPembetulanJabatan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianPembetulanJabatan query()
+ *
+ * @mixin \Eloquent
+ */
 class RincianPembetulanJabatan extends Model
 {
     /**

@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_status
+ * @property string|null $ket_status
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatusKeluarga newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatusKeluarga newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatusKeluarga query()
+ *
+ * @mixin \Eloquent
+ */
 class StatusKeluarga extends Model
 {
     /**

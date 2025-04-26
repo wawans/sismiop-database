@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $no_pegawai
+ * @property string|null $no_penduduk
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kepegawaian newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kepegawaian newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kepegawaian query()
+ *
+ * @mixin \Eloquent
+ */
 class Kepegawaian extends Model
 {
     /**

@@ -43,7 +43,6 @@ class SismiopDatabase
     /**
      * Configure route binding to use custom delimiter.
      *
-     * @param string $delimiter
      * @return static
      */
     public static function useRouteDelimiter(string $delimiter = '-')

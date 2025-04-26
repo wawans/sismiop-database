@@ -4,6 +4,27 @@ namespace Wawans\SismiopDatabase\TandaTerima;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $thn_pajak_sppt
+ * @property string|null $tgl_terima_wp_sppt
+ * @property string|null $nm_yg_menerima_sppt
+ * @property string|null $tgl_rekam_ttr_sppt
+ * @property string|null $nip_rekam_ttr_sppt
+ * @property string|null $sys_nc00013$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TandaTerimaSppt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TandaTerimaSppt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TandaTerimaSppt query()
+ *
+ * @mixin \Eloquent
+ */
 class TandaTerimaSppt extends Model
 {
     /**

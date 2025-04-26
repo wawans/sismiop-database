@@ -9,14 +9,14 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefJpb
  *
- * @property string $KD_JPB
- * @property string|null $NM_JPB
- * @property StrPad $kd_jpb
- * @property StrFn $nm_jpb
+ * @property string $kd_jpb
+ * @property string|null $nm_jpb
  * @property-read mixed $nama
- * @method static \Illuminate\Database\Eloquent\Builder|RefJpb newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJpb newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJpb query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJpb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJpb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJpb query()
+ *
  * @mixin \Eloquent
  */
 class RefJpb extends Model
@@ -58,8 +58,8 @@ class RefJpb extends Model
      * @var array
      */
     protected $casts = [
-        'kd_jpb' => StrPad::class . ':2',
-        'nm_jpb' => StrFn::class . ':strtoupper',
+        'kd_jpb' => StrPad::class.':2',
+        'nm_jpb' => StrFn::class.':strtoupper',
     ];
 
     public function getNamaAttribute()

@@ -10,26 +10,26 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Dat\DatSubjekPajak
  *
- * @property string $SUBJEK_PAJAK_ID
- * @property string|null $NM_WP
- * @property string|null $JALAN_WP
- * @property string|null $BLOK_KAV_NO_WP
- * @property string|null $RW_WP
- * @property string|null $RT_WP
- * @property string|null $KELURAHAN_WP
- * @property string|null $KOTA_WP
- * @property string|null $KD_POS_WP
- * @property string|null $TELP_WP
- * @property string|null $NPWP
- * @property string|null $STATUS_PEKERJAAN_WP
- * @property StrPad $rw_wp
- * @property StrPad $rt_wp
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Dat\DatObjekPajak[] $datObjekPajak
- * @property-read \Wawans\SismiopDatabase\Dat\DatSubjekPajakNjoptkp $datSubjekPajakNjoptkp
- * @property-read LookupItem $refStatusPekerjaan
- * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajak newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajak newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajak query()
+ * @property string $subjek_pajak_id
+ * @property string|null $nm_wp
+ * @property string|null $jalan_wp
+ * @property string|null $blok_kav_no_wp
+ * @property string|null $rw_wp
+ * @property string|null $rt_wp
+ * @property string|null $kelurahan_wp
+ * @property string|null $kota_wp
+ * @property string|null $kd_pos_wp
+ * @property string|null $telp_wp
+ * @property string|null $npwp
+ * @property string|null $status_pekerjaan_wp
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Dat\DatObjekPajak> $datObjekPajak
+ * @property-read \Wawans\SismiopDatabase\Dat\DatSubjekPajakNjoptkp|null $datSubjekPajakNjoptkp
+ * @property-read LookupItem|null $refStatusPekerjaan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatSubjekPajak newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatSubjekPajak newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatSubjekPajak query()
+ *
  * @mixin \Eloquent
  */
 class DatSubjekPajak extends Model
@@ -81,8 +81,8 @@ class DatSubjekPajak extends Model
      * @var array
      */
     protected $casts = [
-        'rw_wp' => StrPad::class . ':2',
-        'rt_wp' => StrPad::class . ':3',
+        'rw_wp' => StrPad::class.':2',
+        'rt_wp' => StrPad::class.':3',
     ];
 
     /**

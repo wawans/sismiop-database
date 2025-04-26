@@ -2,8 +2,17 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_penerima
+ * @property string|null $nm_penerima
+ * @property string|null $pct_pembagian
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Penerima newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Penerima newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Penerima query()
+ *
+ * @mixin \Eloquent
+ */
 class Penerima extends Model
 {
     /**

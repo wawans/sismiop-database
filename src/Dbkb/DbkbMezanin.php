@@ -4,6 +4,19 @@ namespace Wawans\SismiopDatabase\Dbkb;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_dbkb_mezanin
+ * @property string|null $nilai_dbkb_mezanin
+ * @property string|null $sys_nc00005$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbMezanin newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbMezanin newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbMezanin query()
+ *
+ * @mixin \Eloquent
+ */
 class DbkbMezanin extends Model
 {
     /**

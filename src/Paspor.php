@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $no_paspor
+ * @property string|null $no_penduduk
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Paspor newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Paspor newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Paspor query()
+ *
+ * @mixin \Eloquent
+ */
 class Paspor extends Model
 {
     /**

@@ -2,8 +2,30 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok_penghapusan_bng
+ * @property string $no_urut_penghapusan_bng
+ * @property string $kd_jns_op_penghapusan_bng
+ * @property string $no_bng_penghapusan
+ * @property string $indeks_penghapusan_bng
+ * @property string|null $thn_pajak_penghapusan_bng
+ * @property string|null $no_formulir_penghapusan_bng
+ * @property string|null $luas_bng_penghapusan
+ * @property string|null $nilai_bng_penghapusan
+ * @property string|null $tgl_penghapusan_bng
+ * @property string|null $nip_perekam_penghapusan_bng
+ * @property string|null $sys_nc00016$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenghapusanBng newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenghapusanBng newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenghapusanBng query()
+ *
+ * @mixin \Eloquent
+ */
 class PenghapusanBng extends Model
 {
     /**

@@ -4,6 +4,16 @@ namespace Wawans\SismiopDatabase\Adj;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_adj
+ * @property string|null $nm_adj
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adj newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adj newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Adj query()
+ *
+ * @mixin \Eloquent
+ */
 class Adj extends Model
 {
     /**

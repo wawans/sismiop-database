@@ -9,14 +9,14 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefPropinsi
  *
- * @property string $KD_PROPINSI
- * @property string|null $NM_PROPINSI
- * @property StrPad $kd_propinsi
- * @property StrFn $nm_propinsi
+ * @property string $kd_propinsi
+ * @property string|null $nm_propinsi
  * @property-read mixed $nama
- * @method static \Illuminate\Database\Eloquent\Builder|RefPropinsi newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefPropinsi newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefPropinsi query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPropinsi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPropinsi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPropinsi query()
+ *
  * @mixin \Eloquent
  */
 class RefPropinsi extends Model
@@ -58,8 +58,8 @@ class RefPropinsi extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'nm_propinsi' => StrFn::class . ':strtoupper',
+        'kd_propinsi' => StrPad::class.':2',
+        'nm_propinsi' => StrFn::class.':strtoupper',
     ];
 
     public function getNamaAttribute()

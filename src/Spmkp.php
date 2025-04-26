@@ -2,8 +2,32 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $no_spmkp
+ * @property string|null $tgl_spmkp
+ * @property string|null $thn_pelayanan
+ * @property string|null $bundel_pelayanan
+ * @property string|null $no_urut_pelayanan
+ * @property string|null $kd_propinsi_pemohon
+ * @property string|null $kd_dati2_pemohon
+ * @property string|null $kd_kecamatan_pemohon
+ * @property string|null $kd_kelurahan_pemohon
+ * @property string|null $kd_blok_pemohon
+ * @property string|null $no_urut_pemohon
+ * @property string|null $kd_jns_op_pemohon
+ * @property string|null $no_rek_wp
+ * @property string|null $nm_bank_wp
+ * @property string|null $tgl_rekam_spmkp
+ * @property string|null $nip_rekam_spmkp
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Spmkp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Spmkp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Spmkp query()
+ *
+ * @mixin \Eloquent
+ */
 class Spmkp extends Model
 {
     /**

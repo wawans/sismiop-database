@@ -9,23 +9,25 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefBukuStimulus
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $THN_PAJAK
- * @property string|null $BUKU
- * @property int|null $NILAI_MIN
- * @property int|null $NILAI_MAX
- * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
- * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|RefBukuStimulus newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefBukuStimulus newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefBukuStimulus query()
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_pajak
+ * @property string|null $buku
+ * @property string|null $nilai_min
+ * @property string|null $nilai_max
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2|null $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi|null $refPropinsi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefBukuStimulus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefBukuStimulus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefBukuStimulus query()
+ *
  * @mixin \Eloquent
  */
 class RefBukuStimulus extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.

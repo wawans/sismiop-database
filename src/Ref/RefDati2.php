@@ -9,15 +9,16 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefDati2
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string|null $NM_DATI2
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi|null $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|RefDati2 newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefDati2 newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefDati2 query()
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string|null $nm_dati2
+ * @property-read mixed $nama
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefDati2 newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefDati2 newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefDati2 query()
+ *
  * @mixin \Eloquent
  */
 class RefDati2 extends Model
@@ -61,8 +62,8 @@ class RefDati2 extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
     ];
 
     public function getNamaAttribute()

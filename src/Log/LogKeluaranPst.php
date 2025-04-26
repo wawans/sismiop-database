@@ -4,6 +4,33 @@ namespace Wawans\SismiopDatabase\Log;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string $kd_propinsi_pemohon
+ * @property string $kd_dati2_pemohon
+ * @property string $kd_kecamatan_pemohon
+ * @property string $kd_kelurahan_pemohon
+ * @property string $kd_blok_pemohon
+ * @property string $no_urut_pemohon
+ * @property string $kd_jns_op_pemohon
+ * @property string $log_tahun_pajak
+ * @property string|null $kd_jns_pelayanan
+ * @property string|null $log_sppt
+ * @property string|null $log_stts
+ * @property string|null $log_dhkp
+ * @property string|null $log_sk
+ * @property string|null $log_status
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LogKeluaranPst newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LogKeluaranPst newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LogKeluaranPst query()
+ *
+ * @mixin \Eloquent
+ */
 class LogKeluaranPst extends Model
 {
     /**

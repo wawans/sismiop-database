@@ -9,17 +9,16 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefPbi
  *
- * @property string $KD_PEBIN
- * @property string $KD_PBI
- * @property string|null $NM_PBI
- * @property StrPad $kd_pebin
- * @property StrPad $kd_pbi
- * @property StrFn $nm_pbi
+ * @property string $kd_pebin
+ * @property string $kd_pbi
+ * @property string|null $nm_pbi
  * @property-read mixed $nama
  * @property-read \Wawans\SismiopDatabase\Ref\RefPebin|null $refPebin
- * @method static \Illuminate\Database\Eloquent\Builder|RefPbi newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefPbi newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefPbi query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPbi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPbi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPbi query()
+ *
  * @mixin \Eloquent
  */
 class RefPbi extends Model
@@ -62,14 +61,14 @@ class RefPbi extends Model
      * @var array
      */
     protected $casts = [
-        'kd_pebin' => StrPad::class . ':2',
-        'kd_pbi' => StrPad::class . ':2',
-        'nm_pbi' => StrFn::class . ':strtoupper',
+        'kd_pebin' => StrPad::class.':2',
+        'kd_pbi' => StrPad::class.':2',
+        'nm_pbi' => StrFn::class.':strtoupper',
     ];
 
     public function refPebin()
     {
-        return $this->belongsTo(RefPebin::class,'kd_pebin','kd_pebin');
+        return $this->belongsTo(RefPebin::class, 'kd_pebin', 'kd_pebin');
     }
 
     public function getNamaAttribute()

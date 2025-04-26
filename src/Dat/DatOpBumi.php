@@ -15,43 +15,40 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Dat\DatOpBumi
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property int $NO_BUMI
- * @property string|null $KD_ZNT
- * @property int|null $LUAS_BUMI
- * @property string|null $JNS_BUMI
- * @property int|null $NILAI_SISTEM_BUMI
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
- * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
- * @property-read \Wawans\SismiopDatabase\Dat\DatPetaZnt $datPetaZnt
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bumi
+ * @property string|null $kd_znt
+ * @property string|null $luas_bumi
+ * @property string|null $jns_bumi
+ * @property string|null $nilai_sistem_bumi
+ * @property string|null $sys_nc00013$
+ * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak|null $datObjekPajak
+ * @property-read \Wawans\SismiopDatabase\Dat\DatPetaZnt|null $datPetaZnt
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
- * @property-read LookupItem $refJnsBumi
+ * @property-read LookupItem|null $refJnsBumi
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpBumi newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpBumi newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpBumi query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBumi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBumi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBumi query()
+ *
  * @mixin \Eloquent
  */
 class DatOpBumi extends Model
 {
     use WithDatObjekPajak;
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -109,12 +106,12 @@ class DatOpBumi extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
     ];
 
     /**
@@ -127,8 +124,8 @@ class DatOpBumi extends Model
     public function datPetaZnt()
     {
         return $this->belongsTo(DatPetaZnt::class,
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok','kd_znt'],
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok','kd_znt']);
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_blok', 'kd_znt'],
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_blok', 'kd_znt']);
     }
 
     public function refJnsBumi()

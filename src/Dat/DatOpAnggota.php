@@ -4,6 +4,34 @@ namespace Wawans\SismiopDatabase\Dat;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi_induk
+ * @property string $kd_dati2_induk
+ * @property string $kd_kecamatan_induk
+ * @property string $kd_kelurahan_induk
+ * @property string $kd_blok_induk
+ * @property string $no_urut_induk
+ * @property string $kd_jns_op_induk
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string|null $luas_bumi_beban
+ * @property string|null $luas_bng_beban
+ * @property string|null $nilai_sistem_bumi_beban
+ * @property string|null $nilai_sistem_bng_beban
+ * @property string|null $njop_bumi_beban
+ * @property string|null $njop_bng_beban
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpAnggota newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpAnggota newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpAnggota query()
+ *
+ * @mixin \Eloquent
+ */
 class DatOpAnggota extends Model
 {
     /**

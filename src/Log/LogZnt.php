@@ -4,6 +4,21 @@ namespace Wawans\SismiopDatabase\Log;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string|null $status_log_znt
+ * @property string|null $tgl_rekam_log_znt
+ * @property string|null $nip_perekam_log_znt
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LogZnt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LogZnt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LogZnt query()
+ *
+ * @mixin \Eloquent
+ */
 class LogZnt extends Model
 {
     /**

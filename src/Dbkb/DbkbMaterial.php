@@ -4,6 +4,21 @@ namespace Wawans\SismiopDatabase\Dbkb;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_dbkb_material
+ * @property string $kd_pekerjaan
+ * @property string $kd_kegiatan
+ * @property string|null $nilai_dbkb_material
+ * @property string|null $sys_nc00007$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbMaterial newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbMaterial newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbMaterial query()
+ *
+ * @mixin \Eloquent
+ */
 class DbkbMaterial extends Model
 {
     /**

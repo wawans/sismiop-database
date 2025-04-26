@@ -2,8 +2,40 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string $kd_propinsi_pemohon
+ * @property string $kd_dati2_pemohon
+ * @property string $kd_kecamatan_pemohon
+ * @property string $kd_kelurahan_pemohon
+ * @property string $kd_blok_pemohon
+ * @property string $no_urut_pemohon
+ * @property string $kd_jns_op_pemohon
+ * @property string|null $jns_sk
+ * @property string|null $no_sk
+ * @property string|null $jns_keputusan
+ * @property string|null $kd_kls_tanah
+ * @property string|null $thn_awal_kls_tanah
+ * @property string|null $kd_kls_bng
+ * @property string|null $thn_awal_kls_bng
+ * @property string|null $luas_bumi_sk_keberatan
+ * @property string|null $luas_bng_sk_keberatan
+ * @property string|null $njop_bumi_sk_keberatan
+ * @property string|null $njop_bng_sk_keberatan
+ * @property string|null $pbb_sk_keberatan
+ * @property string|null $tgl_cetak_sk_keberatan
+ * @property string|null $nip_pencetak_sk_keberatan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeputusanKeberatanPbb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeputusanKeberatanPbb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeputusanKeberatanPbb query()
+ *
+ * @mixin \Eloquent
+ */
 class KeputusanKeberatanPbb extends Model
 {
     /**

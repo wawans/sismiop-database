@@ -9,14 +9,14 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefJnsSektor
  *
- * @property string $KD_SEKTOR
- * @property string|null $NM_SEKTOR
- * @property StrPad $kd_sektor
- * @property StrFn $nm_sektor
+ * @property string $kd_sektor
+ * @property string|null $nm_sektor
  * @property-read mixed $nama
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsSektor newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsSektor newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsSektor query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsSektor newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsSektor newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsSektor query()
+ *
  * @mixin \Eloquent
  */
 class RefJnsSektor extends Model
@@ -58,8 +58,8 @@ class RefJnsSektor extends Model
      * @var array
      */
     protected $casts = [
-        'kd_sektor' => StrPad::class . ':2',
-        'nm_sektor' => StrFn::class . ':strtoupper',
+        'kd_sektor' => StrPad::class.':2',
+        'nm_sektor' => StrFn::class.':strtoupper',
     ];
 
     public function getNamaAttribute()

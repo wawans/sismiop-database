@@ -13,36 +13,32 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Dat\DatOpInduk
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
  * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpInduk newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpInduk newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpInduk query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpInduk newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpInduk newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpInduk query()
+ *
  * @mixin \Eloquent
  */
 class DatOpInduk extends Model
 {
     use WithDatObjekPajak;
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -94,11 +90,11 @@ class DatOpInduk extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
     ];
 }

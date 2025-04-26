@@ -2,8 +2,20 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $nm_jln_sementara
+ * @property string|null $nm_jln_standard
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JalanStandard newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JalanStandard newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JalanStandard query()
+ *
+ * @mixin \Eloquent
+ */
 class JalanStandard extends Model
 {
     /**

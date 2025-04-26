@@ -11,32 +11,36 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefKelurahan
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string|null $KD_SEKTOR
- * @property string|null $NM_KELURAHAN
- * @property int|null $NO_KELURAHAN
- * @property string|null $KD_POS_KELURAHAN
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string|null $kd_sektor
+ * @property string|null $nm_kelurahan
+ * @property string|null $no_kelurahan
+ * @property string|null $kd_pos_kelurahan
+ * @property string|null $nm_lurah
+ * @property string|null $nip_lurah
+ * @property string|null $nm_ptgs1
+ * @property string|null $nm_ptgs2
+ * @property string|null $nm_kel_br
+ * @property string|null $kd_kel_br
  * @property-read mixed $nama
- * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi|null $refPropinsi
- * @property-read \Wawans\SismiopDatabase\Ref\RefDati2|null $refDati2
- * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan|null $refKecamatan
- * @method static \Illuminate\Database\Eloquent\Builder|RefKelurahan newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefKelurahan newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefKelurahan query()
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefKelurahan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefKelurahan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefKelurahan query()
+ *
  * @mixin \Eloquent
  */
 class RefKelurahan extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -77,10 +81,10 @@ class RefKelurahan extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
     ];
 
     public function getNamaAttribute()

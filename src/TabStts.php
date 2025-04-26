@@ -2,8 +2,23 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $kd_bank_tunggal
+ * @property string $kd_bank_persepsi
+ * @property string $kd_tp
+ * @property string|null $stts_byr
+ * @property string|null $stts_btl
+ * @property string|null $stts_salinan
+ * @property string|null $tgl_lapor
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TabStts newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TabStts newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TabStts query()
+ *
+ * @mixin \Eloquent
+ */
 class TabStts extends Model
 {
     /**

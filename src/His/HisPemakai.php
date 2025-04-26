@@ -4,6 +4,18 @@ namespace Wawans\SismiopDatabase\His;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $username
+ * @property string $tgl_ubah
+ * @property string|null $user_pengubah
+ * @property string|null $ket
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisPemakai newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisPemakai newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisPemakai query()
+ *
+ * @mixin \Eloquent
+ */
 class HisPemakai extends Model
 {
     /**

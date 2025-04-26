@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_jabatan_komdir
+ * @property string|null $ket_jabatan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JabatanKomdir newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JabatanKomdir newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JabatanKomdir query()
+ *
+ * @mixin \Eloquent
+ */
 class JabatanKomdir extends Model
 {
     /**

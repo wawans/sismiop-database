@@ -2,8 +2,36 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string $kd_propinsi_pemohon
+ * @property string $kd_dati2_pemohon
+ * @property string $kd_kecamatan_pemohon
+ * @property string $kd_kelurahan_pemohon
+ * @property string $kd_blok_pemohon
+ * @property string $no_urut_pemohon
+ * @property string $kd_jns_op_pemohon
+ * @property string $no_urut_penerima_kompensasi
+ * @property string|null $kd_propinsi_kompensasi
+ * @property string|null $kd_dati2_kompensasi
+ * @property string|null $kd_kecamatan_kompensasi
+ * @property string|null $kd_kelurahan_kompensasi
+ * @property string|null $kd_blok_kompensasi
+ * @property string|null $no_urut_kompensasi
+ * @property string|null $kd_jns_op_kompensasi
+ * @property string|null $thn_pajak_kompensasi
+ * @property string|null $nilai_yang_dikompensasi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenerimaKompensasi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenerimaKompensasi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PenerimaKompensasi query()
+ *
+ * @mixin \Eloquent
+ */
 class PenerimaKompensasi extends Model
 {
     /**

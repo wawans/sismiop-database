@@ -4,6 +4,27 @@ namespace Wawans\SismiopDatabase\Dat;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bumi
+ * @property string $kd_pebin
+ * @property string $kd_pbi
+ * @property string $kd_ppbi
+ * @property string $kd_upb
+ * @property string $kd_kibt
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBumiKibt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBumiKibt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBumiKibt query()
+ *
+ * @mixin \Eloquent
+ */
 class DatOpBumiKibt extends Model
 {
     /**

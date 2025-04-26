@@ -4,6 +4,22 @@ namespace Wawans\SismiopDatabase\Surat;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $no_srt_cabut_sita
+ * @property string|null $no_spmp
+ * @property string|null $alasan_cabut_sita
+ * @property string|null $tgl_terbit_srt_cabut_sita
+ * @property string|null $tgl_cetak_srt_cabut_sita
+ * @property string|null $nip_pencetak_srt_cabut_sita
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SuratCabutSita newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SuratCabutSita newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SuratCabutSita query()
+ *
+ * @mixin \Eloquent
+ */
 class SuratCabutSita extends Model
 {
     /**

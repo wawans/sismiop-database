@@ -10,27 +10,25 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefAdmKppbb
  *
- * @property string $KD_KANWIL
- * @property string $KD_KPPBB
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property StrPad $kd_kanwil
- * @property StrPad $kd_kppbb
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKanwil $refKanwil
  * @property-read \Wawans\SismiopDatabase\Ref\RefKppbb $refKppbb
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|RefAdmKppbb newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefAdmKppbb newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefAdmKppbb query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefAdmKppbb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefAdmKppbb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefAdmKppbb query()
+ *
  * @mixin \Eloquent
  */
 class RefAdmKppbb extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -76,10 +74,10 @@ class RefAdmKppbb extends Model
      * @var array
      */
     protected $casts = [
-        'kd_kanwil' => StrPad::class . ':2',
-        'kd_kppbb' => StrPad::class . ':2',
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
+        'kd_kanwil' => StrPad::class.':2',
+        'kd_kppbb' => StrPad::class.':2',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
     ];
 
     public function refKanwil()

@@ -12,34 +12,31 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Dat\DatPetaZnt
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $KD_ZNT
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $kd_znt
  * @property-read \Wawans\SismiopDatabase\Dat\DatPetaBlok $datPetaBlok
  * @property-read \Wawans\SismiopDatabase\Dat\DatZnt $datZnt
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatPetaZnt newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatPetaZnt newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatPetaZnt query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatPetaZnt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatPetaZnt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatPetaZnt query()
+ *
  * @mixin \Eloquent
  */
 class DatPetaZnt extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -52,7 +49,7 @@ class DatPetaZnt extends Model
         'kd_kecamatan',
         'kd_kelurahan',
         'kd_blok',
-        'kd_znt'
+        'kd_znt',
     ];
 
     /**
@@ -73,7 +70,7 @@ class DatPetaZnt extends Model
         'kd_kecamatan',
         'kd_kelurahan',
         'kd_blok',
-        'kd_znt'
+        'kd_znt',
     ];
 
     /**
@@ -89,24 +86,24 @@ class DatPetaZnt extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
     ];
 
     public function datPetaBlok()
     {
         return $this->belongsTo(DatPetaBlok::class,
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok'],
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok']);
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_blok'],
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_blok']);
     }
 
     public function datZnt()
     {
         return $this->belongsTo(DatZnt::class,
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_znt'],
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_znt']);
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_znt'],
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_znt']);
     }
 }

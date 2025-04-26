@@ -2,8 +2,18 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_status_kayu_ulin
+ * @property string|null $status_kayu_ulin
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KayuUlin newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KayuUlin newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KayuUlin query()
+ *
+ * @mixin \Eloquent
+ */
 class KayuUlin extends Model
 {
     /**

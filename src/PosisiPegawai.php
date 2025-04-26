@@ -3,7 +3,6 @@
 namespace Wawans\SismiopDatabase;
 
 use Illuminate\Support\Facades\DB;
-use Wawans\SismiopDatabase\Model;
 use Wawans\SismiopDatabase\Ref\RefJabatan;
 use Wawans\SismiopDatabase\Ref\RefSeksi;
 use Wawans\SismiopDatabase\Ref\RefSubSeksi;
@@ -11,24 +10,27 @@ use Wawans\SismiopDatabase\Ref\RefSubSeksi;
 /**
  * Wawans\SismiopDatabase\PosisiPegawai
  *
- * @property string $KD_KANWIL
- * @property string $KD_KPPBB
- * @property string $NIP
- * @property string $KD_SEKSI
- * @property string $KD_SUBSEKSI
- * @property string $TGL_AWAL_BERLAKU
- * @property string|null $TGL_AKHIR_BERLAKU
- * @property string|null $KD_WEWENANG
- * @property string|null $KD_JABATAN
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $nip
+ * @property string $kd_seksi
+ * @property string $kd_subseksi
+ * @property \Illuminate\Support\Carbon $tgl_awal_berlaku
+ * @property \Illuminate\Support\Carbon|null $tgl_akhir_berlaku
+ * @property string|null $kd_wewenang
+ * @property string|null $kd_jabatan
+ * @property string|null $sys_nc00010$
  * @property-read \Wawans\SismiopDatabase\Pegawai $pegawai
- * @property-read RefJabatan $refJabatan
+ * @property-read RefJabatan|null $refJabatan
  * @property-read RefSeksi $refSeksi
  * @property-read RefSubSeksi $refSubSeksi
- * @property-read \Wawans\SismiopDatabase\Wewenang $refWewenang
- * @method static \Illuminate\Database\Eloquent\Builder|PosisiPegawai newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PosisiPegawai newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PosisiPegawai query()
- * @method static \Illuminate\Database\Eloquent\Builder|PosisiPegawai whereActive($date = null, $format = 'YYYY-MM-DD')
+ * @property-read \Wawans\SismiopDatabase\Wewenang|null $refWewenang
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PosisiPegawai newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PosisiPegawai newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PosisiPegawai query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PosisiPegawai whereActive($date = null, $format = 'YYYY-MM-DD')
+ *
  * @mixin \Eloquent
  */
 class PosisiPegawai extends Model
@@ -107,15 +109,14 @@ class PosisiPegawai extends Model
     }
 
     /**
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWhereActive($query, $date = null, $format = 'YYYY-MM-DD')
     {
-        $date = !blank($date) ? $date : date('Y-m-d');
+        $date = ! blank($date) ? $date : date('Y-m-d');
 
-        return $query->where('tgl_awal_berlaku', '<=', DB::raw("TO_DATE('" . $date . "','" . $format . "')"))
-            ->where('tgl_akhir_berlaku', '>=', DB::raw("TO_DATE('" . $date . "','" . $format . "')"));
+        return $query->where('tgl_awal_berlaku', '<=', DB::raw("TO_DATE('".$date."','".$format."')"))
+            ->where('tgl_akhir_berlaku', '>=', DB::raw("TO_DATE('".$date."','".$format."')"));
     }
 }

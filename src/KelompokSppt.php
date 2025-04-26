@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kelompok_sppt
+ * @property string|null $nama_kelompok_sppt
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelompokSppt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelompokSppt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KelompokSppt query()
+ *
+ * @mixin \Eloquent
+ */
 class KelompokSppt extends Model
 {
     /**

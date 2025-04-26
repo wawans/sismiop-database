@@ -2,8 +2,19 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $mfnpwp
+ * @property string $mfkpp
+ * @property string $mfcab
+ * @property string|null $kd_klu
+ * @property string|null $no_penduduk
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Npwp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Npwp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Npwp query()
+ *
+ * @mixin \Eloquent
+ */
 class Npwp extends Model
 {
     /**

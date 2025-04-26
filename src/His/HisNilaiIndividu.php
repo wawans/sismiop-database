@@ -4,6 +4,30 @@ namespace Wawans\SismiopDatabase\His;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bng
+ * @property string $his_indeks_nilai_individu
+ * @property string|null $his_no_formulir_individu
+ * @property string|null $his_nilai_individu
+ * @property string|null $his_tgl_penilaian_individu
+ * @property string|null $his_nip_penilai_individu
+ * @property string|null $his_tgl_perekaman_individu
+ * @property string|null $his_nip_perekam_individu
+ * @property string|null $sys_nc00016$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisNilaiIndividu newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisNilaiIndividu newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisNilaiIndividu query()
+ *
+ * @mixin \Eloquent
+ */
 class HisNilaiIndividu extends Model
 {
     /**

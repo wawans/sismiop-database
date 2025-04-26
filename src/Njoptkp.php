@@ -2,8 +2,19 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_awal
+ * @property string $thn_akhir
+ * @property string $nilai_njoptkp
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Njoptkp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Njoptkp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Njoptkp query()
+ *
+ * @mixin \Eloquent
+ */
 class Njoptkp extends Model
 {
     /**

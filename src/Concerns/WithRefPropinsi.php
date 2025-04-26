@@ -8,6 +8,6 @@ trait WithRefPropinsi
 {
     public function refPropinsi()
     {
-        return $this->belongsTo(RefPropinsi::class,'kd_propinsi','kd_propinsi');
+        return $this->belongsTo(RefPropinsi::class, 'kd_propinsi', 'kd_propinsi');
     }
 }

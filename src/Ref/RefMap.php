@@ -8,13 +8,14 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefMap
  *
- * @property string $KD_SEKTOR
- * @property string|null $KD_MAP
- * @property StrPad $kd_sektor
+ * @property string $kd_sektor
+ * @property string|null $kd_map
  * @property-read \Wawans\SismiopDatabase\Ref\RefJnsSektor|null $refJnsSektor
- * @method static \Illuminate\Database\Eloquent\Builder|RefMap newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefMap newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefMap query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefMap newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefMap newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefMap query()
+ *
  * @mixin \Eloquent
  */
 class RefMap extends Model
@@ -53,7 +54,7 @@ class RefMap extends Model
      * @var array
      */
     protected $casts = [
-        'kd_sektor' => StrPad::class . ':2',
+        'kd_sektor' => StrPad::class.':2',
     ];
 
     public function refJnsSektor()

@@ -13,38 +13,37 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Dat\DatNir
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_ZNT
- * @property string $THN_NIR_ZNT
- * @property string|null $KD_KANWIL
- * @property string|null $KD_KPPBB
- * @property string|null $JNS_DOKUMEN
- * @property string|null $NO_DOKUMEN
- * @property string|null $NIR
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_znt
+ * @property string $thn_nir_znt
+ * @property string|null $kd_kanwil
+ * @property string|null $kd_kppbb
+ * @property string|null $jns_dokumen
+ * @property string|null $no_dokumen
+ * @property string|null $nir
+ * @property string|null $sys_nc00012$
  * @property-read \Wawans\SismiopDatabase\Dat\DatZnt $datZnt
- * @property-read Dokumen $dokumen
+ * @property-read Dokumen|null $dokumen
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatNir newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatNir newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatNir query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatNir newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatNir newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatNir query()
+ *
  * @mixin \Eloquent
  */
 class DatNir extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -57,7 +56,7 @@ class DatNir extends Model
         'kd_kecamatan',
         'kd_kelurahan',
         'kd_znt',
-        'thn_nir_znt'
+        'thn_nir_znt',
     ];
 
     /**
@@ -99,23 +98,23 @@ class DatNir extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
     ];
 
     public function datZnt()
     {
         return $this->belongsTo(DatZnt::class,
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_znt'],
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_znt']);
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_znt'],
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_znt']);
     }
 
     public function dokumen()
     {
         return $this->belongsTo(Dokumen::class,
-            ['kd_kanwil','kd_kppbb','jns_dokumen','no_dokumen'],
-            ['kd_kanwil','kd_kppbb','jns_dokumen','no_dokumen']);
+            ['kd_kanwil', 'kd_kppbb', 'jns_dokumen', 'no_dokumen'],
+            ['kd_kanwil', 'kd_kppbb', 'jns_dokumen', 'no_dokumen']);
     }
 }

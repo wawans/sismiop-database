@@ -2,8 +2,17 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_pekerjaan
+ * @property string $kd_kegiatan
+ * @property string|null $nm_kegiatan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PekerjaanKegiatan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PekerjaanKegiatan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PekerjaanKegiatan query()
+ *
+ * @mixin \Eloquent
+ */
 class PekerjaanKegiatan extends Model
 {
     /**

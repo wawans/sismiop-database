@@ -4,6 +4,22 @@ namespace Wawans\SismiopDatabase\Dbkb;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_dbkb_standard
+ * @property string $kd_jpb
+ * @property string $tipe_bng
+ * @property string $kd_bng_lantai
+ * @property string|null $nilai_dbkb_standard
+ * @property string|null $sys_nc00008$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbStandard newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbStandard newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbStandard query()
+ *
+ * @mixin \Eloquent
+ */
 class DbkbStandard extends Model
 {
     /**

@@ -8,18 +8,15 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefKppbb
  *
- * @property string $KD_KANWIL
- * @property string $KD_KPPBB
- * @property string|null $NM_KPPBB
- * @property string|null $AL_KPPBB
- * @property string|null $KOTA_TERBIT_KPPBB
- * @property string|null $NO_FAKSIMILI
- * @property string|null $NO_TELPON
- * @property string|null $NM_LENGKAP_KPPBB
- * @property string|null $NM_SINGKAT_KPPBB
- * @property StrFn $nm_kppbb
- * @property StrFn $al_kppbb
- * @property StrFn $kota_terbit_kppbb
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string|null $nm_kppbb
+ * @property string|null $al_kppbb
+ * @property string|null $kota_terbit_kppbb
+ * @property string|null $no_faksimili
+ * @property string|null $no_telpon
+ * @property string|null $nm_lengkap_kppbb
+ * @property string|null $nm_singkat_kppbb
  * @property-read mixed $alamat
  * @property-read mixed $faks
  * @property-read mixed $kota
@@ -27,11 +24,13 @@ use Wawans\SismiopDatabase\Model;
  * @property-read mixed $nama_lengkap
  * @property-read mixed $nama_singkat
  * @property-read mixed $telp
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Ref\RefAdmKppbb[] $refAdmKppbb
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Ref\RefAdminKppbb[] $refAdminKppbb
- * @method static \Illuminate\Database\Eloquent\Builder|RefKppbb newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefKppbb newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefKppbb query()
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Ref\RefAdmKppbb> $refAdmKppbb
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Ref\RefAdminKppbb> $refAdminKppbb
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefKppbb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefKppbb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefKppbb query()
+ *
  * @mixin \Eloquent
  */
 class RefKppbb extends Model
@@ -76,9 +75,9 @@ class RefKppbb extends Model
      * @var array
      */
     protected $casts = [
-        'nm_kppbb' => StrFn::class . ':strtoupper',
-        'al_kppbb' => StrFn::class . ':strtoupper',
-        'kota_terbit_kppbb' => StrFn::class . ':strtoupper',
+        'nm_kppbb' => StrFn::class.':strtoupper',
+        'al_kppbb' => StrFn::class.':strtoupper',
+        'kota_terbit_kppbb' => StrFn::class.':strtoupper',
     ];
 
     public function refAdmKppbb()

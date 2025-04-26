@@ -2,8 +2,26 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $no_pmt_jdl_lelang
+ * @property string|null $no_spmp
+ * @property string|null $kd_kantor_lelang
+ * @property string|null $tgl_srt_pmt_jdl_lelang
+ * @property string|null $tgl_pmt_pelelangan
+ * @property string|null $status_lelang
+ * @property string|null $tgl_pelelangan
+ * @property string|null $tempat_pelelangan
+ * @property string|null $tgl_cetak_srt_pmt_jdl_lelang
+ * @property string|null $nip_pencetak_srt_pmt_jdl_llg
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PermintaanJadualLelang newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PermintaanJadualLelang newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PermintaanJadualLelang query()
+ *
+ * @mixin \Eloquent
+ */
 class PermintaanJadualLelang extends Model
 {
     /**

@@ -4,6 +4,18 @@ namespace Wawans\SismiopDatabase\Rek;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $no_pelanggan_pam
+ * @property string $thn_pam
+ * @property string $bulan_ke_pam
+ * @property string|null $tagihan_pam
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekPam newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekPam newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekPam query()
+ *
+ * @mixin \Eloquent
+ */
 class RekPam extends Model
 {
     /**

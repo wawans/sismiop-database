@@ -4,6 +4,42 @@ namespace Wawans\SismiopDatabase\Pembetulan;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string $kd_propinsi_pemohon
+ * @property string $kd_dati2_pemohon
+ * @property string $kd_kecamatan_pemohon
+ * @property string $kd_kelurahan_pemohon
+ * @property string $kd_blok_pemohon
+ * @property string $no_urut_pemohon
+ * @property string $kd_jns_op_pemohon
+ * @property string|null $thn_pelayanan_keb_kbrt
+ * @property string|null $bundel_pelayanan_kep_kbrt
+ * @property string|null $no_urut_pelayanan_kep_kbrt
+ * @property string|null $jns_sk
+ * @property string|null $no_sk
+ * @property string|null $kd_kls_tanah
+ * @property string|null $thn_awal_kls_tanah
+ * @property string|null $kd_kls_bng
+ * @property string|null $thn_awal_kls_bng
+ * @property string|null $luas_bumi_pembetulan
+ * @property string|null $luas_bng_pembetulan
+ * @property string|null $njop_bumi_pembetulan
+ * @property string|null $njop_bng_pembetulan
+ * @property string|null $pbb_pembetulan
+ * @property string|null $tgl_cetak_pembetulan
+ * @property string|null $nip_pencetak_pembetulan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembetulanKeberatan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembetulanKeberatan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembetulanKeberatan query()
+ *
+ * @mixin \Eloquent
+ */
 class PembetulanKeberatan extends Model
 {
     /**

@@ -4,6 +4,16 @@ namespace Wawans\SismiopDatabase\Sim;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $no_sim
+ * @property string|null $no_penduduk
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sim newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sim newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sim query()
+ *
+ * @mixin \Eloquent
+ */
 class Sim extends Model
 {
     /**

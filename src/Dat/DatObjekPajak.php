@@ -16,70 +16,64 @@ use Wawans\SismiopDatabase\Sppt\Sppt;
 /**
  * Wawans\SismiopDatabase\Dat\DatObjekPajak
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property string|null $SUBJEK_PAJAK_ID
- * @property string|null $NO_FORMULIR_SPOP
- * @property string|null $NO_PERSIL
- * @property string|null $JALAN_OP
- * @property string|null $BLOK_KAV_NO_OP
- * @property string|null $RW_OP
- * @property string|null $RT_OP
- * @property bool|null $KD_STATUS_CABANG
- * @property string|null $KD_STATUS_WP
- * @property int|null $TOTAL_LUAS_BUMI
- * @property int|null $TOTAL_LUAS_BNG
- * @property int|null $NJOP_BUMI
- * @property int|null $NJOP_BNG
- * @property bool|null $STATUS_PETA_OP
- * @property string|null $JNS_TRANSAKSI_OP
- * @property string|null $TGL_PENDATAAN_OP
- * @property string|null $NIP_PENDATA
- * @property string|null $TGL_PEMERIKSAAN_OP
- * @property string|null $NIP_PEMERIKSA_OP
- * @property string|null $TGL_PEREKAMAN_OP
- * @property string|null $NIP_PEREKAM_OP
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
- * @property StrPad $rw_op
- * @property StrPad $rt_op
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Dat\DatOpBangunan[] $datOpBangunan
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string|null $subjek_pajak_id
+ * @property string|null $no_formulir_spop
+ * @property string|null $no_persil
+ * @property string|null $jalan_op
+ * @property string|null $blok_kav_no_op
+ * @property string|null $rw_op
+ * @property string|null $rt_op
+ * @property string|null $kd_status_cabang
+ * @property string|null $kd_status_wp
+ * @property string|null $total_luas_bumi
+ * @property string|null $total_luas_bng
+ * @property string|null $njop_bumi
+ * @property string|null $njop_bng
+ * @property string|null $status_peta_op
+ * @property string|null $jns_transaksi_op
+ * @property \Illuminate\Support\Carbon|null $tgl_pendataan_op
+ * @property string|null $nip_pendata
+ * @property \Illuminate\Support\Carbon|null $tgl_pemeriksaan_op
+ * @property string|null $nip_pemeriksa_op
+ * @property \Illuminate\Support\Carbon|null $tgl_perekaman_op
+ * @property string|null $nip_perekam_op
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Dat\DatOpBangunan> $datOpBangunan
  * @property-read \Wawans\SismiopDatabase\Dat\DatOpBumi|null $datOpBumi
  * @property-read \Wawans\SismiopDatabase\Dat\DatPetaBlok $datPetaBlok
- * @property-read \Wawans\SismiopDatabase\Dat\DatSubjekPajak $datSubjekPajak
+ * @property-read \Wawans\SismiopDatabase\Dat\DatSubjekPajak|null $datSubjekPajak
  * @property-read mixed $jalan_blok_kav_no_op
- * @property-read Pegawai $pegawaiPemeriksa
- * @property-read Pegawai $pegawaiPendata
- * @property-read Pegawai $pegawaiPerekam
+ * @property-read Pegawai|null $pegawaiPemeriksa
+ * @property-read Pegawai|null $pegawaiPendata
+ * @property-read Pegawai|null $pegawaiPerekam
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
- * @property-read LookupItem $refJnsTransaksi
- * @property-read LookupItem $refKdStatusCabang
- * @property-read LookupItem $refKdStatusWp
+ * @property-read LookupItem|null $refJnsTransaksi
+ * @property-read LookupItem|null $refKdStatusCabang
+ * @property-read LookupItem|null $refKdStatusWp
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @property-read LookupItem $refStatusPeta
- * @property-read \Illuminate\Database\Eloquent\Collection|Sppt[] $sppt
- * @method static \Illuminate\Database\Eloquent\Builder|DatObjekPajak newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatObjekPajak newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatObjekPajak query()
+ * @property-read LookupItem|null $refStatusPeta
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Sppt> $sppt
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatObjekPajak newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatObjekPajak newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatObjekPajak query()
+ *
  * @mixin \Eloquent
  */
 class DatObjekPajak extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -152,14 +146,14 @@ class DatObjekPajak extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
-        'rw_op' => StrPad::class . ':2',
-        'rt_op' => StrPad::class . ':3',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
+        'rw_op' => StrPad::class.':2',
+        'rt_op' => StrPad::class.':3',
         'tgl_pendataan_op' => 'date',
         'tgl_pemeriksaan_op' => 'date',
         'tgl_perekaman_op' => 'datetime',
@@ -178,8 +172,8 @@ class DatObjekPajak extends Model
     public function datPetaBlok()
     {
         return $this->belongsTo(DatPetaBlok::class,
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok'],
-            ['kd_propinsi','kd_dati2','kd_kecamatan','kd_kelurahan','kd_blok']);
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_blok'],
+            ['kd_propinsi', 'kd_dati2', 'kd_kecamatan', 'kd_kelurahan', 'kd_blok']);
     }
 
     public function datSubjekPajak()
@@ -229,6 +223,6 @@ class DatObjekPajak extends Model
 
     public function getJalanBlokKavNoOpAttribute($value)
     {
-        return $this->jalan_op . ' ' . $this->blok_kav_no_op;
+        return $this->jalan_op.' '.$this->blok_kav_no_op;
     }
 }

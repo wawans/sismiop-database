@@ -2,8 +2,32 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_pebin
+ * @property string $kd_pbi
+ * @property string $kd_ppbi
+ * @property string $kd_upb
+ * @property string $kd_kibb
+ * @property string|null $untuk_pemakai
+ * @property string|null $tahun
+ * @property string|null $luas_bangunan
+ * @property string|null $cara
+ * @property string|null $dari
+ * @property string|null $kondisi
+ * @property string|null $harga
+ * @property string|null $nilai_perolehan
+ * @property string|null $sumber_dana
+ * @property string|null $dasar_harga
+ * @property string|null $bukti_hak
+ * @property string|null $kronologis_hak
+ * @property string|null $digunakan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AsetKibb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AsetKibb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AsetKibb query()
+ *
+ * @mixin \Eloquent
+ */
 class AsetKibb extends Model
 {
     /**

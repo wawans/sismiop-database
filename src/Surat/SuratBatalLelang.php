@@ -4,6 +4,22 @@ namespace Wawans\SismiopDatabase\Surat;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $no_srt_batal_lelang
+ * @property string|null $no_pmt_jdl_lelang
+ * @property string|null $alasan_batal_lelang
+ * @property string|null $tgl_terbit_srt_batal_lelang
+ * @property string|null $tgl_cetak_srt_batal_lelang
+ * @property string|null $nip_pencetak_srt_batal_lelang
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SuratBatalLelang newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SuratBatalLelang newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SuratBatalLelang query()
+ *
+ * @mixin \Eloquent
+ */
 class SuratBatalLelang extends Model
 {
     /**

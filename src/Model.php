@@ -3,16 +3,21 @@
 namespace Wawans\SismiopDatabase;
 
 use Awobaz\Compoships\Compoships;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Str;
-use Wawans\SismiopDatabase\Concerns\HasRouteBinding;
 
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Model newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Model newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Model query()
+ *
+ * @mixin \Eloquent
+ */
 class Model extends EloquentModel
 {
     use Compoships;
-    use HasFactory;
-    use HasRouteBinding;
+    use Concerns\Composite;
+    use Concerns\RouteBinding;
 
     /**
      * Indicates if the IDs are auto-incrementing.

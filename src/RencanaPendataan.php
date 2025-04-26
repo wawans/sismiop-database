@@ -2,8 +2,25 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $thn_renpend
+ * @property string|null $jml_op_bumi_renpend
+ * @property string|null $jml_op_bng_renpend
+ * @property string|null $luas_bumi_renpend
+ * @property string|null $luas_bng_renpend
+ * @property string|null $njop_bumi_renpend
+ * @property string|null $njop_bng_renpend
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RencanaPendataan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RencanaPendataan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RencanaPendataan query()
+ *
+ * @mixin \Eloquent
+ */
 class RencanaPendataan extends Model
 {
     /**

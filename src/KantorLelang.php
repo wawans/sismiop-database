@@ -2,8 +2,17 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kantor_lelang
+ * @property string|null $nm_kantor_lelang
+ * @property string|null $al_kantor_lelang
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KantorLelang newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KantorLelang newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KantorLelang query()
+ *
+ * @mixin \Eloquent
+ */
 class KantorLelang extends Model
 {
     /**

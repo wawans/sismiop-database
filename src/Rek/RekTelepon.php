@@ -4,6 +4,19 @@ namespace Wawans\SismiopDatabase\Rek;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_area
+ * @property string $no_telepon
+ * @property string $thn_telepon
+ * @property string $bulan_ke_telepon
+ * @property string|null $tagihan_telepon
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekTelepon newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekTelepon newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekTelepon query()
+ *
+ * @mixin \Eloquent
+ */
 class RekTelepon extends Model
 {
     /**

@@ -16,80 +16,77 @@ use Wawans\SismiopDatabase\Pembayaran\PembayaranSppt;
 /**
  * Wawans\SismiopDatabase\Sppt\Sppt
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property string $THN_PAJAK_SPPT
- * @property int $SIKLUS_SPPT
- * @property string $KD_KANWIL_BANK
- * @property string $KD_KPPBB_BANK
- * @property string $KD_BANK_TUNGGAL
- * @property string $KD_BANK_PERSEPSI
- * @property string $KD_TP
- * @property string $NM_WP_SPPT
- * @property string $JLN_WP_SPPT
- * @property string|null $BLOK_KAV_NO_WP_SPPT
- * @property string|null $RW_WP_SPPT
- * @property string|null $RT_WP_SPPT
- * @property string|null $KELURAHAN_WP_SPPT
- * @property string|null $KOTA_WP_SPPT
- * @property string|null $KD_POS_WP_SPPT
- * @property string|null $NPWP_SPPT
- * @property string|null $NO_PERSIL_SPPT
- * @property string $KD_KLS_TANAH
- * @property string $THN_AWAL_KLS_TANAH
- * @property string $KD_KLS_BNG
- * @property string $THN_AWAL_KLS_BNG
- * @property string $TGL_JATUH_TEMPO_SPPT
- * @property int $LUAS_BUMI_SPPT
- * @property int $LUAS_BNG_SPPT
- * @property int $NJOP_BUMI_SPPT
- * @property int $NJOP_BNG_SPPT
- * @property int $NJOP_SPPT
- * @property int $NJOPTKP_SPPT
- * @property string|null $NJKP_SPPT
- * @property int $PBB_TERHUTANG_SPPT
- * @property int|null $FAKTOR_PENGURANG_SPPT
- * @property int $PBB_YG_HARUS_DIBAYAR_SPPT
- * @property string $STATUS_PEMBAYARAN_SPPT
- * @property string $STATUS_TAGIHAN_SPPT
- * @property string $STATUS_CETAK_SPPT
- * @property string $TGL_TERBIT_SPPT
- * @property string $TGL_CETAK_SPPT
- * @property string $NIP_PENCETAK_SPPT
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
- * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
- * @property-read \Illuminate\Database\Eloquent\Collection|PembayaranSppt[] $pembayaranSppt
- * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
- * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
- * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
- * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @property-read LookupItem $refStatusCetak
- * @property-read LookupItem $refStatusPembayaran
- * @property-read LookupItem $refStatusTagihan
- * @method static \Illuminate\Database\Eloquent\Builder|Sppt newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Sppt newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Sppt orderByTahun($order = 'asc')
- * @method static \Illuminate\Database\Eloquent\Builder|Sppt query()
- * @method static \Illuminate\Database\Eloquent\Builder|Sppt statusPembayaran($status = 1)
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $thn_pajak_sppt
+ * @property string $siklus_sppt
+ * @property string $kd_kanwil_bank
+ * @property string $kd_kppbb_bank
+ * @property string $kd_bank_tunggal
+ * @property string $kd_bank_persepsi
+ * @property string $kd_tp
+ * @property string $nm_wp_sppt
+ * @property string $jln_wp_sppt
+ * @property string|null $blok_kav_no_wp_sppt
+ * @property string|null $rw_wp_sppt
+ * @property string|null $rt_wp_sppt
+ * @property string|null $kelurahan_wp_sppt
+ * @property string|null $kota_wp_sppt
+ * @property string|null $kd_pos_wp_sppt
+ * @property string|null $npwp_sppt
+ * @property string|null $no_persil_sppt
+ * @property string $kd_kls_tanah
+ * @property string $thn_awal_kls_tanah
+ * @property string $kd_kls_bng
+ * @property string $thn_awal_kls_bng
+ * @property \Illuminate\Support\Carbon $tgl_jatuh_tempo_sppt
+ * @property string $luas_bumi_sppt
+ * @property string $luas_bng_sppt
+ * @property string $njop_bumi_sppt
+ * @property string $njop_bng_sppt
+ * @property string $njop_sppt
+ * @property string $njoptkp_sppt
+ * @property string|null $njkp_sppt
+ * @property string $pbb_terhutang_sppt
+ * @property string|null $faktor_pengurang_sppt
+ * @property string $pbb_yg_harus_dibayar_sppt
+ * @property string $status_pembayaran_sppt
+ * @property string $status_tagihan_sppt
+ * @property string $status_cetak_sppt
+ * @property \Illuminate\Support\Carbon $tgl_terbit_sppt
+ * @property \Illuminate\Support\Carbon $tgl_cetak_sppt
+ * @property string $nip_pencetak_sppt
+ * @property string|null $tarif_sppt
+ * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak|null $datObjekPajak
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, PembayaranSppt> $pembayaranSppt
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2|null $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan|null $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan|null $refKelurahan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi|null $refPropinsi
+ * @property-read LookupItem|null $refStatusCetak
+ * @property-read LookupItem|null $refStatusPembayaran
+ * @property-read LookupItem|null $refStatusTagihan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sppt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sppt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sppt orderByTahun($order = 'asc')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sppt query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Sppt statusPembayaran($status = 1)
+ *
  * @mixin \Eloquent
  */
 class Sppt extends Model
 {
     use WithDatObjekPajak;
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -104,7 +101,7 @@ class Sppt extends Model
         'kd_blok',
         'no_urut',
         'kd_jns_op',
-        'thn_pajak_sppt'
+        'thn_pajak_sppt',
     ];
 
     /**
@@ -180,12 +177,12 @@ class Sppt extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
         'tgl_jatuh_tempo_sppt' => 'date',
         'tgl_terbit_sppt' => 'date',
         'tgl_cetak_sppt' => 'datetime',
@@ -212,9 +209,8 @@ class Sppt extends Model
     }
 
     /**
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param mixed $status
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  mixed  $status
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeStatusPembayaran($query, $status = 1)
@@ -223,9 +219,8 @@ class Sppt extends Model
     }
 
     /**
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param mixed $order
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  mixed  $order
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeOrderByTahun($query, $order = 'asc')

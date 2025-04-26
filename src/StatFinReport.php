@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_stat_fin_rep
+ * @property string|null $ket_stat_fin_rep
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatFinReport newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatFinReport newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatFinReport query()
+ *
+ * @mixin \Eloquent
+ */
 class StatFinReport extends Model
 {
     /**

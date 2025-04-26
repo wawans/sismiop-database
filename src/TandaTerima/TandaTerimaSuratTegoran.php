@@ -4,6 +4,21 @@ namespace Wawans\SismiopDatabase\TandaTerima;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $no_srt_tegoran
+ * @property string|null $tgl_terima_wp_srt_tegoran
+ * @property string|null $nm_yg_menerima_srt_tegoran
+ * @property string|null $tgl_rekam_ttr_srt_tegoran
+ * @property string|null $nip_rekam_ttr_srt_tegoran
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TandaTerimaSuratTegoran newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TandaTerimaSuratTegoran newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TandaTerimaSuratTegoran query()
+ *
+ * @mixin \Eloquent
+ */
 class TandaTerimaSuratTegoran extends Model
 {
     /**

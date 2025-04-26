@@ -4,6 +4,18 @@ namespace Wawans\SismiopDatabase\Adj;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_jpb
+ * @property string $tipe_bng
+ * @property string $kd_bng_lantai
+ * @property string|null $pct_adj_luas
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjLuas newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjLuas newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjLuas query()
+ *
+ * @mixin \Eloquent
+ */
 class AdjLuas extends Model
 {
     /**
@@ -34,7 +46,7 @@ class AdjLuas extends Model
         'tipe_bng',
         'kd_bng_lantai',
         'pct_adj_luas',
-];
+    ];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -2,8 +2,24 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_area
+ * @property string $no_telepon
+ * @property string|null $kd_propinsi
+ * @property string|null $kd_dati2
+ * @property string|null $kd_kecamatan
+ * @property string|null $kd_kelurahan
+ * @property string|null $kd_blok
+ * @property string|null $no_urut
+ * @property string|null $kd_jns_op
+ * @property string|null $no_bng
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Telepon newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Telepon newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Telepon query()
+ *
+ * @mixin \Eloquent
+ */
 class Telepon extends Model
 {
     /**

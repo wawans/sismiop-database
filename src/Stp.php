@@ -2,8 +2,43 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $tgl_terbit_stp
+ * @property string|null $no_stp
+ * @property string|null $kd_jns_ketetapan
+ * @property string|null $no_srt_ketetapan
+ * @property string|null $thn_pajak_ketetapan
+ * @property string|null $pbb_ketetapan_awal
+ * @property string|null $pengurangan_pbb
+ * @property string|null $pengurangan_denda_skp
+ * @property string|null $jml_pbb_telah_dibayar
+ * @property string|null $jml_pbb_kurang_bayar
+ * @property string|null $denda_stp
+ * @property string|null $pengurangan_denda_sppt
+ * @property string|null $pbb_yg_harus_dibayar_stp
+ * @property string|null $kd_kanwil_bank
+ * @property string|null $kd_kppbb_bank
+ * @property string|null $kd_bank_tunggal
+ * @property string|null $kd_bank_persepsi
+ * @property string|null $kd_tp
+ * @property string|null $tgl_jatuh_tempo_stp
+ * @property string|null $status_pembayaran_stp
+ * @property string|null $tgl_cetak_stp
+ * @property string|null $nip_pencetak_stp
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Stp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Stp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Stp query()
+ *
+ * @mixin \Eloquent
+ */
 class Stp extends Model
 {
     /**

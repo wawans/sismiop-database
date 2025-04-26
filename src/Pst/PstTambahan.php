@@ -8,24 +8,21 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Pst\PstTambahan
  *
- * @property string $KD_KANWIL
- * @property string $KD_KPPBB
- * @property string $THN_PELAYANAN
- * @property string $BUNDEL_PELAYANAN
- * @property string $NO_URUT_PELAYANAN
- * @property string|null $THN_PENERBITAN
- * @property string|null $NO_TELP
- * @property string|null $TGL_REKAM
- * @property string|null $NIP_REKAM
- * @property StrPad $kd_kanwil
- * @property StrPad $kd_kppbb
- * @property StrPad $thn_pelayanan
- * @property StrPad $bundel_pelayanan
- * @property StrPad $no_urut_pelayanan
- * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonan $pstPermohonan
- * @method static \Illuminate\Database\Eloquent\Builder|PstTambahan newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PstTambahan newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PstTambahan query()
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string|null $thn_penerbitan
+ * @property string|null $no_telp
+ * @property \Illuminate\Support\Carbon|null $tgl_rekam
+ * @property string|null $nip_rekam
+ * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonan|null $pstPermohonan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstTambahan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstTambahan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstTambahan query()
+ *
  * @mixin \Eloquent
  */
 class PstTambahan extends Model
@@ -74,11 +71,11 @@ class PstTambahan extends Model
      * @var array
      */
     protected $casts = [
-        'kd_kanwil' => StrPad::class . ':2',
-        'kd_kppbb' => StrPad::class . ':2',
-        'thn_pelayanan' => StrPad::class . ':4',
-        'bundel_pelayanan' => StrPad::class . ':4',
-        'no_urut_pelayanan' => StrPad::class . ':3',
+        'kd_kanwil' => StrPad::class.':2',
+        'kd_kppbb' => StrPad::class.':2',
+        'thn_pelayanan' => StrPad::class.':4',
+        'bundel_pelayanan' => StrPad::class.':4',
+        'no_urut_pelayanan' => StrPad::class.':3',
         'tgl_rekam' => 'datetime',
     ];
 

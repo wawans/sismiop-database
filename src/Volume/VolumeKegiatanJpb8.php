@@ -4,6 +4,21 @@ namespace Wawans\SismiopDatabase\Volume;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_pekerjaan
+ * @property string $kd_kegiatan
+ * @property string $lbr_bent_min_hrg_jpb8
+ * @property string $lbr_bent_max_hrg_jpb8
+ * @property string $ting_kolom_min_hrg_jpb8
+ * @property string $ting_kolom_max_hrg_jpb8
+ * @property string|null $vol_kegiatan_jpb8
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeKegiatanJpb8 newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeKegiatanJpb8 newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeKegiatanJpb8 query()
+ *
+ * @mixin \Eloquent
+ */
 class VolumeKegiatanJpb8 extends Model
 {
     /**

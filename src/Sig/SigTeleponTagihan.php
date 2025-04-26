@@ -4,6 +4,26 @@ namespace Wawans\SismiopDatabase\Sig;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $kode_area
+ * @property string $no_telepon
+ * @property string $thn_tagihan
+ * @property string $bln_tagihan
+ * @property string|null $jml_tagihan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SigTeleponTagihan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SigTeleponTagihan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SigTeleponTagihan query()
+ *
+ * @mixin \Eloquent
+ */
 class SigTeleponTagihan extends Model
 {
     /**

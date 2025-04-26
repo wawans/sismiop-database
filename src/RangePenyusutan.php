@@ -2,8 +2,17 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_range_penyusutan
+ * @property string|null $nilai_min_penyusutan
+ * @property string|null $nilai_max_penyusutan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RangePenyusutan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RangePenyusutan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RangePenyusutan query()
+ *
+ * @mixin \Eloquent
+ */
 class RangePenyusutan extends Model
 {
     /**

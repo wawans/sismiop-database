@@ -2,8 +2,35 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $mfnpwp_comp
+ * @property string $mfkpp_comp
+ * @property string $mfcab_comp
+ * @property string $tahun_porto
+ * @property string|null $nm_kap
+ * @property string|null $kd_stat_fin_rep
+ * @property string|null $kd_pendapat
+ * @property string|null $peredaran_usaha
+ * @property string|null $laba_bruto
+ * @property string|null $pengurang_bruto
+ * @property string|null $hasilan_net_dlm
+ * @property string|null $hasil_net_luar
+ * @property string|null $hasil_net
+ * @property string|null $kompensasi_rugi
+ * @property string|null $pkp
+ * @property string|null $pph_terutang
+ * @property string|null $kredit_pajak
+ * @property string|null $pph_kurang_byr
+ * @property string|null $pajak_masukan
+ * @property string|null $pajak_keluaran
+ * @property string|null $krg_lbh_bayar
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompPorto newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompPorto newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompPorto query()
+ *
+ * @mixin \Eloquent
+ */
 class CompPorto extends Model
 {
     /**

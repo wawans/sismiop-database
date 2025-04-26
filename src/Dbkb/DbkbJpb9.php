@@ -4,6 +4,22 @@ namespace Wawans\SismiopDatabase\Dbkb;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_dbkb_jpb9
+ * @property string $kls_dbkb_jpb9
+ * @property string $lantai_min_jpb9
+ * @property string $lantai_max_jpb9
+ * @property string|null $nilai_dbkb_jpb9
+ * @property string|null $sys_nc00008$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbJpb9 newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbJpb9 newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbJpb9 query()
+ *
+ * @mixin \Eloquent
+ */
 class DbkbJpb9 extends Model
 {
     /**

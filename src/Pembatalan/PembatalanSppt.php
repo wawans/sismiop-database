@@ -4,6 +4,34 @@ namespace Wawans\SismiopDatabase\Pembatalan;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $thn_pajak_sppt
+ * @property string $pembatalan_sppt_ke
+ * @property string|null $kd_batal
+ * @property string|null $kd_kanwil_bank
+ * @property string|null $kd_kppbb_bank
+ * @property string|null $kd_bank_tunggal
+ * @property string|null $kd_bank_persepsi
+ * @property string|null $kd_tp
+ * @property string|null $denda_sppt
+ * @property string|null $jml_sppt_yg_dibatalkan
+ * @property string|null $tgl_pembatalan_sppt
+ * @property string|null $tgl_rekam_btl_sppt
+ * @property string|null $nip_rekam_btl_sppt
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembatalanSppt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembatalanSppt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembatalanSppt query()
+ *
+ * @mixin \Eloquent
+ */
 class PembatalanSppt extends Model
 {
     /**

@@ -4,6 +4,21 @@ namespace Wawans\SismiopDatabase\Sim;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $sim_thn_dep_jpb_kls_bintang
+ * @property string $kd_fasilitas
+ * @property string $kd_jpb
+ * @property string $sim_kls_bintang
+ * @property string|null $sim_nilai_fas_kls_bintang
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimFasDepJpbKlsBintang newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimFasDepJpbKlsBintang newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimFasDepJpbKlsBintang query()
+ *
+ * @mixin \Eloquent
+ */
 class SimFasDepJpbKlsBintang extends Model
 {
     /**

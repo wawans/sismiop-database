@@ -2,8 +2,24 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $no_ba_sita
+ * @property string $no_urut_barang_sita
+ * @property string|null $jns_barang_sita
+ * @property string|null $nm_barang_sita
+ * @property string|null $al_barang_sita
+ * @property string|null $no_sertifikat
+ * @property string|null $tgl_sertifikat
+ * @property string|null $taksiran_harga_barang_sita
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianBarangSita newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianBarangSita newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianBarangSita query()
+ *
+ * @mixin \Eloquent
+ */
 class RincianBarangSita extends Model
 {
     /**

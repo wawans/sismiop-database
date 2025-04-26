@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_stat_kawin
+ * @property string|null $ket_stat_kawin
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatusKawin newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatusKawin newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|StatusKawin query()
+ *
+ * @mixin \Eloquent
+ */
 class StatusKawin extends Model
 {
     /**

@@ -2,8 +2,23 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $indeks_range
+ * @property string $kd_jns_range
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_jpb_jpt
+ * @property string $urutan_njkp
+ * @property string|null $njop_min
+ * @property string|null $njop_max
+ * @property string|null $nilai_njkp
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Njkp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Njkp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Njkp query()
+ *
+ * @mixin \Eloquent
+ */
 class Njkp extends Model
 {
     /**

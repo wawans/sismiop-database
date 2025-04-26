@@ -9,18 +9,18 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefSeksi
  *
- * @property string $KD_SEKSI
- * @property string|null $NM_SEKSI
- * @property string|null $NO_SRT_SEKSI
- * @property string|null $KODE_SURAT_1
- * @property string|null $KODE_SURAT_2
- * @property StrPad $kd_seksi
- * @property StrFn $nm_seksi
+ * @property string $kd_seksi
+ * @property string|null $nm_seksi
+ * @property string|null $no_srt_seksi
+ * @property string|null $kode_surat_1
+ * @property string|null $kode_surat_2
  * @property-read mixed $nama
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Ref\RefSubSeksi[] $refSubSeksi
- * @method static \Illuminate\Database\Eloquent\Builder|RefSeksi newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefSeksi newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefSeksi query()
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Ref\RefSubSeksi> $refSubSeksi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefSeksi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefSeksi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefSeksi query()
+ *
  * @mixin \Eloquent
  */
 class RefSeksi extends Model
@@ -62,8 +62,8 @@ class RefSeksi extends Model
      * @var array
      */
     protected $casts = [
-        'kd_seksi' => StrPad::class . ':2',
-        'nm_seksi' => StrFn::class . ':strtoupper',
+        'kd_seksi' => StrPad::class.':2',
+        'nm_seksi' => StrFn::class.':strtoupper',
     ];
 
     public function refSubSeksi()

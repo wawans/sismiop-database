@@ -2,8 +2,20 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_pajak_cr
+ * @property string $kd_sektor
+ * @property string|null $collection_ratio
+ * @property string|null $sys_nc00006$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CollectionRatio newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CollectionRatio newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CollectionRatio query()
+ *
+ * @mixin \Eloquent
+ */
 class CollectionRatio extends Model
 {
     /**

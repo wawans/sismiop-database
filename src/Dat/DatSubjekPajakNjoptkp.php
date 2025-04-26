@@ -8,25 +8,21 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Dat\DatSubjekPajakNjoptkp
  *
- * @property string $SUBJEK_PAJAK_ID
- * @property string|null $KD_PROPINSI
- * @property string|null $KD_DATI2
- * @property string|null $KD_KECAMATAN
- * @property string|null $KD_KELURAHAN
- * @property string|null $KD_BLOK
- * @property string|null $NO_URUT
- * @property string|null $KD_JNS_OP
- * @property string|null $THN_NJOPTKP
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
+ * @property string $subjek_pajak_id
+ * @property string|null $kd_propinsi
+ * @property string|null $kd_dati2
+ * @property string|null $kd_kecamatan
+ * @property string|null $kd_kelurahan
+ * @property string|null $kd_blok
+ * @property string|null $no_urut
+ * @property string|null $kd_jns_op
+ * @property string|null $thn_njoptkp
  * @property-read \Wawans\SismiopDatabase\Dat\DatSubjekPajak $datSubjekPajak
- * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajakNjoptkp newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajakNjoptkp newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatSubjekPajakNjoptkp query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatSubjekPajakNjoptkp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatSubjekPajakNjoptkp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatSubjekPajakNjoptkp query()
+ *
  * @mixin \Eloquent
  */
 class DatSubjekPajakNjoptkp extends Model
@@ -75,12 +71,12 @@ class DatSubjekPajakNjoptkp extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
     ];
 
     public function datSubjekPajak()

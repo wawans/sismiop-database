@@ -9,20 +9,18 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefPpbi
  *
- * @property string $KD_PEBIN
- * @property string $KD_PBI
- * @property string $KD_PPBI
- * @property string|null $NM_PPBI
- * @property StrPad $kd_pebin
- * @property StrPad $kd_pbi
- * @property StrPad $kd_ppbi
- * @property StrFn $nm_ppbi
+ * @property string $kd_pebin
+ * @property string $kd_pbi
+ * @property string $kd_ppbi
+ * @property string|null $nm_ppbi
  * @property-read mixed $nama
- * @property-read \Wawans\SismiopDatabase\Ref\RefPbi $refPbi
- * @property-read \Wawans\SismiopDatabase\Ref\RefPebin $refPebin
- * @method static \Illuminate\Database\Eloquent\Builder|RefPpbi newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefPpbi newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefPpbi query()
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPbi|null $refPbi
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPebin|null $refPebin
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPpbi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPpbi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPpbi query()
+ *
  * @mixin \Eloquent
  */
 class RefPpbi extends Model
@@ -47,7 +45,7 @@ class RefPpbi extends Model
      * @var string[]
      */
     protected $fillable = [
-        'kd_pebin', 'kd_pbi', 'kd_ppbi', 'nm_ppbi'
+        'kd_pebin', 'kd_pbi', 'kd_ppbi', 'nm_ppbi',
     ];
 
     /**
@@ -63,15 +61,15 @@ class RefPpbi extends Model
      * @var array
      */
     protected $casts = [
-        'kd_pebin' => StrPad::class . ':2',
-        'kd_pbi' => StrPad::class . ':2',
-        'kd_ppbi' => StrPad::class . ':2',
-        'nm_ppbi' => StrFn::class . ':strtoupper',
+        'kd_pebin' => StrPad::class.':2',
+        'kd_pbi' => StrPad::class.':2',
+        'kd_ppbi' => StrPad::class.':2',
+        'nm_ppbi' => StrFn::class.':strtoupper',
     ];
 
     public function refPebin()
     {
-        return $this->belongsTo(RefPebin::class,'kd_pebin','kd_pebin');
+        return $this->belongsTo(RefPebin::class, 'kd_pebin', 'kd_pebin');
     }
 
     public function refPbi()

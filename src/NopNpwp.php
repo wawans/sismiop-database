@@ -2,8 +2,23 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $npwp
+ * @property string|null $nama_wp
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopNpwp newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopNpwp newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopNpwp query()
+ *
+ * @mixin \Eloquent
+ */
 class NopNpwp extends Model
 {
     /**

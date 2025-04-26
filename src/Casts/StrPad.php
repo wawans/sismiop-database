@@ -28,10 +28,6 @@ class StrPad implements CastsInboundAttributes
 
     /**
      * Constructor.
-     *
-     * @param int $length
-     * @param string $char
-     * @param int $type
      */
     public function __construct(int $length = 0, string $char = '0', int $type = STR_PAD_LEFT)
     {

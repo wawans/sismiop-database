@@ -14,41 +14,38 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Dat\DatKunjunganKembali
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property int $NO_BNG
- * @property string|null $TGL_KUNJUNGAN_KEMBALI
- * @property bool|null $STATUS_KUNJUNGAN_KEMBALI
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bng
+ * @property \Illuminate\Support\Carbon|null $tgl_kunjungan_kembali
+ * @property string|null $status_kunjungan_kembali
+ * @property string|null $sys_nc00011$
  * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
  * @property-read \Wawans\SismiopDatabase\Dat\DatOpBangunan $datOpBangunan
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatKunjunganKembali newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatKunjunganKembali newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatKunjunganKembali query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatKunjunganKembali newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatKunjunganKembali newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatKunjunganKembali query()
+ *
  * @mixin \Eloquent
  */
 class DatKunjunganKembali extends Model
 {
     use WithDatObjekPajak;
     use WithDatOpBangunan;
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -63,7 +60,7 @@ class DatKunjunganKembali extends Model
         'kd_blok',
         'no_urut',
         'kd_jns_op',
-        'no_bng'
+        'no_bng',
     ];
 
     /**
@@ -104,12 +101,12 @@ class DatKunjunganKembali extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
         'tgl_kunjungan_kembali' => 'date',
     ];
 }

@@ -4,6 +4,29 @@ namespace Wawans\SismiopDatabase\Pembetulan;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $thn_pembetulan
+ * @property string $pembetulan_ke
+ * @property string|null $jns_sk
+ * @property string|null $no_sk
+ * @property string|null $jns_surat_yg_dibetulkan
+ * @property string|null $no_surat_yg_dibetulkan
+ * @property string|null $tgl_surat_yg_dibetulkan
+ * @property string|null $sys_nc00015$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembetulanJabatan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembetulanJabatan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembetulanJabatan query()
+ *
+ * @mixin \Eloquent
+ */
 class PembetulanJabatan extends Model
 {
     /**

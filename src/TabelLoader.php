@@ -2,8 +2,19 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $nama_tabel
+ * @property string|null $kode_tabel
+ * @property string|null $jenis_tabel
+ * @property string|null $no_urut
+ * @property string|null $status_load
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TabelLoader newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TabelLoader newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TabelLoader query()
+ *
+ * @mixin \Eloquent
+ */
 class TabelLoader extends Model
 {
     /**

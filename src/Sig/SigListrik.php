@@ -4,6 +4,24 @@ namespace Wawans\SismiopDatabase\Sig;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_pelanggan
+ * @property string|null $daya_listrik
+ * @property string|null $nm_pelanggan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SigListrik newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SigListrik newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SigListrik query()
+ *
+ * @mixin \Eloquent
+ */
 class SigListrik extends Model
 {
     /**

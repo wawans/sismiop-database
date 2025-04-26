@@ -17,69 +17,64 @@ use Wawans\SismiopDatabase\Ref\RefJpb;
 /**
  * Wawans\SismiopDatabase\Dat\DatOpBangunan
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property int $NO_BNG
- * @property string|null $KD_JPB
- * @property string|null $NO_FORMULIR_LSPOP
- * @property string|null $THN_DIBANGUN_BNG
- * @property string|null $THN_RENOVASI_BNG
- * @property int|null $LUAS_BNG
- * @property int|null $JML_LANTAI_BNG
- * @property string|null $KONDISI_BNG
- * @property string|null $JNS_KONSTRUKSI_BNG
- * @property string|null $JNS_ATAP_BNG
- * @property string|null $KD_DINDING
- * @property string|null $KD_LANTAI
- * @property string|null $KD_LANGIT_LANGIT
- * @property int|null $NILAI_SISTEM_BNG
- * @property string|null $JNS_TRANSAKSI_BNG
- * @property string|null $TGL_PENDATAAN_BNG
- * @property string|null $NIP_PENDATA_BNG
- * @property string|null $TGL_PEMERIKSAAN_BNG
- * @property string|null $NIP_PEMERIKSA_BNG
- * @property string|null $TGL_PEREKAMAN_BNG
- * @property string|null $NIP_PEREKAM_BNG
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property StrPad $kd_kelurahan
- * @property StrPad $kd_blok
- * @property StrPad $no_urut
- * @property StrPad $kd_jpb
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Dat\DatFasilitasBangunan[] $datFasilitasBangunan
- * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak $datObjekPajak
- * @property-read Pegawai $pegawaiPemeriksa
- * @property-read Pegawai $pegawaiPendata
- * @property-read Pegawai $pegawaiPerekam
- * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
- * @property-read LookupItem $refJnsAtap
- * @property-read LookupItem $refJnsKonstruksi
- * @property-read RefJpb $refJpb
- * @property-read LookupItem $refKdDinding
- * @property-read LookupItem $refKdLangitLangit
- * @property-read LookupItem $refKdLantai
- * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
- * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
- * @property-read LookupItem $refKondisi
- * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpBangunan newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpBangunan newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatOpBangunan query()
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $no_bng
+ * @property string|null $kd_jpb
+ * @property string|null $no_formulir_lspop
+ * @property string|null $thn_dibangun_bng
+ * @property string|null $thn_renovasi_bng
+ * @property string|null $luas_bng
+ * @property string|null $jml_lantai_bng
+ * @property string|null $kondisi_bng
+ * @property string|null $jns_konstruksi_bng
+ * @property string|null $jns_atap_bng
+ * @property string|null $kd_dinding
+ * @property string|null $kd_lantai
+ * @property string|null $kd_langit_langit
+ * @property string|null $nilai_sistem_bng
+ * @property string|null $jns_transaksi_bng
+ * @property \Illuminate\Support\Carbon|null $tgl_pendataan_bng
+ * @property string|null $nip_pendata_bng
+ * @property \Illuminate\Support\Carbon|null $tgl_pemeriksaan_bng
+ * @property string|null $nip_pemeriksa_bng
+ * @property \Illuminate\Support\Carbon|null $tgl_perekaman_bng
+ * @property string|null $nip_perekam_bng
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Dat\DatFasilitasBangunan> $datFasilitasBangunan
+ * @property-read \Wawans\SismiopDatabase\Dat\DatObjekPajak|null $datObjekPajak
+ * @property-read Pegawai|null $pegawaiPemeriksa
+ * @property-read Pegawai|null $pegawaiPendata
+ * @property-read Pegawai|null $pegawaiPerekam
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2|null $refDati2
+ * @property-read LookupItem|null $refJnsAtap
+ * @property-read LookupItem|null $refJnsKonstruksi
+ * @property-read RefJpb|null $refJpb
+ * @property-read LookupItem|null $refKdDinding
+ * @property-read LookupItem|null $refKdLangitLangit
+ * @property-read LookupItem|null $refKdLantai
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan|null $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan|null $refKelurahan
+ * @property-read LookupItem|null $refKondisi
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi|null $refPropinsi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBangunan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBangunan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatOpBangunan query()
+ *
  * @mixin \Eloquent
  */
 class DatOpBangunan extends Model
 {
     use WithDatObjekPajak;
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -94,7 +89,7 @@ class DatOpBangunan extends Model
         'kd_blok',
         'no_urut',
         'kd_jns_op',
-        'no_bng'
+        'no_bng',
     ];
 
     /**
@@ -153,13 +148,13 @@ class DatOpBangunan extends Model
      * @var array
      */
     protected $casts = [
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
-        'kd_kelurahan' => StrPad::class . ':3',
-        'kd_blok' => StrPad::class . ':3',
-        'no_urut' => StrPad::class . ':4',
-        'kd_jpb' => StrPad::class . ':2',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
+        'kd_kelurahan' => StrPad::class.':3',
+        'kd_blok' => StrPad::class.':3',
+        'no_urut' => StrPad::class.':4',
+        'kd_jpb' => StrPad::class.':2',
         'tgl_pendataan_bng' => 'date',
         'tgl_pemeriksaan_bng' => 'date',
         'tgl_perekaman_bng' => 'datetime',

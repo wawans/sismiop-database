@@ -20,10 +20,8 @@ class StrFn implements CastsInboundAttributes
 
     /**
      * Constructor.
-     *
-     * @param string|null $fn
      */
-    public function __construct(string $fn = null)
+    public function __construct(?string $fn = null)
     {
         $this->fn = $fn;
     }
@@ -41,6 +39,6 @@ class StrFn implements CastsInboundAttributes
     {
         $f = $this->fn;
 
-        return (is_null($f) || !function_exists($f)) ? $value : $f($value);
+        return (is_null($f) || ! function_exists($f)) ? $value : $f($value);
     }
 }

@@ -4,6 +4,20 @@ namespace Wawans\SismiopDatabase\Dbkb;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_dbkb_daya_dukung
+ * @property string $type_konstruksi
+ * @property string|null $nilai_dbkb_daya_dukung
+ * @property string|null $sys_nc00006$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbDayaDukung newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbDayaDukung newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DbkbDayaDukung query()
+ *
+ * @mixin \Eloquent
+ */
 class DbkbDayaDukung extends Model
 {
     /**

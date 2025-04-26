@@ -2,8 +2,24 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $jns_dokumen
+ * @property string $no_dokumen
+ * @property string|null $tgl_pendataan_dok
+ * @property string|null $nip_pendata_dok
+ * @property string|null $tgl_pemeriksaan_dok
+ * @property string|null $nip_pemeriksa_dok
+ * @property string|null $tgl_perekaman_dok
+ * @property string|null $nip_perekam_dok
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dokumen newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dokumen newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dokumen query()
+ *
+ * @mixin \Eloquent
+ */
 class Dokumen extends Model
 {
     /**

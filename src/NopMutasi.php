@@ -2,8 +2,33 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $indeks_mutasi
+ * @property string|null $kd_propinsi_mutasi
+ * @property string|null $kd_dati2_mutasi
+ * @property string|null $kd_kecamatan_mutasi
+ * @property string|null $kd_kelurahan_mutasi
+ * @property string|null $kd_blok_mutasi
+ * @property string|null $no_urut_mutasi
+ * @property string|null $kd_jns_op_mutasi
+ * @property string|null $luas_bumi_mutasi
+ * @property string|null $tgl_rekam_nop_mutasi
+ * @property string|null $nip_perekam_nop_mutasi
+ * @property string|null $sys_nc00019$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopMutasi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopMutasi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NopMutasi query()
+ *
+ * @mixin \Eloquent
+ */
 class NopMutasi extends Model
 {
     /**

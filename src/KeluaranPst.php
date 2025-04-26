@@ -2,8 +2,19 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_jns_pelayanan
+ * @property string|null $sppt_pelayanan
+ * @property string|null $stts_pelayanan
+ * @property string|null $dhkp_pelayanan
+ * @property string|null $sk_pelayanan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeluaranPst newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeluaranPst newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeluaranPst query()
+ *
+ * @mixin \Eloquent
+ */
 class KeluaranPst extends Model
 {
     /**

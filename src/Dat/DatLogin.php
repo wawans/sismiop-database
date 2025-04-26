@@ -9,14 +9,15 @@ use Wawans\SismiopDatabase\Pegawai;
 /**
  * Wawans\SismiopDatabase\Dat\DatLogin
  *
- * @property string $NM_LOGIN
- * @property string $NIP
- * @property string $PASSWORD
- * @property StrPad $nip
- * @property-read Pegawai $pegawai
- * @method static \Illuminate\Database\Eloquent\Builder|DatLogin newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatLogin newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DatLogin query()
+ * @property string $nm_login
+ * @property string $nip
+ * @property string $password
+ * @property-read Pegawai|null $pegawai
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatLogin newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatLogin newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DatLogin query()
+ *
  * @mixin \Eloquent
  */
 class DatLogin extends Model
@@ -59,7 +60,7 @@ class DatLogin extends Model
      * @var array
      */
     protected $casts = [
-        'nip' => StrPad::class . ':9',
+        'nip' => StrPad::class.':9',
     ];
 
     public function pegawai()

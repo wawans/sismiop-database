@@ -8,47 +8,49 @@ use Wawans\SismiopDatabase\Concerns\WithRefKelurahan;
 use Wawans\SismiopDatabase\Concerns\WithRefPropinsi;
 use Wawans\SismiopDatabase\Model;
 use Wawans\SismiopDatabase\Sppt\Sppt;
-use Wawans\SismiopDatabase\TempatPembayaran;
+use Wawans\SismiopDatabase\TempatPembayaran\TempatPembayaran;
 
 /**
  * Wawans\SismiopDatabase\Pembayaran\PembayaranSppt
  *
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property string $KD_KELURAHAN
- * @property string $KD_BLOK
- * @property string $NO_URUT
- * @property string $KD_JNS_OP
- * @property string $THN_PAJAK_SPPT
- * @property int $PEMBAYARAN_SPPT_KE
- * @property string $KD_KANWIL_BANK
- * @property string $KD_KPPBB_BANK
- * @property string $KD_BANK_TUNGGAL
- * @property string $KD_BANK_PERSEPSI
- * @property string $KD_TP
- * @property int|null $DENDA_SPPT
- * @property int $JML_SPPT_YG_DIBAYAR
- * @property string $TGL_PEMBAYARAN_SPPT
- * @property string $TGL_REKAM_BYR_SPPT
- * @property string $NIP_REKAM_BYR_SPPT
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $thn_pajak_sppt
+ * @property string $pembayaran_sppt_ke
+ * @property string $kd_kanwil_bank
+ * @property string $kd_kppbb_bank
+ * @property string $kd_bank_tunggal
+ * @property string $kd_bank_persepsi
+ * @property string $kd_tp
+ * @property string|null $denda_sppt
+ * @property string $jml_sppt_yg_dibayar
+ * @property \Illuminate\Support\Carbon $tgl_pembayaran_sppt
+ * @property \Illuminate\Support\Carbon $tgl_rekam_byr_sppt
+ * @property string $nip_rekam_byr_sppt
  * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
  * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
  * @property-read \Wawans\SismiopDatabase\Ref\RefKelurahan $refKelurahan
  * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
  * @property-read Sppt $sppt
  * @property-read TempatPembayaran $tempatPembayaran
- * @method static \Illuminate\Database\Eloquent\Builder|PembayaranSppt newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PembayaranSppt newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PembayaranSppt query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembayaranSppt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembayaranSppt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PembayaranSppt query()
+ *
  * @mixin \Eloquent
  */
 class PembayaranSppt extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
     use WithRefKelurahan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.

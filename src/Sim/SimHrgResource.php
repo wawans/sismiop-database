@@ -4,6 +4,20 @@ namespace Wawans\SismiopDatabase\Sim;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $sim_thn_hrg_resource
+ * @property string $kd_group_resource
+ * @property string $kd_resource
+ * @property string|null $sim_hrg_resource
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimHrgResource newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimHrgResource newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SimHrgResource query()
+ *
+ * @mixin \Eloquent
+ */
 class SimHrgResource extends Model
 {
     /**

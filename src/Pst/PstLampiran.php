@@ -7,30 +7,32 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Pst\PstLampiran
  *
- * @property string $KD_KANWIL
- * @property string $KD_KPPBB
- * @property string $THN_PELAYANAN
- * @property string $BUNDEL_PELAYANAN
- * @property string $NO_URUT_PELAYANAN
- * @property bool|null $L_PERMOHONAN
- * @property bool|null $L_SURAT_KUASA
- * @property bool|null $L_KTP_WP
- * @property bool|null $L_SERTIFIKAT_TANAH
- * @property bool|null $L_SPPT
- * @property bool|null $L_IMB
- * @property bool|null $L_AKTE_JUAL_BELI
- * @property bool|null $L_SK_PENSIUN
- * @property bool|null $L_SPPT_STTS
- * @property bool|null $L_STTS
- * @property bool|null $L_SK_PENGURANGAN
- * @property bool|null $L_SK_KEBERATAN
- * @property bool|null $L_SKKP_PBB
- * @property bool|null $L_SPMKP_PBB
- * @property bool|null $L_LAIN_LAIN
- * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonan $pstPermohonan
- * @method static \Illuminate\Database\Eloquent\Builder|PstLampiran newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PstLampiran newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PstLampiran query()
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string|null $l_permohonan
+ * @property string|null $l_surat_kuasa
+ * @property string|null $l_ktp_wp
+ * @property string|null $l_sertifikat_tanah
+ * @property string|null $l_sppt
+ * @property string|null $l_imb
+ * @property string|null $l_akte_jual_beli
+ * @property string|null $l_sk_pensiun
+ * @property string|null $l_sppt_stts
+ * @property string|null $l_stts
+ * @property string|null $l_sk_pengurangan
+ * @property string|null $l_sk_keberatan
+ * @property string|null $l_skkp_pbb
+ * @property string|null $l_spmkp_pbb
+ * @property string|null $l_lain_lain
+ * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonan|null $pstPermohonan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstLampiran newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstLampiran newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstLampiran query()
+ *
  * @mixin \Eloquent
  */
 class PstLampiran extends Model

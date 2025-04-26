@@ -4,6 +4,20 @@ namespace Wawans\SismiopDatabase\Ref;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $jns_mata_anggaran
+ * @property string $kd_mata_anggaran
+ * @property string|null $nm_mata_anggaran
+ * @property string|null $rekening_kas_negara
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefMataAnggaran newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefMataAnggaran newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefMataAnggaran query()
+ *
+ * @mixin \Eloquent
+ */
 class RefMataAnggaran extends Model
 {
     /**

@@ -2,8 +2,17 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $type_konstruksi
+ * @property string|null $daya_dukung_lantai_min_dbkb
+ * @property string|null $daya_dukung_lantai_max_dbkb
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DayaDukung newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DayaDukung newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DayaDukung query()
+ *
+ * @mixin \Eloquent
+ */
 class DayaDukung extends Model
 {
     /**

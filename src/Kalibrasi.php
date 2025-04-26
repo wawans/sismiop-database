@@ -2,8 +2,24 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $thn_kalibrasi
+ * @property string $indeks_kalibrasi
+ * @property string|null $tgl_kalibrasi
+ * @property string|null $nip_pengkalibrasi
+ * @property string|null $sys_nc00009$
+ * @property string|null $sys_nc00010$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kalibrasi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kalibrasi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kalibrasi query()
+ *
+ * @mixin \Eloquent
+ */
 class Kalibrasi extends Model
 {
     /**

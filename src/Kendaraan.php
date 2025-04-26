@@ -2,8 +2,28 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $no_polisi
+ * @property string|null $kd_kendaraan
+ * @property string|null $kd_propinsi
+ * @property string|null $kd_dati2
+ * @property string|null $kd_kecamatan
+ * @property string|null $kd_kelurahan
+ * @property string|null $kd_blok
+ * @property string|null $no_urut
+ * @property string|null $kd_jns_op
+ * @property string|null $no_bng
+ * @property string|null $merk
+ * @property string|null $tahun
+ * @property string|null $nama_pemilik
+ * @property string|null $status_kendaraan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kendaraan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kendaraan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Kendaraan query()
+ *
+ * @mixin \Eloquent
+ */
 class Kendaraan extends Model
 {
     /**

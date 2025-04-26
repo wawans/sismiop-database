@@ -4,6 +4,20 @@ namespace Wawans\SismiopDatabase\Volume;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_jpb
+ * @property string $tipe_bng
+ * @property string $kd_bng_lantai
+ * @property string $kd_pekerjaan
+ * @property string $kd_kegiatan
+ * @property string|null $vol_kegiatan
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeKegiatan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeKegiatan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeKegiatan query()
+ *
+ * @mixin \Eloquent
+ */
 class VolumeKegiatan extends Model
 {
     /**

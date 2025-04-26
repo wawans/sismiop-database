@@ -2,8 +2,25 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $mfnpwp_comp
+ * @property string $mfkpp_comp
+ * @property string $mfcab_comp
+ * @property string|null $kd_stat_kantor
+ * @property string|null $kd_jns_usaha
+ * @property string|null $nm_perusahaan
+ * @property string|null $no_akta
+ * @property string|null $no_situ
+ * @property string|null $no_siup
+ * @property string|null $no_ijin_usaha
+ * @property string|null $franchise
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompProfile newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompProfile newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompProfile query()
+ *
+ * @mixin \Eloquent
+ */
 class CompProfile extends Model
 {
     /**

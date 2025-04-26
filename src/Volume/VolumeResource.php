@@ -4,6 +4,19 @@ namespace Wawans\SismiopDatabase\Volume;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_pekerjaan
+ * @property string $kd_kegiatan
+ * @property string $kd_group_resource
+ * @property string $kd_resource
+ * @property string|null $vol_resource
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeResource newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeResource newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VolumeResource query()
+ *
+ * @mixin \Eloquent
+ */
 class VolumeResource extends Model
 {
     /**

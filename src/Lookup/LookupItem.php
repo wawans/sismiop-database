@@ -8,19 +8,20 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Lookup\LookupItem
  *
- * @property string $KD_LOOKUP_GROUP
- * @property string $KD_LOOKUP_ITEM
- * @property string|null $NM_LOOKUP_ITEM
- * @property StrFn $nm_lookup_item
+ * @property string $kd_lookup_group
+ * @property string $kd_lookup_item
+ * @property string|null $nm_lookup_item
  * @property-read mixed $nama
- * @property-read \Wawans\SismiopDatabase\Lookup\LookupGroup|null $group
- * @property-read \Wawans\SismiopDatabase\Lookup\LookupGroup|null $lookupGroup
- * @method static \Illuminate\Database\Eloquent\Builder|LookupItem newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|LookupItem newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|LookupItem query()
- * @method static \Illuminate\Database\Eloquent\Builder|LookupItem whereGroup($group)
- * @method static \Illuminate\Database\Eloquent\Builder|LookupItem whereGroupItem($group, $item)
- * @method static \Illuminate\Database\Eloquent\Builder|LookupItem whereItem($item)
+ * @property-read \Wawans\SismiopDatabase\Lookup\LookupGroup $group
+ * @property-read \Wawans\SismiopDatabase\Lookup\LookupGroup $lookupGroup
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupItem newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupItem newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupItem query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupItem whereGroup($group)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupItem whereGroupItem($group, $item)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LookupItem whereItem($item)
+ *
  * @mixin \Eloquent
  */
 class LookupItem extends Model
@@ -63,7 +64,7 @@ class LookupItem extends Model
      * @var array
      */
     protected $casts = [
-        'nm_lookup_item' => StrFn::class . ':strtoupper',
+        'nm_lookup_item' => StrFn::class.':strtoupper',
     ];
 
     public function lookupGroup()
@@ -77,9 +78,8 @@ class LookupItem extends Model
     }
 
     /**
-     *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  mixed $group
+     * @param  mixed  $group
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWhereGroup($query, $group)
@@ -88,9 +88,8 @@ class LookupItem extends Model
     }
 
     /**
-     *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  mixed $item
+     * @param  mixed  $item
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWhereItem($query, $item)
@@ -99,10 +98,7 @@ class LookupItem extends Model
     }
 
     /**
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param $group
-     * @param $item
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWhereGroupItem($query, $group, $item)

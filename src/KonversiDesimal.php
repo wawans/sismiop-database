@@ -2,8 +2,16 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $bilangan_10
+ * @property string|null $bilangan_62
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KonversiDesimal newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KonversiDesimal newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KonversiDesimal query()
+ *
+ * @mixin \Eloquent
+ */
 class KonversiDesimal extends Model
 {
     /**

@@ -11,31 +11,28 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefAdminKppbb
  *
- * @property string $KD_KANWIL
- * @property string $KD_KPPBB
- * @property string $KD_PROPINSI
- * @property string $KD_DATI2
- * @property string $KD_KECAMATAN
- * @property StrPad $kd_kanwil
- * @property StrPad $kd_kppbb
- * @property StrPad $kd_propinsi
- * @property StrPad $kd_dati2
- * @property StrPad $kd_kecamatan
- * @property-read \Wawans\SismiopDatabase\Ref\RefDati2 $refDati2
- * @property-read \Wawans\SismiopDatabase\Ref\RefKanwil $refKanwil
- * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan $refKecamatan
- * @property-read \Wawans\SismiopDatabase\Ref\RefKppbb $refKppbb
- * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi $refPropinsi
- * @method static \Illuminate\Database\Eloquent\Builder|RefAdminKppbb newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefAdminKppbb newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefAdminKppbb query()
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefDati2|null $refDati2
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKanwil|null $refKanwil
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKecamatan|null $refKecamatan
+ * @property-read \Wawans\SismiopDatabase\Ref\RefKppbb|null $refKppbb
+ * @property-read \Wawans\SismiopDatabase\Ref\RefPropinsi|null $refPropinsi
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefAdminKppbb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefAdminKppbb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefAdminKppbb query()
+ *
  * @mixin \Eloquent
  */
 class RefAdminKppbb extends Model
 {
-    use WithRefPropinsi;
     use WithRefDati2;
     use WithRefKecamatan;
+    use WithRefPropinsi;
 
     /**
      * The primary key for the model.
@@ -83,11 +80,11 @@ class RefAdminKppbb extends Model
      * @var array
      */
     protected $casts = [
-        'kd_kanwil' => StrPad::class . ':2',
-        'kd_kppbb' => StrPad::class . ':2',
-        'kd_propinsi' => StrPad::class . ':2',
-        'kd_dati2' => StrPad::class . ':2',
-        'kd_kecamatan' => StrPad::class . ':3',
+        'kd_kanwil' => StrPad::class.':2',
+        'kd_kppbb' => StrPad::class.':2',
+        'kd_propinsi' => StrPad::class.':2',
+        'kd_dati2' => StrPad::class.':2',
+        'kd_kecamatan' => StrPad::class.':3',
     ];
 
     public function refKanwil()

@@ -2,8 +2,17 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $nip
+ * @property string|null $menu
+ * @property string|null $tgl_update
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MenuPegawai newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MenuPegawai newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MenuPegawai query()
+ *
+ * @mixin \Eloquent
+ */
 class MenuPegawai extends Model
 {
     /**

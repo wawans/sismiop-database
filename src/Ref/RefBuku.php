@@ -7,14 +7,16 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefBuku
  *
- * @property string $THN_AWAL
- * @property string $THN_AKHIR
- * @property string $KD_BUKU
- * @property int $NILAI_MIN_BUKU
- * @property int $NILAI_MAX_BUKU
- * @method static \Illuminate\Database\Eloquent\Builder|RefBuku newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefBuku newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefBuku query()
+ * @property string $thn_awal
+ * @property string $thn_akhir
+ * @property string $kd_buku
+ * @property string $nilai_min_buku
+ * @property string $nilai_max_buku
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefBuku newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefBuku newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefBuku query()
+ *
  * @mixin \Eloquent
  */
 class RefBuku extends Model
@@ -43,7 +45,7 @@ class RefBuku extends Model
         'thn_akhir',
         'kd_buku',
         'nilai_min_buku',
-        'nilai_max_buku'
+        'nilai_max_buku',
     ];
 
     /**

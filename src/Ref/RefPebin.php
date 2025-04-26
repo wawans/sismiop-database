@@ -9,14 +9,14 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefPebin
  *
- * @property string $KD_PEBIN
- * @property string|null $NM_PEBIN
- * @property StrPad $kd_pebin
- * @property StrFn $nm_pebin
+ * @property string $kd_pebin
+ * @property string|null $nm_pebin
  * @property-read mixed $nama
- * @method static \Illuminate\Database\Eloquent\Builder|RefPebin newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefPebin newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefPebin query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPebin newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPebin newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefPebin query()
+ *
  * @mixin \Eloquent
  */
 class RefPebin extends Model
@@ -58,8 +58,8 @@ class RefPebin extends Model
      * @var array
      */
     protected $casts = [
-        'kd_pebin' => StrPad::class . ':2',
-        'nm_pebin' => StrFn::class . ':strtoupper',
+        'kd_pebin' => StrPad::class.':2',
+        'nm_pebin' => StrFn::class.':strtoupper',
     ];
 
     public function getNamaAttribute()

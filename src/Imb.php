@@ -2,8 +2,26 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $no_imb
+ * @property string|null $kd_jns_imb
+ * @property string|null $kd_propinsi
+ * @property string|null $kd_dati2
+ * @property string|null $kd_kecamatan
+ * @property string|null $kd_kelurahan
+ * @property string|null $kd_blok
+ * @property string|null $no_urut
+ * @property string|null $kd_jns_op
+ * @property string|null $no_bng
+ * @property string|null $tgl_imb
+ * @property string|null $nama_imb
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Imb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Imb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Imb query()
+ *
+ * @mixin \Eloquent
+ */
 class Imb extends Model
 {
     /**

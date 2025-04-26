@@ -2,8 +2,30 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $thn_pajak_sppt
+ * @property string $angsuran_ke
+ * @property string|null $jml_pokok_angsuran
+ * @property string|null $tgl_jatuh_tempo
+ * @property string|null $jml_denda_adm
+ * @property string|null $status_pembayaran
+ * @property string|null $status_tagihan
+ * @property string|null $tgl_rekam_angsuran
+ * @property string|null $nip_perekam_angsuran
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianAngsuranPbb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianAngsuranPbb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RincianAngsuranPbb query()
+ *
+ * @mixin \Eloquent
+ */
 class RincianAngsuranPbb extends Model
 {
     /**

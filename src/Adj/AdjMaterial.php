@@ -4,6 +4,19 @@ namespace Wawans\SismiopDatabase\Adj;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_pekerjaan
+ * @property string $kd_kegiatan
+ * @property string|null $pct_adj_mtrl_1
+ * @property string|null $pct_adj_mtrl_2
+ * @property string|null $deskripsi_adj
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjMaterial newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjMaterial newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjMaterial query()
+ *
+ * @mixin \Eloquent
+ */
 class AdjMaterial extends Model
 {
     /**

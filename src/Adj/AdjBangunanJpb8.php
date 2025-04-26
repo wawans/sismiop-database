@@ -4,6 +4,20 @@ namespace Wawans\SismiopDatabase\Adj;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_adj
+ * @property string $lbr_bent_min_adj
+ * @property string $lbr_bent_max_adj
+ * @property string $ting_kolom_min_adj
+ * @property string $ting_kolom_max_adj
+ * @property string|null $pct_adj_bng_jpb8
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjBangunanJpb8 newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjBangunanJpb8 newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdjBangunanJpb8 query()
+ *
+ * @mixin \Eloquent
+ */
 class AdjBangunanJpb8 extends Model
 {
     /**

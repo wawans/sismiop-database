@@ -2,8 +2,17 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $no_rekening
+ * @property string|null $no_penduduk
+ * @property string|null $ket_bank
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekeningBank newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekeningBank newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RekeningBank query()
+ *
+ * @mixin \Eloquent
+ */
 class RekeningBank extends Model
 {
     /**

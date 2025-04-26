@@ -2,8 +2,36 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $kd_kecamatan
+ * @property string $kd_kelurahan
+ * @property string $kd_blok
+ * @property string $no_urut
+ * @property string $kd_jns_op
+ * @property string $thn_pajak_sppt
+ * @property string|null $no_sk_angsuran
+ * @property string|null $tgl_sk_angsuran
+ * @property string|null $nm_pemohon
+ * @property string|null $no_srt_permohonan
+ * @property string|null $tgl_srt_permohonan
+ * @property string|null $jns_ketetapan
+ * @property string|null $no_srt_ketetapan
+ * @property string|null $pbb_terutang
+ * @property string|null $no_tanda_terima
+ * @property string|null $tgl_tanda_terima
+ * @property string|null $no_lap_penelitian
+ * @property string|null $tgl_lap_penelitian
+ * @property string|null $tgl_rekam_sk_angsuran
+ * @property string|null $nip_perekam_sk_angsuran
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeputusanAngsuranPbb newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeputusanAngsuranPbb newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|KeputusanAngsuranPbb query()
+ *
+ * @mixin \Eloquent
+ */
 class KeputusanAngsuranPbb extends Model
 {
     /**

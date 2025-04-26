@@ -2,8 +2,22 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_sektor
+ * @property string $kd_propinsi
+ * @property string $kd_dati2
+ * @property string $thn_anggaran_prognosa
+ * @property string|null $jml_prognosa
+ * @property string|null $tgl_rekam_prognosa
+ * @property string|null $nip_rekam_trm_prognosa
+ * @property string|null $sys_nc00008$
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Prognosa newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Prognosa newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Prognosa query()
+ *
+ * @mixin \Eloquent
+ */
 class Prognosa extends Model
 {
     /**

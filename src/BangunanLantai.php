@@ -2,8 +2,19 @@
 
 namespace Wawans\SismiopDatabase;
 
-use Wawans\SismiopDatabase\Model;
-
+/**
+ * @property string $kd_jpb
+ * @property string $tipe_bng
+ * @property string $kd_bng_lantai
+ * @property string|null $lantai_min_bng_lantai
+ * @property string|null $lantai_max_bng_lantai
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BangunanLantai newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BangunanLantai newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BangunanLantai query()
+ *
+ * @mixin \Eloquent
+ */
 class BangunanLantai extends Model
 {
     /**

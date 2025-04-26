@@ -9,14 +9,14 @@ use Wawans\SismiopDatabase\Model;
 /**
  * Wawans\SismiopDatabase\Ref\RefJnsPelayanan
  *
- * @property string $KD_JNS_PELAYANAN
- * @property string|null $NM_JENIS_PELAYANAN
- * @property StrPad $kd_jns_pelayanan
- * @property StrFn $nm_jenis_pelayanan
+ * @property string $kd_jns_pelayanan
+ * @property string|null $nm_jenis_pelayanan
  * @property-read mixed $nama
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsPelayanan newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsPelayanan newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RefJnsPelayanan query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsPelayanan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsPelayanan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RefJnsPelayanan query()
+ *
  * @mixin \Eloquent
  */
 class RefJnsPelayanan extends Model
@@ -58,8 +58,8 @@ class RefJnsPelayanan extends Model
      * @var array
      */
     protected $casts = [
-        'kd_jns_pelayanan' => StrPad::class . ':2',
-        'nm_jenis_pelayanan' => StrFn::class . ':strtoupper',
+        'kd_jns_pelayanan' => StrPad::class.':2',
+        'nm_jenis_pelayanan' => StrFn::class.':strtoupper',
     ];
 
     public function getNamaAttribute()

@@ -4,6 +4,39 @@ namespace Wawans\SismiopDatabase\His;
 
 use Wawans\SismiopDatabase\Model;
 
+/**
+ * @property string $kd_propinsi_lama
+ * @property string $kd_dati2_lama
+ * @property string $kd_kecamatan_lama
+ * @property string $kd_kelurahan_lama
+ * @property string $kd_blok_lama
+ * @property string $no_urut_lama
+ * @property string $kd_jns_op_lama
+ * @property string $kd_propinsi_baru
+ * @property string $kd_dati2_baru
+ * @property string $kd_kecamatan_baru
+ * @property string $kd_kelurahan_baru
+ * @property string $kd_blok_baru
+ * @property string $no_urut_baru
+ * @property string $kd_jns_op_baru
+ * @property string|null $nama_wp_lama
+ * @property string|null $alamat_wp_lama
+ * @property string|null $pbb_lama
+ * @property string|null $nama_wp_baru
+ * @property string|null $alamat_wp_baru
+ * @property string|null $pbb_baru
+ * @property string $tgl_perubahan
+ * @property string $tahun_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string $thn_pajak
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisPerubahanSppt newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisPerubahanSppt newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|HisPerubahanSppt query()
+ *
+ * @mixin \Eloquent
+ */
 class HisPerubahanSppt extends Model
 {
     /**

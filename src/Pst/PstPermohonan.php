@@ -10,43 +10,36 @@ use Wawans\SismiopDatabase\Pegawai;
 /**
  * Wawans\SismiopDatabase\Pst\PstPermohonan
  *
- * @property string $KD_KANWIL
- * @property string $KD_KPPBB
- * @property string $THN_PELAYANAN
- * @property string $BUNDEL_PELAYANAN
- * @property string $NO_URUT_PELAYANAN
- * @property string|null $NO_SRT_PERMOHONAN
- * @property string|null $TGL_SURAT_PERMOHONAN
- * @property string|null $NAMA_PEMOHON
- * @property string|null $ALAMAT_PEMOHON
- * @property string|null $KETERANGAN_PST
- * @property string|null $CATATAN_PST
- * @property string $STATUS_KOLEKTIF
- * @property string $TGL_TERIMA_DOKUMEN_WP
- * @property string $TGL_PERKIRAAN_SELESAI
- * @property string $NIP_PENERIMA
- * @property StrPad $kd_kanwil
- * @property StrPad $kd_kppbb
- * @property StrPad $thn_pelayanan
- * @property StrPad $bundel_pelayanan
- * @property StrPad $no_urut_pelayanan
- * @property StrFn $nama_pemohon
- * @property StrFn $alamat_pemohon
- * @property StrFn $keterangan_pst
- * @property StrFn $catatan_pst
- * @property-read Pegawai|null $pegawaiPenerima
+ * @property string $kd_kanwil
+ * @property string $kd_kppbb
+ * @property string $thn_pelayanan
+ * @property string $bundel_pelayanan
+ * @property string $no_urut_pelayanan
+ * @property string|null $no_srt_permohonan
+ * @property \Illuminate\Support\Carbon|null $tgl_surat_permohonan
+ * @property string|null $nama_pemohon
+ * @property string|null $alamat_pemohon
+ * @property string|null $keterangan_pst
+ * @property string|null $catatan_pst
+ * @property string $status_kolektif
+ * @property \Illuminate\Support\Carbon $tgl_terima_dokumen_wp
+ * @property \Illuminate\Support\Carbon $tgl_perkiraan_selesai
+ * @property string $nip_penerima
+ * @property-read Pegawai $pegawaiPenerima
  * @property-read \Wawans\SismiopDatabase\Pst\PstDataOpBaru|null $pstDataOpBaru
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Pst\PstDataOpBaru[] $pstDataOpBaruKolektif
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Pst\PstDataOpBaru> $pstDataOpBaruKolektif
  * @property-read \Wawans\SismiopDatabase\Pst\PstDetail|null $pstDetail
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Pst\PstDetail[] $pstDetailKolektif
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Pst\PstDetail> $pstDetailKolektif
  * @property-read \Wawans\SismiopDatabase\Pst\PstLampiran|null $pstLampiran
  * @property-read \Wawans\SismiopDatabase\Pst\PstPermohonanPengurangan|null $pstPermohonanPengurangan
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Pst\PstPermohonanPengurangan[] $pstPermohonanPenguranganKolektif
- * @property-read \Illuminate\Database\Eloquent\Collection|\Wawans\SismiopDatabase\Pst\PstPosisiBerkas[] $pstPosisiBerkas
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Pst\PstPermohonanPengurangan> $pstPermohonanPenguranganKolektif
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Wawans\SismiopDatabase\Pst\PstPosisiBerkas> $pstPosisiBerkas
  * @property-read \Wawans\SismiopDatabase\Pst\PstTambahan|null $pstTambahan
- * @method static \Illuminate\Database\Eloquent\Builder|PstPermohonan newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PstPermohonan newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|PstPermohonan query()
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstPermohonan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstPermohonan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PstPermohonan query()
+ *
  * @mixin \Eloquent
  */
 class PstPermohonan extends Model
@@ -101,15 +94,15 @@ class PstPermohonan extends Model
      * @var array
      */
     protected $casts = [
-        'kd_kanwil' => StrPad::class . ':2',
-        'kd_kppbb' => StrPad::class . ':2',
-        'thn_pelayanan' => StrPad::class . ':4',
-        'bundel_pelayanan' => StrPad::class . ':4',
-        'no_urut_pelayanan' => StrPad::class . ':3',
-        'nama_pemohon' => StrFn::class . ':strtoupper',
-        'alamat_pemohon' => StrFn::class . ':strtoupper',
-        'keterangan_pst' => StrFn::class . ':strtoupper',
-        'catatan_pst' => StrFn::class . ':strtoupper',
+        'kd_kanwil' => StrPad::class.':2',
+        'kd_kppbb' => StrPad::class.':2',
+        'thn_pelayanan' => StrPad::class.':4',
+        'bundel_pelayanan' => StrPad::class.':4',
+        'no_urut_pelayanan' => StrPad::class.':3',
+        'nama_pemohon' => StrFn::class.':strtoupper',
+        'alamat_pemohon' => StrFn::class.':strtoupper',
+        'keterangan_pst' => StrFn::class.':strtoupper',
+        'catatan_pst' => StrFn::class.':strtoupper',
         'tgl_surat_permohonan' => 'date',
         'tgl_terima_dokumen_wp' => 'date',
         'tgl_perkiraan_selesai' => 'date',
